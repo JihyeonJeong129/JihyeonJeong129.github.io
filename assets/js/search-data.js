@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-cv",
+  },{id: "nav-projects",
+          title: "projects",
+          description: "A growing collection of my awesome projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-cv",
           title: "cv",
           description: "",
           section: "Navigation",
@@ -408,11 +415,21 @@ ninja.data = [{
           description: "",
           section: "Awardcertification",handler: () => {
               window.location.href = "/awardcertification/2021_nationalPark/";
+            },},{id: "awardcertification-practical-coding-with-riot-games",
+          title: 'Practical Coding with Riot Games',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2021_riot_games_seminar/";
             },},{id: "awardcertification-sejong-big-data-analysis-idea-contest",
           title: 'Sejong Big Data Analysis Idea Contest',
           description: "",
           section: "Awardcertification",handler: () => {
               window.location.href = "/awardcertification/2024_sejong_bigdata/";
+            },},{id: "awardcertification-future-mobility-lecture-series-e2e-autonomous-driving-technology",
+          title: 'Future Mobility Lecture Series:E2E Autonomous Driving Technology',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2025_e2e_seminar/";
             },},{id: "awardcertification-advanced-data-analytics-semi-professional-adsp",
           title: 'Advanced Data Analytics Semi-Professional (ADsP)',
           description: "",
@@ -449,26 +466,21 @@ ninja.data = [{
           description: "",
           section: "Photos",handler: () => {
               window.location.href = "/photos/2025_APO_Concert/";
+            },},{id: "projects-2025-summer-plc-theory-amp-practice-program",
+          title: '2025 Summer PLC Theory &amp;amp; Practice Program',
+          description: "Secondary Battery Equipment Control PLC Theory &amp; Practice Program with OMRON",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2025_summer_omron_plc/";
             },},{id: "projects-project-9",
           title: 'project 9',
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "projects-fgpa-worldclock",
-          title: 'FGPA - WorldClock',
-          description: "a project with no image",
+            },},{id: "projects-fpga-worldclock",
+          title: 'FPGA WorldClock',
+          description: "FPGA-based Digital World Clock with 7-Segment &amp; Keypad",
           section: "Projects",handler: () => {
               window.location.href = "/projects/FGPA%20-%20WorldClock/";
-            },},{id: "projects-fpga-nvme-ssd-simulator",
-          title: 'FPGA - NVME SSD Simulator',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/FPGA%20-%20NVME%20SSD%20Simulator/";
-            },},{id: "projects-fpga-peta-linux",
-          title: 'FPGA - Peta Linux',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/FPGA%20-%20Peta%20Linux/";
             },},{id: "projects-node-athena",
           title: 'Node - Athena',
           description: "a project with a background image and giscus comments",
@@ -476,7 +488,7 @@ ninja.data = [{
               window.location.href = "/projects/Node%20-%20Athena/";
             },},{id: "projects-node-daedalus",
           title: 'Node - Daedalus',
-          description: "a project that redirects to another website",
+          description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20Daedalus/";
             },},{id: "projects-node-hades",
@@ -489,29 +501,24 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20RaspberryPi(past)/";
-            },},{id: "projects-ros-project-1",
-          title: 'ROS Project - 1',
+            },},{id: "projects-ros-project-with-morai-sim",
+          title: 'ROS Project with MORAI sim',
           description: "another without an image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ROS%20Project%20-%201/";
             },},{id: "projects-sejong-city-data-driven-innovation-challenge",
           title: 'Sejong City Data-Driven Innovation Challenge',
-          description: "an other project with a background image and giscus comments",
+          description: "Public Transport Data Analysis for Festival Accessibility",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Sejong%20City%20Data/";
-            },},{id: "projects-lg-aimers",
-          title: 'LG-Aimers',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/lg-aimers/";
-            },},{id: "projects-moida",
-          title: 'Moida',
+            },},{id: "projects-moisam",
+          title: 'Moisam',
           description: "Dormitory group purchasing platform",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/moida/";
+              window.location.href = "/projects/moisam/";
             },},{id: "projects-tactix",
-          title: 'tactix',
-          description: "Dormitory group purchasing platform",
+          title: 'TACTIX',
+          description: "RAG-based Aircraft Maintenance Support System",
           section: "Projects",handler: () => {
               window.location.href = "/projects/tactix/";
             },},{
