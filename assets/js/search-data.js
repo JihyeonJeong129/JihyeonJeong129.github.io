@@ -393,7 +393,37 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-the-godfather",
+      },{id: "awardcertification-industrial-engineer-information-processing",
+          title: 'Industrial Engineer Information Processing',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/%20IndustrialEngineerInformationProcessing/";
+            },},{id: "awardcertification-kepco-kdn-innovation-idea-contest",
+          title: 'KEPCO KDN Innovation Idea Contest',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2021_KDN/";
+            },},{id: "awardcertification-national-park-visitor-service-idea-contest",
+          title: 'National Park Visitor Service Idea Contest',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2021_nationalPark/";
+            },},{id: "awardcertification-sejong-big-data-analysis-idea-contest",
+          title: 'Sejong Big Data Analysis Idea Contest',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2024_sejong_bigdata/";
+            },},{id: "awardcertification-advanced-data-analytics-semi-professional-adsp",
+          title: 'Advanced Data Analytics Semi-Professional (ADsP)',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/ADsP/";
+            },},{id: "awardcertification-sql-developer-sqld",
+          title: 'SQL Developer (SQLD)',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/SQLD/";
+            },},{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
