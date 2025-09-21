@@ -29,7 +29,7 @@
       "location": "Suwon, South Korea",
       "url": "https://www.ajou.ac.kr/",
       "area": "Software (major), Electronic Engineering (double major)",
-      "studyType": "B.S.",
+      "studyType": "Undergraduate Student",
       "startDate": "2021-03-02",
       "endDate": ""
     },
@@ -100,17 +100,19 @@
   "awards":[
     {
       "title": "Excellence Award - Sejong Big Data Analysis Idea Contest",
-      "url": "",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/2024_sejong_bigdata/",
       "date": "2024-11-06",
       "summary": "Proposed a strategy to boost tourism by analyzing bus card data related to major festivals in Sejong City. Responsible for building a MySQL database with raw bus card data and performing SQL-based correlation and principal component analysis. Received the Excellence Award from the Mayor of Sejong."
     },
     {
       "title": "Excellence Award - KEPCO KDN Innovation Idea Contest",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/2024_sejong_bigdata/",
       "date": "2021-07-07",
       "summary": "Proposed an AI-based electric vehicle charging station management and optimal allocation system to support the acceleration of EV adoption. Received the Excellence Award from the President of KEPCO KDN."
     },
     {
       "title": "Grand Prize - National Park Visitor Service Idea Contest",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/2021_nationalPark/",
       "date": "2021-04-20",
       "summary": "Suggested an AI-based national park recommendation system tailored to the rise in family-oriented travel. Received the Grand Prize from the Minister of Environment."
     }
@@ -120,27 +122,27 @@
       "name": "Industrial Engineer Information Processing",
       "date": "2024-06-18",
       "issuer": "Human Resources Development Service of Korea",
-      "url": "",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/%20IndustrialEngineerInformationProcessing/",
       "icon": "fa-solid fa-certificate"
     },
     {
       "name": "SQL Developer (SQLD)",
       "date": "2023-12-15",
       "issuer": "Korea Data Agency",
-      "url": "",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/SQLD/",
       "icon": "fa-solid fa-database"
     },
     {
       "name": "Advanced Data Analytics Semi-Professional (ADsP)",
       "date": "2023-09-15",
       "issuer": "Korea Data Agency",
-      "url": "",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/ADsP/",
       "icon": "fa-solid fa-chart-line"
     }
   ],
   "projects": [
     {
-      "name": "MyAwesome HomeLab",
+      "name": "My Awesome HomeLab",
       "summary": "Designed and managed a personal home server infrastructure built on hypervisors (ESXi, XEN) to support private cloud services, AI research, and self-hosted applications. The HomeLab also serves as a deployment environment for various personal projects.",
       "highlights": [
         "Configured and maintained OpenMediaVault-based NAS with real-time PC synchronization",
@@ -161,20 +163,8 @@
         "Integrated LLM with rule-based expert system to guide troubleshooting and procedures",
         "Designed secure, on-premise full-stack deployment (Frontend, Backend, GPU acceleration) for closed military networks"
       ],
-      "startDate": "2025-05-01",
+      "startDate": "2025-05-21",
       "endDate": "2025-06-13",
-      "url": "https://jihyeonjeong129.github.io/projects/projects/tactix/"
-    },
-    {
-      "name": "Moida: RAG-based Aircraft Maintenance Support System",
-      "summary": "Developed a Retrieval-Augmented Generation (RAG) system to support technicians in aircraft maintenance through natural language interaction and embedded manuals.",
-      "highlights": [
-        "Combined LLMs with vector database search for expert troubleshooting",
-        "Integrated document retrieval and procedural guidance for maintainers",
-        "Designed full-stack service including UI/UX, backend, and GPU deployment"
-      ],
-      "startDate": "2025-05-07",
-      "endDate": "2025-06-10",
       "url": "https://jihyeonjeong129.github.io/projects/projects/tactix/"
     },
     {
@@ -184,8 +174,8 @@
         "Designed relational schema and normalized tables (1NF→BCNF) for core entities such as Users, Posts, Participation, and Chat",
         "Implemented database-backed features including recruitment posts, participation tracking, comments, and real-time chat" 
       ],
-      "startDate": "2024-09-01",
-      "endDate": "2024-11-06",
+      "startDate": "2025-04-28",
+      "endDate": "2025-05-16",
       "url": "https://jihyeonjeong129.github.io/projects/Sejong%20City%20Data/"
     }
   ],
@@ -252,7 +242,7 @@
       ],
       "startDate": "2022-03-01",
       "endDate": "PRESENT",
-      "url": "",
+      "url": "https://www.instagram.com/ajou_pops_orchestra/",
       "organization": "Ajou University"
     } 
   ] 
