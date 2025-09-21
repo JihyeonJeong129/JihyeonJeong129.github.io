@@ -3,79 +3,67 @@ layout: page
 title: Node - RaspberryPi
 description: with background image
 img: assets/img/hpe_microserver_gen10plus.jpg
-importance: 4
+importance: 7
 category: "My Awesome Home Lab"
-related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<!-- ===== 프로젝트 개요 ===== -->
+## Node - RaspberryPi: Legacy NAS Server Overview
+This project introduces **Node - RaspberryPi**, a past server project built with Raspberry Pi boards.  
+Although it is no longer in operation, it was used to experiment with **lightweight NAS deployments**.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+- **Hardware**:  
+  - First Build: Raspberry Pi 3 B+  
+  - Second Build: Raspberry Pi 4 (8 GB model)  
+  - Storage: 4 TB external HDD (used as main NAS storage)  
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+- **Purpose**:  
+  - Designed to operate as a **NAS (Network Attached Storage)**  
+  - Both builds were configured with **OpenMediaVault** to manage storage and provide file services  
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+---
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
+### Raspberry Pi 3 B+ Build
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid
+       path="/assets/img/raspberrypi-server/pi3bplus.jpg"
+       title="Raspberry Pi 3 B+ NAS Setup"
+       class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="caption">
+  The **first build** of Node - RaspberryPi was based on a **Raspberry Pi 3 B+**.  
+  It served as a low-power testbed for running **OpenMediaVault NAS**, connected to a 4 TB HDD.  
+  This setup validated the feasibility of running a NAS on constrained hardware.
+</div>
 
-{% endraw %}
+---
+
+### Raspberry Pi 4 (8 GB) Build
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/raspberrypi-server/pi4_8gb.jpg"
+       title="Raspberry Pi 4 (8 GB) NAS Setup"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  The **second build** upgraded to a **Raspberry Pi 4 (8 GB model)**, significantly improving performance and stability.  
+  It continued to run **OpenMediaVault NAS** with a 4 TB HDD, offering better throughput and multi-user handling.  
+  This version demonstrated the practical limits of Raspberry Pi-based NAS before transitioning to enterprise-grade servers.
+</div>
+
+---
+
+- **Core Services**:  
+  - **NAS (OpenMediaVault)**: provided file sharing, user management, and storage access within the local network  
+  - Lightweight home server environment for testing and learning purposes  
+
+- **Outcomes**:  
+  - Served as an **experimental platform** to validate NAS setups on low-power hardware  
+  - Demonstrated the feasibility of **cost-effective storage solutions** using Raspberry Pi boards  
+  - Retired from active use after migration to more powerful, enterprise-grade nodes in the infrastructure  
+
+

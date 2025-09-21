@@ -5,77 +5,157 @@ description: a project with a background image and giscus comments
 img: assets/img/lenovo_x3650_2gpu.jpg
 importance: 2
 category: "My Awesome Home Lab"
-giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<!-- ===== 프로젝트 개요 ===== -->
+## Node - Athena: AI & Data Science Server Overview
+This project introduces **Node - Athena**, a Lenovo System X3650 server designed for **AI research, data analysis, and collaborative software projects**.  
+It serves as the main compute backbone for high-performance machine learning, academic coursework, and team-based R&D.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+- **Hardware**:  
+  - Lenovo System X3650  
+  - CPU: Dual Intel Xeon E5-2630 v4 (each 10 cores / 20 threads → total **20 cores / 40 threads**)  
+  - RAM: 80 GB (upgrade to **272 GB planned for October 2025**)  
+  - Storage: 1 TB NVMe SSD  
+  - GPU: 2 × NVIDIA Tesla P100 (16 GB VRAM each)  
+  - Network: Intel 10Gb Ethernet NIC for high-throughput data transfer  
+  - UPS: 1000VA UPS installation scheduled for October 2025 to ensure uninterruptible operation  
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+- **Virtualization**:  
+  - **Xen Hypervisor**  
+  - Hosts multiple VMs dedicated to AI workloads, Docker-based services, and software engineering projects  
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+- **Core Services**:  
+  - **JupyterHub**: provides a collaborative environment for data analysis and AI training  
+    - Used in **Sejong Big Data Competition**  
+    - Supported multiple projects in the **Spring 2025 Machine Learning course**  
+  - **Docker-based AI Agent Platform**: ongoing development and deployment of AI agents  
+  - **Software Engineering Projects**: student and team projects hosted and tested on this server  
+  - **Past Projects**:  
+    - **TACTIX**: RAG-based Aircraft Maintenance Support System  
+    - **Moida**: Dormitory Group-Purchase Platform  
+  - **VPN (OpenVPN & WireGuard)**: secure remote access for external connectivity to hosted services  
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+- **Outcomes**:  
+  - Enables high-performance **AI model training, data science experiments, and prototype deployment**  
+  - Provides a centralized platform for **coursework, hackathons, and research competitions**  
+  - Supports **ongoing confidential AI and software projects** under active development  
+  - Allows **secure external access** to internal resources through VPN (OpenVPN & WireGuard)  
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+---
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+<!-- ===== Core Services ===== -->
+## Core Services
 
-{% raw %}
-
-```html
+### JupyterHub
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid
+       path="/assets/img/athena-server/jupyterhub.jpg"
+       title="JupyterHub environment"
+       class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="caption">
+  **JupyterHub** provides a collaborative platform for data analysis and AI training.  
+  - Used in the **Sejong Big Data Competition**  
+  - Supported multiple projects in the **Spring 2025 Machine Learning course**  
+  Students and team members can access GPU resources and shared notebooks seamlessly.
+</div>
 
-{% endraw %}
+---
+
+### Docker-based AI Agent Platform
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/athena-server/ai_agent.jpg"
+       title="AI Agent platform on Docker"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Node - Athena runs an **AI agent platform** based on Docker containers.  
+  This platform supports ongoing AI research and prototyping.  
+  Current projects include a **confidential AI agent system** under development.
+</div>
+
+---
+
+### Software Engineering Projects
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/athena-server/software_engineering.jpg"
+       title="Software engineering projects"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  The server hosts multiple **software engineering projects** for coursework and research.  
+  It provides a controlled environment for testing, CI/CD pipelines, and collaborative development.
+</div>
+
+---
+
+### Past Projects: TACTIX
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/athena-server/tactix.jpg"
+       title="TACTIX Project"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  **TACTIX** (RAG-based Aircraft Maintenance Support System) was developed and deployed on Node - Athena.  
+  This project focused on integrating retrieval-augmented generation for maintenance workflows.
+</div>
+
+---
+
+### Past Projects: Moida
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/athena-server/moida.jpg"
+       title="Moida Platform"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  **Moida** (Dormitory Group-Purchase Platform) was another major project built and deployed on Node - Athena.  
+  It provided a safe and efficient environment for closed-community group purchasing in university dormitories.
+</div>
+
+---
+
+### VPN (OpenVPN & WireGuard)
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/athena-server/vpn.jpg"
+       title="VPN remote access"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Node - Athena ensures **secure external connectivity** through both OpenVPN and WireGuard.  
+  This enables team members to access JupyterHub, Docker containers, and project resources remotely.
+</div>
+
+---
+
+### UPS (Uninterruptible Power Supply)
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/athena-server/ups.jpg"
+       title="1000VA UPS (planned)"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  A **1000VA UPS** installation is scheduled for October 2025.  
+  It will ensure uninterruptible operation, safe shutdown procedures, and overall system protection for Node - Athena.
+</div>

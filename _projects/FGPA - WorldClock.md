@@ -1,80 +1,117 @@
 ---
 layout: page
-title: FGPA - WorldClock
-description: a project with no image
-img:
-importance: 4
+title: FPGA WorldClock
+description: FPGA-based Digital World Clock with 7-Segment & Keypad
+img: assets/img/world_clock_fpga.jpg
+importance: 3
 category: HardWare
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<!-- ===== 프로젝트 개요 ===== -->
+## FPGA WorldClock: Digital Multi-City Time Display System
+This project introduces **WorldClock**, an FPGA-based digital system that displays the current time in **Seoul and 5 major cities worldwide (London, Paris, Tokyo, LA, New York)** using a **7-Segment display and keypad input**:contentReference[oaicite:0]{index=0}.  
+The system emphasizes **real-time digital logic design**, **time-zone calculation**, and **user interaction** through Verilog HDL.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+- **Goals**:  
+  - Implement a **world clock** capable of showing multiple city times with time difference adjustment  
+  - Use **Keypad input** for time setting, city selection, and reset  
+  - Extend functionality with **AM/PM display (12-hour mode)** for enhanced usability  
+  - Gain practical FPGA experience in **clock division, state machines, and exception handling**  
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
+### Key Features
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/fpga-worldclock/time_setting.jpg"
+       title="Initial Time Setting"
+       class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/fpga-worldclock/city_selection.jpg"
+       title="City Selection via Keypad"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/fpga-worldclock/am_pm_display.jpg"
+       title="AM/PM Implementation"
+       class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="caption">
+  From left: **Seoul time setting**, **city selection using keypad**, and **12-hour mode with AM/PM display**.
+</div>
 
-{% endraw %}
+- **Initial Time Setup**: Set Seoul’s current time (hours & minutes) using **SET, Plus, Minus** keys:contentReference[oaicite:1]{index=1}.  
+- **City Selection**: Switch between cities using keypad buttons; system adjusts time with **time-zone offsets**.  
+- **AM/PM Mode**: Converts 24-hour format to **12-hour format with AM/PM indicators**.  
+- **Reset Function**: Reset button restores display to default `--0000`.  
+
+---
+
+### System Architecture & Verilog Design
+<div class="row justify-content-sm-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/fpga-worldclock/architecture.jpg"
+       title="System Block Diagram"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Block diagram showing **keypad input logic, clock divider, city selection logic, AM/PM conversion, and 7-Segment display control**:contentReference[oaicite:2]{index=2}.
+</div>
+
+- **Clock Divider**: 50 MHz base clock divided to 1-second tick  
+- **State Machine**: Controls modes (Idle → Set Hour → Set Minute → Running Clock → City Selection)  
+- **Exception Handling**: Prevents underflow/overflow in hour/minute adjustment (e.g., -1 → 23, 60 → 0)  
+- **Parallel Signals**: Used to synchronize variable updates across modules  
+
+---
+
+### Results & Demonstration
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/fpga-worldclock/seoul_display.jpg"
+       title="Seoul Display"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/fpga-worldclock/london_display.jpg"
+       title="London Display"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid
+       path="/assets/img/fpga-worldclock/ny_display.jpg"
+       title="New York Display"
+       class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Example outputs: **Seoul time**, **London time adjusted by -9 hours**, **New York time adjusted by -14 hours**:contentReference[oaicite:3]{index=3}.
+</div>
+
+- Verified **time increment per second** works correctly (sec → min → hour cascade)  
+- Confirmed **city switching logic** displays proper time-zone adjusted values  
+- AM/PM correctly toggled with 12-hour mode conversion  
+
+---
+
+### Reflections
+- Gained hands-on experience with **Verilog HDL, digital clock design, and keypad-driven interfaces**  
+- Learned importance of **clock management** and **state synchronization** in FPGA designs  
+- Implemented **exception handling** for time underflow/overflow and invalid input states  
+- Identified possible improvement: system currently requires Seoul time setup before city selection; future version should allow **flexible input order** without errors:contentReference[oaicite:4]{index=4}  
+
+---
+
+- **Outcomes**:  
+  - Fully implemented **multi-city FPGA world clock** with AM/PM and city-switching  
+  - Achieved stable real-time operation synchronized with actual clock flow  
+  - Improved understanding of **time-domain digital systems** and FPGA-based user interfaces  
