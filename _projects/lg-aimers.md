@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: LG-Aimers 
+description: an other project with a background image and giscus comments
+img: assets/img/9.jpg
+importance: 2
+category: Data Analytics
+giscus_comments: true
 ---
 
 Every project has a beautiful feature showcase page.

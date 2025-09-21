@@ -1,0 +1,59 @@
+<style>
+.course-entry {
+  padding: 1rem 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.course-entry:last-child {
+  border-bottom: none;
+}
+
+.course-title {
+  font-weight: 600;
+  color: #b300b3;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.course-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.course-summary {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-highlights {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+</style>
+
+{% for course in data[1] %}
+  <div class="course-entry">
+    <div class="course-title">
+      {% if course.url %}
+        <a href="{{ course.url }}" target="_blank" rel="noopener noreferrer">{{ course.name }}</a>
+      {% else %}
+        {{ course.name }}
+      {% endif %}
+    </div>
+    <div class="course-date">
+      {{ course.startDate }} ~ {{ course.endDate }}
+    </div>
+    {% if course.summary %}
+      <div class="course-summary">{{ course.summary }}</div>
+    {% endif %}
+    {% if course.highlights %}
+      <ul class="course-highlights">
+        {% for item in course.highlights %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endfor %}

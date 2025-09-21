@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of my awesome projects.
-nav: false
-nav_order: 3
-display_categories: [My Awesome Home Lab, Auto Driving, BackEnd, HardWare, Data Analytics]
+title: photos
+permalink: /photos/
+description: This page shows the photos I have captured over the years. 
+nav: true
+nav_order: 7
+display_categories: [2025, 2024]
 horizontal: false
 ---
 
@@ -34,7 +34,7 @@ html[data-theme="dark"] .projects h2.category {
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
+  {% assign categorized_projects = site.photos | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
@@ -58,7 +58,7 @@ html[data-theme="dark"] .projects h2.category {
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+{% assign sorted_projects = site.photos | sort: "importance" %}
 
   <!-- Generate cards for each project -->
 

@@ -1,35 +1,66 @@
-<div class="list-groups">
+<style>
+.cert-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px dashed #ccc;
+  padding: 0.75rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cert-line .left {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cert-line i {
+  color: #b300b3;
+  margin-right: 0.6rem;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.cert-line .text {
+  line-height: 1.3;
+}
+
+.cert-line .title {
+  font-weight: 600;
+  color: #b300b3;
+}
+
+.cert-line .issuer {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.cert-line .date {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: #666;
+  flex-shrink: 0;
+}
+</style>
+
+<div class="cert-section">
   {% assign certificates = data[1] | sort: 'date' | reverse %}
-  {% for content in certificates %}
-    <div class="list-group col-md-6">
-      <table class="table-cv list-group-table">
-        <tbody>
-          <tr>
-            {% if content.icon %}
-              <td class="list-group-category-icon">
-                <i class="{{ content.icon }}"></i>
-              </td>
-            {% else %}
-              <td class="list-group-category-icon"></td>
-            {% endif %}
-            <!-- Calculate colspan number for category title -->
-            {% assign i = 1 %}
-            {% for item in content.items %}
-              {% assign i = i | plus: 1 %}
-            {% endfor %}
-            <td colspan="{{ i }}" class="list-group-category">
-              <a href="{{ content.url | default: # }}">{{ content.name }}</a>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="list-group-name">
-              <b>{{ content.issuer }}</b>
-            </td>
-            <td class="list-group-name">{{ content.date }}</td>
-          </tr>
-        </tbody>
-      </table>
+  {% for cert in certificates %}
+    <div class="cert-line">
+      <div class="left">
+        {% if cert.icon %}
+          <i class="{{ cert.icon }}"></i>
+        {% endif %}
+        <div class="text">
+          <div class="title">
+            <a href="{{ cert.url | default: '#' }}">{{ cert.name }}</a>
+          </div>
+          <div class="issuer">{{ cert.issuer }}</div>
+        </div>
+      </div>
+      <div class="date">{{ cert.date }}</div>
     </div>
   {% endfor %}
 </div>

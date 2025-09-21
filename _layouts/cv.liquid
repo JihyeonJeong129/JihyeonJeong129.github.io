@@ -115,6 +115,10 @@ layout: default
                   {% include resume/certificates.liquid %}
                 {% when 'references' %}
                   {% include resume/references.liquid %}
+                {% when 'courses' %}
+                  {% include resume/courses.liquid %}
+                {% when 'extracurricular' %}
+                  {% include resume/extracurricular.liquid %}
                 {% else %}
 
               {% endcase %}

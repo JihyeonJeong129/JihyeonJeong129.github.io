@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 3 with very long name
+title: Node - Daedalus
 description: a project that redirects to another website
-img: assets/img/7.jpg
+img: assets/img/samsung_desktop.jpg
 redirect: https://unsplash.com
 importance: 3
-category: work
+category: "My Awesome Home Lab"
 ---
 
 Every project has a beautiful feature showcase page.
