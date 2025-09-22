@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of my awesome projects.
 nav: true
 nav_order: 3
-display_categories: [My Awesome Home Lab, Auto Driving, BackEnd, HardWare, Data Analytics, PLC]
+display_categories: [My Awesome Home Lab, Auto Driving, BackEnd, FPGA, Data Analytics, PLC]
 horizontal: false
 ---
 

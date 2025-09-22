@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ROS Project with MORAI sim
-description: another without an image
+description: ROS-based autonomous driving project conducted with the MORAI simulation platform
 img: /assets/img/morai.png
 importance: 3
 category: Auto Driving
@@ -79,10 +79,12 @@ It focused on implementing **global path tracking, traffic light recognition, pe
 ---
 
 ### Demo Video
-<div class="ratio ratio-16x9 mt-3">
+<div class="mt-3">
   <iframe
-    src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
-    title="MORAI Autonomous Driving Demo"
+    width="1000"
+    height="562"
+    src="https://www.youtube.com/embed/zIE8PgRny8g"
+    title="PLC Demo"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>

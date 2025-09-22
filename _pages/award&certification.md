@@ -3,7 +3,7 @@ layout: page
 title: Awards and Certifications
 permalink: /awardcertification/
 description: This page shows the Awards and Certifications.
-nav: false
+nav: true
 nav_order: 10
 display_categories: [awards, certifications, etc]
 horizontal: false

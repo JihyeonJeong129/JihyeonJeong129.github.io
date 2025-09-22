@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Node - Athena
-description: a project with a background image and giscus comments
+description: Personal home server (Node - Athena) built on a Lenovo System X3650 server 
 img: assets/img/lenovo_x3650_2gpu.jpg
 importance: 2
 category: "My Awesome Home Lab"
@@ -33,7 +33,7 @@ It serves as the main compute backbone for high-performance machine learning, ac
   - **Software Engineering Projects**: student and team projects hosted and tested on this server  
   - **Past Projects**:  
     - **TACTIX**: RAG-based Aircraft Maintenance Support System  
-    - **Moida**: Dormitory Group-Purchase Platform  
+    - **Moisam**: Dormitory Group-Purchase Platform  
   - **VPN (OpenVPN & WireGuard)**: secure remote access for external connectivity to hosted services  
 
 - **Outcomes**:  

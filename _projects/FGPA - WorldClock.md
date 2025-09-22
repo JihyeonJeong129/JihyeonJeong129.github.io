@@ -4,7 +4,7 @@ title: FPGA WorldClock
 description: FPGA-based Digital World Clock with 7-Segment & Keypad
 img: assets/img/world_clock_fpga.jpg
 importance: 3
-category: HardWare
+category: FPGA
 ---
 
 <!-- ===== 프로젝트 개요 ===== -->

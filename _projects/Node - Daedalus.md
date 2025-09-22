@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Node - Daedalus
-description: with background image
+description: Node - Daedalus, dedicated to FPGA system testing
 img: assets/img/samsung_desktop.jpg
 importance: 5
 category: "My Awesome Home Lab"

@@ -88,15 +88,18 @@ Participants practiced **I/O mapping**, **timers/counters**, **edge detection**,
 {%- endcomment -%}
 
 <!-- 방법 B: iframe 임베드 (테마가 youtube.liquid 없을 때 사용) -->
-<div class="ratio ratio-16x9 mt-3">
+<div class="mt-3">
   <iframe
-    src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
+    width="1000"
+    height="562"
+    src="https://www.youtube.com/embed/ruMg5BIu5Ws"
     title="PLC Demo"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
 </div>
+
 
 ---
 

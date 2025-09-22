@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Node - Hades
-description: with background image
+description: Personal home server (Node - Hades) built on a HPE MicroServer Gen10 Plus
 img: assets/img/hpe_microserver_gen10plus.jpg
 importance: 1
 category: "My Awesome Home Lab"
@@ -9,7 +9,7 @@ category: "My Awesome Home Lab"
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Node - Hades: Home Server Overview
-This project highlights my **personal home server (Node - Hades)** built on an HPE MicroServer Gen10 Plus, designed for
+This project highlights my **personal home server (Node - Hades)** built on a HPE MicroServer Gen10 Plus, designed for
 virtualization, storage, communication, and remote access.  
 It serves as the backbone of my development environment, media archive, and collaboration platform.
 

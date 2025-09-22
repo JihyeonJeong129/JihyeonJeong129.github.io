@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Node - RaspberryPi
-description: with background image
-img: assets/img/hpe_microserver_gen10plus.jpg
+description: Node - RaspberryPi, a past server project built with Raspberry Pi boards.
+img: assets/img/raspberrypi.jpg
 importance: 7
 category: "My Awesome Home Lab"
 ---
