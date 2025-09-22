@@ -483,27 +483,27 @@ ninja.data = [{
               window.location.href = "/projects/FGPA%20-%20WorldClock/";
             },},{id: "projects-node-athena",
           title: 'Node - Athena',
-          description: "a project with a background image and giscus comments",
+          description: "Personal home server (Node - Athena) built on a Lenovo System X3650 server",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20Athena/";
             },},{id: "projects-node-daedalus",
           title: 'Node - Daedalus',
-          description: "with background image",
+          description: "Node - Daedalus, dedicated to FPGA system testing",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20Daedalus/";
             },},{id: "projects-node-hades",
           title: 'Node - Hades',
-          description: "with background image",
+          description: "Personal home server (Node - Hades) built on a HPE MicroServer Gen10 Plus",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20Hades/";
             },},{id: "projects-node-raspberrypi",
           title: 'Node - RaspberryPi',
-          description: "with background image",
+          description: "Node - RaspberryPi, a past server project built with Raspberry Pi boards.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20RaspberryPi(past)/";
             },},{id: "projects-ros-project-with-morai-sim",
           title: 'ROS Project with MORAI sim',
-          description: "another without an image",
+          description: "ROS-based autonomous driving project conducted with the MORAI simulation platform",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ROS%20Project%20-%201/";
             },},{id: "projects-sejong-city-data-driven-innovation-challenge",
