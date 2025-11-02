@@ -43,6 +43,49 @@
   ],
   "courses": [
     {
+      "name": "Security Engineering on AWS - 2",
+      "summary": "An advanced two-day workshop on AWS security architecture, IAM policy control, and directory-based access governance.",
+      "highlights": [
+        "Credential-based and resource-based IAM policy evaluation",
+        "Using permission boundaries for least-privilege access control",
+        "Integrating AWS Directory Service (Simple AD) for domain user access",
+        "Assigning IAM roles to directory-based user groups",
+        "Best practices for secure account and identity governance"
+      ],
+      "startDate": "2025-11-01",
+      "endDate": "2025-11-02",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/2025_aws_11_01_11_02/",
+      "organization": "Amazon Web Services (Korea)"
+    },
+    {
+      "name": "Security Engineering on AWS - 1",
+      "summary": "A practical workshop focusing on AWS security automation, WAF protection, and incident monitoring for secure cloud operations.",
+      "highlights": [
+        "Implementing AWS WAF for mitigating malicious web traffic",
+        "Setting up CloudWatch Logs agent on EC2 for log monitoring",
+        "Configuring EventBridge and Lambda for automatic EC2 quarantine",
+        "Hands-on security automation for real-world incident response"
+      ],
+      "startDate": "2025-09-28",
+      "endDate": "2025-09-28",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/2025_aws_09_28/",
+      "organization": "Amazon Web Services (Korea)"
+    },
+    {
+      "name": "AWS Technical Essentials",
+      "summary": "A foundational, hands-on session introducing AWS core infrastructure services, IAM management, and EC2/VPC configuration basics.",
+      "highlights": [
+        "Introduction to AWS Identity and Access Management (IAM)",
+        "Creating user groups, managing passwords, and testing IAM policies",
+        "Launching and configuring EC2 instances within a custom VPC",
+        "Understanding AWS networking and web application deployment"
+      ],
+      "startDate": "2025-09-27",
+      "endDate": "2025-09-27",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/2025_aws_09_27/",
+      "organization": "Amazon Web Services (Korea)"
+    },
+    {
       "name": "Practical PLC Programming with Omron",
       "summary": "A hands-on workshop focused on Omron PLC fundamentals, ladder logic design, and real-world troubleshooting using CX-Programmer / Sysmac Studio.",
       "highlights": [
