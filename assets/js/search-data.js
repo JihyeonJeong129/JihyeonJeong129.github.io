@@ -425,6 +425,21 @@ ninja.data = [{
           description: "",
           section: "Awardcertification",handler: () => {
               window.location.href = "/awardcertification/2024_sejong_bigdata/";
+            },},{id: "awardcertification-aws-technical-essentials-25-09-27",
+          title: 'AWS Technical Essentials (25.09.27)',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2025_aws_09_27/";
+            },},{id: "awardcertification-security-engineering-on-aws-1-25-09-28",
+          title: 'Security Engineering on AWS - 1 (25.09.28)',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2025_aws_09_28/";
+            },},{id: "awardcertification-security-engineering-on-aws-2-25-11-01-25-11-02",
+          title: 'Security Engineering on AWS - 2 (25.11.01 ~ 25.11.02)',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2025_aws_11_01_11_02/";
             },},{id: "awardcertification-future-mobility-lecture-series-e2e-autonomous-driving-technology",
           title: 'Future Mobility Lecture Series:E2E Autonomous Driving Technology',
           description: "",
