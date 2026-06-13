@@ -37,99 +37,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/photos/";
           },
-        },{id: "post-장애기록-athena-노드-gpu-인식-실패-tesla-p100이-사라진-30분",
-        
-          title: "[장애기록] Athena 노드 GPU 인식 실패 — Tesla P100이 사라진 30분",
-        
-        description: "JupyterHub 사용자가 &quot;GPU가 안 보인다&quot;고 신고한 사건. 원인 분석부터 임시 조치, 재발 방지까지의 전체 타임라인.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/ko/blog/2026/athena-gpu-postmortem/";
-          
-        },
-      },{id: "post-incident-athena-node-gpu-disappeared-30-minutes-without-a-tesla-p100",
-        
-          title: "[Incident] Athena Node GPU Disappeared — 30 Minutes Without a Tesla P100",
-        
-        description: "A user report that &quot;GPU is gone&quot; on JupyterHub. Full timeline from symptom to root-cause hypothesis to mitigation.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/athena-gpu-postmortem/";
-          
-        },
-      },{id: "post-esxi-vm-자동-백업-스크립트-작성기-ghettovcb에서-자체-스크립트로",
-        
-          title: "ESXi VM 자동 백업 스크립트 작성기 — ghettoVCB에서 자체 스크립트로",
-        
-        description: "Hades(VMware ESXi) 위에서 돌아가는 VM들을 NAS로 정기 백업하기 위해 거친 시행착오와 RPO/RTO 정의 기록.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/ko/blog/2026/esxi-vm-backup-script/";
-          
-        },
-      },{id: "post-writing-my-own-esxi-vm-backup-script-from-ghettovcb-to-custom-tooling",
-        
-          title: "Writing My Own ESXi VM Backup Script — From ghettoVCB to Custom Tooling...",
-        
-        description: "A retrospective on building a scheduled backup pipeline for VMs running on Hades (VMware ESXi) — including the RPO/RTO targets I had to define along the way.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/esxi-vm-backup-script/";
-          
-        },
-      },{id: "post-home-lab-모니터링-스택-구축-회고-prometheus-grafana-loki",
-        
-          title: "Home Lab 모니터링 스택 구축 회고 — Prometheus + Grafana + Loki",
-        
-        description: "3-노드(Athena / Hades / Daedalus) 홈랩에 모니터링 스택을 도입하면서 마주한 설계 결정과 시행착오 기록.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/ko/blog/2026/home-lab-monitoring-stack/";
-          
-        },
-      },{id: "post-building-a-home-lab-monitoring-stack-prometheus-grafana-loki",
-        
-          title: "Building a Home Lab Monitoring Stack — Prometheus + Grafana + Loki",
-        
-        description: "A retrospective on introducing an observability stack to my 3-node home lab (Athena / Hades / Daedalus) — design decisions and lessons learned along the way.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/home-lab-monitoring-stack/";
-          
-        },
-      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
-          
-        },
-      },{id: "awardcertification-engineer-information-processing",
+        },{id: "awardcertification-engineer-information-processing",
           title: 'Engineer Information Processing',
           description: "",
           section: "Awardcertification",handler: () => {
-              window.location.href = "/awardcertification/%20IndustrialEngineerInformationProcessing/";
+              window.location.href = "/awardcertification/EngineerInformationProcessing/";
             },},{id: "awardcertification-kepco-kdn-innovation-idea-contest",
           title: 'KEPCO KDN Innovation Idea Contest',
           description: "",
@@ -172,7 +84,7 @@ ninja.data = [{
               window.location.href = "/awardcertification/2025_e2e_seminar/";
             },},{id: "awardcertification-regional-startup-solverthon-competition",
           title: 'Regional Startup Solverthon Competition',
-          description: "Proposed an AI agent designed to improve workforce efficiency for startups.",
+          description: "",
           section: "Awardcertification",handler: () => {
               window.location.href = "/awardcertification/2026_regional_startup_solverthon/";
             },},{id: "awardcertification-advanced-data-analytics-semi-professional-adsp",
@@ -219,7 +131,7 @@ ninja.data = [{
           title: 'FPGA WorldClock',
           description: "FPGA-based Digital World Clock with 7-Segment &amp; Keypad",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/FGPA%20-%20WorldClock/";
+              window.location.href = "/projects/fpga-worldclock/";
             },},{id: "projects-홈-서버-인프라-개요",
           title: '홈 서버 인프라 개요',
           description: "개인 분산 서버 클러스터(Athena, Hades, Daedalus) 전체 구조 개요",
@@ -275,8 +187,8 @@ ninja.data = [{
           description: "MORAI 시뮬레이터 기반 ROS 자율주행 프로젝트",
           section: "Projects",handler: () => {
               window.location.href = "/ko/projects/ros-morai/";
-            },},{id: "projects-ros-project-with-morai-sim",
-          title: 'ROS Project with MORAI sim',
+            },},{id: "projects-ros-project-with-morai-simulator",
+          title: 'ROS Project with MORAI Simulator',
           description: "ROS-based autonomous driving project conducted with the MORAI simulation platform",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ROS%20Project%20-%201/";
@@ -331,30 +243,4 @@ ninja.data = [{
         handler: () => {
           window.open("https://www.linkedin.com/in/jihyeon-jeong-a04223244", "_blank");
         },
-      },{
-      id: 'light-theme',
-      title: 'Change theme to light',
-      description: 'Change the theme of the site to Light',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("light");
-      },
-    },
-    {
-      id: 'dark-theme',
-      title: 'Change theme to dark',
-      description: 'Change the theme of the site to Dark',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
-      },
-    },];
+      },];
