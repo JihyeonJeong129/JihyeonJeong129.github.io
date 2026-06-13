@@ -2,8 +2,8 @@
 layout: page
 title: Regional Startup Solverthon Competition
 img: /assets/img/certification_awards/2026_solverton.png
-description: Proposed an AI agent designed to improve workforce efficiency for startups.
-location: "Special Award, 2026.01.09"
+description: 
+location: "Special Award, 2026.01.09, awarded by the Director of the Seoul National University University Alliance Regional Talent Development Project Group"
 photos:
   - /assets/img/certification_awards/2026_solverton.png
 importance: 1
