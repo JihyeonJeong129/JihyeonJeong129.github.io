@@ -7,7 +7,7 @@ importance: 4
 category: "Hardware & Embedded"
 lang: en
 ref: omron-plc-2025
-giscus_comments: true
+giscus_comments: false
 ---
 
 <p>

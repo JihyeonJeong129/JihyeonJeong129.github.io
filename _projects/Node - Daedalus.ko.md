@@ -49,3 +49,9 @@ FPGA 개발은 보드 드라이버, 벤더 툴, 로컬 설정의 영향을 많�
 
 - 홈랩 안에 하드웨어 실험 전용 공간을 분리했습니다.
 - Verilog, Vivado, 보드 테스트 경험을 축적할 수 있는 기반을 만들었습니다.
+
+---
+
+<p class="text-muted small mt-4">
+  더 자세한 내용은 <a href="{{ '/projects/Node%20-%20Daedalus/' | relative_url }}">영어 원본 보기</a>에서 확인할 수 있습니다.
+</p>

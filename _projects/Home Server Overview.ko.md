@@ -53,3 +53,9 @@ Athena는 연산, Hades는 저장소와 서비스, Daedalus는 하드웨어 테�
 - 여러 프로젝트를 배포하고 실험할 수 있는 개인 인프라 기반을 만들었습니다.
 - 가상화, VPN, 저장소, 서비스 운영을 직접 다루며 DevOps 감각을 키웠습니다.
 - 단순 장비 구축이 아니라 운영 습관과 구조 설계의 중요성을 배웠습니다.
+
+---
+
+<p class="text-muted small mt-4">
+  더 자세한 내용은 <a href="{{ '/projects/Home%20Server%20Overview/' | relative_url }}">영어 원본 보기</a>에서 확인할 수 있습니다.
+</p>

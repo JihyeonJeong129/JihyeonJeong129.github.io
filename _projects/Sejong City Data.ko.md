@@ -8,7 +8,7 @@ category: Data Analytics
 lang: ko
 ref: sejong-data
 permalink: /ko/projects/sejong-data/
-giscus_comments: true
+giscus_comments: false
 ---
 
 <p>
@@ -53,3 +53,9 @@ SQL은 반복적인 집계와 조건 비교에 적합했고, Python은 탐색 �
 - 셔틀 및 순환버스 운영, 압축 동선 설계, 지역 상권 연계 방향을 제안했습니다.
 - 데이터 분석 결과를 정책 제안 형태로 연결하는 경험을 얻었습니다.
 - 세종 빅데이터 분석 아이디어 공모전에서 우수상을 수상했습니다.
+
+---
+
+<p class="text-muted small mt-4">
+  더 자세한 내용은 <a href="{{ '/projects/Sejong%20City%20Data/' | relative_url }}">영어 원본 보기</a>에서 확인할 수 있습니다.
+</p>

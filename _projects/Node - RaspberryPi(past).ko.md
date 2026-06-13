@@ -47,3 +47,9 @@ Raspberry Pi는 시작하기 쉽지만 I/O 성능과 장기 안정성에는 한�
 
 - 저전력 NAS 실험을 통해 Linux 저장소 관리의 기초를 익혔습니다.
 - 이후 Hades 기반 홈랩 저장소 구조로 확장하는 출발점이 되었습니다.
+
+---
+
+<p class="text-muted small mt-4">
+  더 자세한 내용은 <a href="{{ '/projects/Node%20-%20RaspberryPi%28past%29/' | relative_url }}">영어 원본 보기</a>에서 확인할 수 있습니다.
+</p>

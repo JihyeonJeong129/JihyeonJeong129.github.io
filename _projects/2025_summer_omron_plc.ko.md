@@ -8,7 +8,7 @@ category: "Hardware & Embedded"
 lang: ko
 ref: omron-plc-2025
 permalink: /ko/projects/omron-plc-2025/
-giscus_comments: true
+giscus_comments: false
 ---
 
 <p>
@@ -64,3 +64,9 @@ OMRON PLC를 활용해 이차전지 설비 제어의 기본 개념과 실습을 
     allowfullscreen>
   </iframe>
 </div>
+
+---
+
+<p class="text-muted small mt-4">
+  더 자세한 내용은 <a href="{{ '/projects/2025_summer_omron_plc/' | relative_url }}">영어 원본 보기</a>에서 확인할 수 있습니다.
+</p>

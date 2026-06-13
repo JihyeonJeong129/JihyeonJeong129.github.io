@@ -63,3 +63,9 @@ ROS topic 구조를 활용해 위치, 객체, 제어 명령을 분리했습니�
     allowfullscreen>
   </iframe>
 </div>
+
+---
+
+<p class="text-muted small mt-4">
+  더 자세한 내용은 <a href="{{ '/projects/ROS%20Project%20-%201/' | relative_url }}">영어 원본 보기</a>에서 확인할 수 있습니다.
+</p>

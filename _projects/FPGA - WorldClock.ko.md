@@ -47,3 +47,9 @@ FSM 구조를 사용해 설정 모드와 동작 모드를 분리했습니다. �
 
 - FPGA 보드에서 다중 도시 디지털 시계를 구현했습니다.
 - Verilog 기반 상태 설계와 시간 도메인 처리 경험을 얻었습니다.
+
+---
+
+<p class="text-muted small mt-4">
+  더 자세한 내용은 <a href="{{ '/projects/fpga-worldclock/' | relative_url }}">영어 원본 보기</a>에서 확인할 수 있습니다.
+</p>

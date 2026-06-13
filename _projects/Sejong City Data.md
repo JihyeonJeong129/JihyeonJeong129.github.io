@@ -7,7 +7,7 @@ importance: 2
 category: Data Analytics
 lang: en
 ref: sejong-data
-giscus_comments: true
+giscus_comments: false
 ---
 
 <p>
