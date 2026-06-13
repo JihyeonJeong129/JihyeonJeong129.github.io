@@ -1,19 +1,14 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
+title_ko: 블로그
 nav: false
-nav_order: 1
+nav_order: 4
+lang: en
+ref: blog
 pagination:
-  enabled: true
-  collection: posts
-  permalink: /page/:num/
-  per_page: 5
-  sort_field: date
-  sort_reverse: true
-  trail:
-    before: 1 # The number of links before the current page
-    after: 3 # The number of links after the current page
+  enabled: false
 ---
 
 <div class="post">
@@ -103,11 +98,8 @@ pagination:
 
   <ul class="post-list">
 
-    {% if page.pagination.enabled %}
-      {% assign postlist = paginator.posts %}
-    {% else %}
-      {% assign postlist = site.posts %}
-    {% endif %}
+    {% comment %} Show only English posts (lang != 'ko'). Bypass paginator since paginate-v2 doesn't filter by custom 'lang' field. {% endcomment %}
+    {% assign postlist = site.posts | where_exp: "p", "p.lang != 'ko'" %}
 
     {% for post in postlist %}
 

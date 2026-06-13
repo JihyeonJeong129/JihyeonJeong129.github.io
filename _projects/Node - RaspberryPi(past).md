@@ -4,8 +4,18 @@ title: Node - RaspberryPi
 description: Node - RaspberryPi, a past server project built with Raspberry Pi boards.
 img: assets/img/raspberrypi.jpg
 importance: 7
-category: "My Awesome Home Lab"
+category: "Infrastructure & DevOps"
+lang: en
+ref: node-raspberrypi
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="Raspberry Pi" src="https://img.shields.io/badge/Raspberry%20Pi%203B%2B%20%2F%204-A22846?style=flat&logo=raspberrypi&logoColor=white">
+<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
+<img alt="Samba" src="https://img.shields.io/badge/Samba%20%2F%20NFS-CB2027?style=flat">
+<img alt="NAS" src="https://img.shields.io/badge/NAS%204TB-0085CA?style=flat">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Node - RaspberryPi: Legacy NAS Server Overview

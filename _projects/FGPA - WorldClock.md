@@ -3,9 +3,22 @@ layout: page
 title: FPGA WorldClock
 description: FPGA-based Digital World Clock with 7-Segment & Keypad
 img: assets/img/world_clock_fpga.jpg
-importance: 3
-category: FPGA
+importance: 2
+category: "Hardware & Embedded"
+lang: en
+ref: fpga-worldclock
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="Verilog" src="https://img.shields.io/badge/Verilog%20HDL-B22222?style=flat">
+<img alt="FPGA" src="https://img.shields.io/badge/FPGA-FFCC00?style=flat">
+<img alt="Xilinx" src="https://img.shields.io/badge/Xilinx-EE0000?style=flat">
+<img alt="Vivado" src="https://img.shields.io/badge/Vivado-EE0000?style=flat">
+<img alt="7-Segment" src="https://img.shields.io/badge/7--Segment%20Display-455A64?style=flat">
+<img alt="Keypad I/O" src="https://img.shields.io/badge/Keypad%20I%2FO-607D8B?style=flat">
+<img alt="FSM" src="https://img.shields.io/badge/State%20Machine-3F51B5?style=flat">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## FPGA WorldClock: Digital Multi-City Time Display System

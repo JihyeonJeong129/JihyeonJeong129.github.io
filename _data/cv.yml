@@ -2,96 +2,111 @@
   type: map
   contents:
     - name: Full Name
-      value: Jihyeon Jeong
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Jihyeon Jeong (정지현)
     - name: Languages
-      value: English, German
+      value: Korean (native), English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.S. in Software & Electrical Engineering (Double Major)
+      institution: Ajou University, Suwon, South Korea
+      year: 2021 - present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - Coursework includes Operating Systems, Computer Networks, Database Systems, Distributed Systems, Algorithms, Computer Architecture, and Machine Learning.
+        - See the <a href="/Coursework/">Coursework</a> page for details.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Active-Duty Airman, Air Traffic Control
+      institution: 1st Master Control and Reporting Center (1MCRC), ROKAF, Osan Air Base
+      year: 2022 - 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - Operated mission-critical air-defense communication systems within an air-gapped military network.
+        - Built operational habits around uptime, security discipline, and incident-driven communication.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Selected Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: TACTIX — RAG-based Aircraft Maintenance Support System
+      year: 2025
+      description:
+        - Designed for air-gapped (closed) military networks.
+        - Built an end-to-end retrieval-augmented generation pipeline for technical-manual Q&A.
+    - title: Moida — Dormitory Group-Purchasing Platform
+      year: 2025
+      description:
+        - Backend with OAuth authentication, real-time chat, and an escrow-style payment flow.
+        - Designed schema and operated the system on a self-hosted environment.
+    - title: Home Lab — 3-node On-Prem Cluster
+      year: 2024 - present
+      description:
+        - Xen + VMware ESXi hosting backend services, JupyterHub, container workloads, NAS, and VPN gateways.
+        - Personal sandbox for distributed infrastructure, service reliability, and automation.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2026
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Regional Startup Solverthon Competition — Special Award
+    - year: 2024
       items:
-        - Max Planck Medal
+        - Sejong Big Data Analysis Idea Contest — Excellence Award (Mayor of Sejong)
+    - year: 2021
+      items:
+        - National Park Visitor Service Idea Contest — Grand Prize (Minister of Environment)
+        - KEPCO KDN Innovation Idea Contest — Excellence Award (President of KEPCO KDN)
+    - year: 2017
+      items:
+        - Samsung Junior Software Creative Competition — Special Award (Samsung Electronics)
+    - year: 2016
+      items:
+        - The 20th International Robot Olympiad — Award (high school)
 
-- title: Academic Interests
+- title: Certifications
+  type: time_table
+  contents:
+    - year: 2026
+      items:
+        - Engineer Information Processing — Human Resources Development Service of Korea
+    - year: 2023
+      items:
+        - SQL Developer (SQLD) — Korea Data Agency
+        - Advanced Data Analytics Semi-Professional (ADsP) — Korea Data Agency
+
+- title: Training & Continuing Education
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - Security Engineering on AWS — multi-day instructor-led course (AWS)
+        - AWS Technical Essentials — instructor-led course (AWS)
+        - Future Mobility Lecture Series — E2E Autonomous Driving Technology
+    - year: 2021
+      items:
+        - Practical Coding with Riot Games — industry seminar
+
+- title: Technical Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Infrastructure & Cloud
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - AWS (EC2, VPC, IAM, S3, security fundamentals)
+        - Linux administration, virtualization (Xen, VMware ESXi), containers (Docker)
+        - Networking, VPN, on-prem clustering, NAS
+    - title: Backend & Data
       items:
-        - Description 1.
-        - Description 2.
+        - Python, Java, C
+        - REST APIs, OAuth, real-time messaging
+        - MySQL, schema design, SQL
+    - title: DevOps & Tooling
+      items:
+        - Git, CI/CD pipelines, shell scripting
+        - Observability and reliability practices
 
-- title: Other Interests
+- title: Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Focus areas:</u> Backend, DevOps, Cloud Infrastructure, distributed systems, service reliability.

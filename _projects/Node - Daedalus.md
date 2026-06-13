@@ -4,8 +4,19 @@ title: Node - Daedalus
 description: Node - Daedalus, dedicated to FPGA system testing
 img: assets/img/samsung_desktop.jpg
 importance: 5
-category: "My Awesome Home Lab"
+category: "Infrastructure & DevOps"
+lang: en
+ref: node-daedalus
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
+<img alt="Intel Core i5" src="https://img.shields.io/badge/Intel%20Core%20i5--4670-0071C5?style=flat&logo=intel&logoColor=white">
+<img alt="Xilinx ZYNQ-7000" src="https://img.shields.io/badge/Xilinx%20ZYNQ--7000-FFCC00?style=flat">
+<img alt="Verilog" src="https://img.shields.io/badge/Verilog%20HDL-B22222?style=flat">
+<img alt="Vivado" src="https://img.shields.io/badge/Xilinx%20Vivado-EE0000?style=flat">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Node - Daedalus: FPGA Test Server Overview

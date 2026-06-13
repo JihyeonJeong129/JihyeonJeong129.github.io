@@ -401,23 +401,23 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2.8rem;
 
     a {
       img {
-        width: 3.2rem;
-        height: 3.2rem;
-        margin-bottom: 1rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-bottom: 0.6rem;
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
-        margin-bottom: 0.5rem;
+        width: 2.6rem;
+        height: 2.8rem;
+        margin-bottom: 0.4rem;
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 2.6rem;
+          height: 2.6rem;
         }
       }
 
@@ -1423,3 +1423,78 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+/* Navbar separator between main pages and utility icons (search, lang, theme) */
+.navbar .nav-divider {
+  width: 1px;
+  align-self: center;
+  height: 1.4rem;
+  margin: 0 0.5rem;
+  background-color: var(--global-divider-color);
+}
+@media (max-width: 575.98px) {
+  /* On collapsed mobile menu, hide the inline divider */
+  .navbar .nav-divider {
+    display: none;
+  }
+}
+
+/* Language switcher subtle emphasis */
+.navbar .lang-switch {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* About-page tag chips */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0 1.5rem;
+}
+.tags .tag {
+  display: inline-block;
+  padding: 0.05rem 0.4rem;
+  font-family: var(--bs-font-monospace, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 0.85em;
+  font-weight: 400;
+  border-radius: 4px;
+  background-color: var(--global-code-bg-color);
+  color: var(--global-text-color);
+}
+
+/* Project cards: unify image height + tighter title */
+.projects {
+  .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 1rem;
+    background-color: var(--global-card-bg-color);
+  }
+  .card .card-title {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+}
+
+/* Photos page: square preview images, keep 3-column grid */
+.projects.photos-page {
+  .card-img-top {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    padding: 0;
+  }
+}
+
+/* Category headings on projects / photos / awards index pages */
+.projects h2.category {
+  font-weight: 300 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  text-align: left !important;
+}
+html[data-theme="light"] .projects h2.category { color: #111 !important; }
+html[data-theme="dark"] .projects h2.category  { color: #eeeeee !important; }

@@ -42,15 +42,36 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+          {% assign current_lang = page.lang | default: 'en' %}
+
+          {% comment %} About: pick Korean version when on a Korean page {% endcomment %}
+          {% assign about_url = '/' %}
+          {% assign about_title = '' %}
+          {% assign about_title_ko = '' %}
+          {% for p in site.pages %}
+            {% if p.permalink == '/' %}
+              {% assign about_title = p.title %}
+              {% assign about_title_ko = p.title_ko %}
+            {% endif %}
           {% endfor %}
+          {% assign about_url_en = '/' %}
+          {% assign about_url_ko = '/' %}
+          {% assign ko_about = site.pages | where: "ref", "about" | where: "lang", "ko" | first %}
+          {% if ko_about %}{% assign about_url_ko = ko_about.url %}{% endif %}
+          {% if current_lang == 'ko' %}
+            {% if ko_about %}
+              {% assign about_url = ko_about.url %}
+              {% assign about_title = ko_about.title %}
+            {% elsif about_title_ko %}
+              {% assign about_title = about_title_ko %}
+            {% endif %}
+          {% endif %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li class="nav-item {% if page.url == about_url %}active{% endif %}">
+            <a class="nav-link" href="{{ about_url | relative_url }}" data-href-en="{{ about_url_en | relative_url }}" data-href-ko="{{ about_url_ko | relative_url }}">
               {{- about_title }}
-              {% if page.permalink == '/' %}
+              {% if page.url == about_url %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -98,18 +119,37 @@
                   </div>
                 </li>
               {% else %}
-                {% assign parent_link = p.permalink | remove: 'index.html' %}
+                {% comment %} If on a Korean page, look up the Korean counterpart by ref {% endcomment %}
+                {% assign nav_title = p.title %}
+                {% assign nav_url = p.url %}
+                {% if p.permalink contains '://' %}
+                  {% assign nav_url = p.permalink %}
+                {% elsif p.permalink contains '/blog/' %}
+                  {% assign nav_url = '/blog/' %}
+                {% endif %}
+                {% assign nav_url_en = nav_url %}
+                {% assign nav_url_ko = nav_url %}
+                {% if p.ref %}
+                  {% assign ko_alt = site.pages | where: "ref", p.ref | where: "lang", "ko" | first %}
+                  {% if ko_alt %}{% assign nav_url_ko = ko_alt.url %}{% endif %}
+                {% endif %}
+                {% if current_lang == 'ko' %}
+                  {% if p.ref %}
+                    {% if ko_alt %}
+                      {% assign nav_title = ko_alt.title %}
+                      {% assign nav_url = ko_alt.url %}
+                    {% elsif p.title_ko %}
+                      {% assign nav_title = p.title_ko %}
+                    {% endif %}
+                  {% elsif p.title_ko %}
+                    {% assign nav_title = p.title_ko %}
+                  {% endif %}
+                {% endif %}
+                {% assign parent_link = nav_url | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {%- if p.permalink contains '://' -%}
-                    {%- assign url = p.permalink -%}
-                  {%- elsif p.permalink contains '/blog/' -%}
-                    {%- assign url = '/blog/' -%}
-                  {%- else -%}
-                    {%- assign url = p.url -%}
-                  {%- endif %}
-                  <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
-                    {% if page.url contains p.url %}
+                  <a class="nav-link" href="{{ nav_url | relative_url }}" data-href-en="{{ nav_url_en | relative_url }}" data-href-ko="{{ nav_url_ko | relative_url }}">
+                    {{- nav_title }}
+                    {% if page.url contains nav_url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
@@ -117,19 +157,48 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+
+          <!-- Divider between main nav and utility icons -->
+          <li class="nav-item nav-divider" aria-hidden="true"></li>
+
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+                <span class="nav-link"><i class="ti ti-search"></i></span>
               </button>
             </li>
           {% endif %}
+
+          <!-- Language Switcher -->
+          {% comment %} Only show when the current page has a translated counterpart {% endcomment %}
+          {% if page.ref %}
+            {% if current_lang == 'ko' %}
+              {% assign target_lang = 'en' %}
+              {% assign target_label = 'EN' %}
+              {% assign target_full = 'English' %}
+            {% else %}
+              {% assign target_lang = 'ko' %}
+              {% assign target_label = '한국어' %}
+              {% assign target_full = '한국어' %}
+            {% endif %}
+
+            {% assign all_items = site.posts | concat: site.projects | concat: site.pages %}
+            {% assign counterpart = all_items | where: "ref", page.ref | where: "lang", target_lang | first %}
+
+            {% if counterpart %}
+              <li class="nav-item">
+                <a class="nav-link lang-switch-link" href="{{ counterpart.url | relative_url }}" data-target-lang="{{ target_lang }}" title="Switch to {{ target_full }}" aria-label="Switch language">
+                  <span class="lang-switch">{{ target_label }}</span>
+                </a>
+              </li>
+            {% endif %}
+          {% endif %}
+
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
               <button id="light-toggle" title="Change theme">
-                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
                 <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
                 <i class="ti ti-sun-filled" id="light-toggle-light"></i>
               </button>

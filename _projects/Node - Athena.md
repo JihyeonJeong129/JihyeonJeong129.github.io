@@ -4,8 +4,23 @@ title: Node - Athena
 description: Personal home server (Node - Athena) built on a Lenovo System X3650 server 
 img: assets/img/lenovo_x3650_2gpu.jpg
 importance: 2
-category: "My Awesome Home Lab"
+category: "Infrastructure & DevOps"
+lang: en
+ref: node-athena
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="Lenovo X3650" src="https://img.shields.io/badge/Lenovo%20System%20X3650-E2231A?style=flat&logo=lenovo&logoColor=white">
+<img alt="Xeon" src="https://img.shields.io/badge/Intel%20Xeon%20E5--2630%20v4-0071C5?style=flat&logo=intel&logoColor=white">
+<img alt="Tesla P100" src="https://img.shields.io/badge/NVIDIA%20Tesla%20P100-76B900?style=flat&logo=nvidia&logoColor=white">
+<img alt="Xen" src="https://img.shields.io/badge/Xen%20Hypervisor-EE0000?style=flat">
+<img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
+<img alt="JupyterHub" src="https://img.shields.io/badge/JupyterHub-F37626?style=flat&logo=jupyter&logoColor=white">
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+<img alt="OpenVPN" src="https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white">
+<img alt="WireGuard" src="https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Node - Athena: AI & Data Science Server Overview

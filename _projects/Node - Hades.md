@@ -4,8 +4,22 @@ title: Node - Hades
 description: Personal home server (Node - Hades) built on a HPE MicroServer Gen10 Plus
 img: assets/img/hpe_microserver_gen10plus.jpg
 importance: 1
-category: "My Awesome Home Lab"
+category: "Infrastructure & DevOps"
+lang: en
+ref: node-hades
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="HPE MicroServer" src="https://img.shields.io/badge/HPE%20MicroServer%20Gen10%20Plus-01A982?style=flat&logo=hewlettpackardenterprise&logoColor=white">
+<img alt="Xeon" src="https://img.shields.io/badge/Intel%20Xeon%20E--2224G-0071C5?style=flat&logo=intel&logoColor=white">
+<img alt="VMware ESXi" src="https://img.shields.io/badge/VMware%20ESXi-607078?style=flat&logo=vmware&logoColor=white">
+<img alt="NAS" src="https://img.shields.io/badge/NAS%2010TB-0085CA?style=flat">
+<img alt="PhotoPrism" src="https://img.shields.io/badge/PhotoPrism-000000?style=flat">
+<img alt="Mattermost" src="https://img.shields.io/badge/Mattermost-0072C6?style=flat&logo=mattermost&logoColor=white">
+<img alt="OpenVPN" src="https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white">
+<img alt="WireGuard" src="https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Node - Hades: Home Server Overview

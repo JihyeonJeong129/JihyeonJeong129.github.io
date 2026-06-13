@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Security Engineering on AWS - 1 (25.09.28)
-img: /assets/img/certification_awards/AWS-09-28-certificate.png
-description: 
-location: 
+title: Regional Startup Solverthon Competition
+img: /assets/img/certification_awards/2026_solverton.png
+description: Proposed an AI agent designed to improve workforce efficiency for startups.
+location: "Special Award, 2026.01.09"
 photos:
-  - /assets/img/certification_awards/AWS-09-28-certificate.png
+  - /assets/img/certification_awards/2026_solverton.png
 importance: 1
-category: etc
+category: awards
 ---
 
 <style>
@@ -17,8 +17,8 @@ category: etc
 }
 
 .carousel-viewport {
-  height: 500px;                 /* ← 필요에 맞게 400~600px 등으로 조절 */
-  background: #111;              /* 레터박스 배경색 */
+  height: 500px;
+  background: #111;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);

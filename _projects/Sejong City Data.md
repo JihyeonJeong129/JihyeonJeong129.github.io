@@ -5,8 +5,22 @@ description: Public Transport Data Analysis for Festival Accessibility
 img: assets/img/sejong_logo.png
 importance: 2
 category: Data Analytics
+lang: en
+ref: sejong-data
 giscus_comments: true
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+<img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white">
+<img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white">
+<img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white">
+<img alt="PCA" src="https://img.shields.io/badge/PCA%20Analysis-9C27B0?style=flat">
+<img alt="SQL" src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white">
+<img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-11557C?style=flat">
+<img alt="JupyterHub" src="https://img.shields.io/badge/JupyterHub-F37626?style=flat&logo=jupyter&logoColor=white">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Sejong City Data-Driven Innovation Challenge: Festival Accessibility & Mobility Insights

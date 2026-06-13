@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Security Engineering on AWS - 1 (25.09.28)
-img: /assets/img/certification_awards/AWS-09-28-certificate.png
+title: 2026 Regional Startup Solverthon Competition
+img: assets/img/photos/2026_solverton_1.jpg
 description: 
-location: 
+location: 📍 COEX, Seoul, Republic of Korea.
 photos:
-  - /assets/img/certification_awards/AWS-09-28-certificate.png
+  - /assets/img/photos/2026_solverton_1.jpg
+  - /assets/img/photos/2026_solverton_2.jpg
 importance: 1
-category: etc
+category: 2026
 ---
 
 <style>

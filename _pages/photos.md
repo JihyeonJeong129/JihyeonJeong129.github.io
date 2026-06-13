@@ -1,33 +1,18 @@
 ---
 layout: page
-title: photos
+title: Photos
+title_ko: 사진
 permalink: /photos/
 description: This page shows the photos I have captured over the years. 
 nav: true
 nav_order: 7
-display_categories: [2025, 2024]
+lang: en
+ref: photos
+display_categories: [2026, 2025, 2024]
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<style>
-.projects h2.category {
-  font-weight: 300 !important;
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
-}
-
-html[data-theme="light"] .projects h2.category {
-  color: #111 !important;
-}
-
-html[data-theme="dark"] .projects h2.category {
-  color: #eeeeee !important;
-}
-</style>
-
-
-<div class="projects">
+<div class="projects photos-page">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}

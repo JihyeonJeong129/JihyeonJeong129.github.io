@@ -3,9 +3,23 @@ layout: page
 title: Moisam
 description: Dormitory group purchasing platform
 img: assets/img/moisam.png
-importance: 3
-category: BackEnd
+importance: 2
+category: Backend
+lang: en
+ref: moisam
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black">
+<img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white">
+<img alt="Express" src="https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white">
+<img alt="WebSocket" src="https://img.shields.io/badge/WebSocket-010101?style=flat&logo=socket.io&logoColor=white">
+<img alt="OAuth" src="https://img.shields.io/badge/Google%20OAuth%202.0-4285F4?style=flat&logo=google&logoColor=white">
+<img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white">
+<img alt="REST API" src="https://img.shields.io/badge/REST%20API-25A162?style=flat">
+<img alt="UUID" src="https://img.shields.io/badge/UUID-6C757D?style=flat">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Moida: Dormitory Group-Purchasing Platform Overview

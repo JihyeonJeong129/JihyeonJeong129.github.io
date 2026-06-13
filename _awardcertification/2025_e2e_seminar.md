@@ -6,7 +6,7 @@ description:
 location: 
 photos:
   - /assets/img/certification_awards/2025_e2e.jpg
-importance: 4
+importance: 5
 category: etc
 ---
 

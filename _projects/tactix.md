@@ -3,9 +3,25 @@ layout: page
 title: TACTIX
 description: RAG-based Aircraft Maintenance Support System
 img: assets/img/tactix.jpg
-importance: 3
-category: BackEnd
+importance: 1
+category: Backend
+lang: en
+ref: tactix
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+<img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
+<img alt="LangChain" src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white">
+<img alt="LLM" src="https://img.shields.io/badge/LLM-412991?style=flat&logo=openai&logoColor=white">
+<img alt="RAG" src="https://img.shields.io/badge/RAG-FF6F00?style=flat">
+<img alt="Vector DB" src="https://img.shields.io/badge/Vector%20DB-1F77B4?style=flat">
+<img alt="FAISS" src="https://img.shields.io/badge/FAISS-0467DF?style=flat&logo=meta&logoColor=white">
+<img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
+<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
+<img alt="Air-gapped" src="https://img.shields.io/badge/Air--gapped%20Network-455A64?style=flat">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Overview

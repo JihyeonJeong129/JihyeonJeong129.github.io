@@ -9,24 +9,6 @@ display_categories: [awards, certifications, etc]
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<style>
-.projects h2.category {
-  font-weight: 300 !important;
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
-}
-
-html[data-theme="light"] .projects h2.category {
-  color: #111 !important;
-}
-
-html[data-theme="dark"] .projects h2.category {
-  color: #eeeeee !important;
-}
-</style>
-
-
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

@@ -4,8 +4,21 @@ title: ROS Project with MORAI sim
 description: ROS-based autonomous driving project conducted with the MORAI simulation platform
 img: /assets/img/morai.png
 importance: 3
-category: Auto Driving
+category: "Hardware & Embedded"
+lang: en
+ref: ros-morai
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="ROS" src="https://img.shields.io/badge/ROS-22314E?style=flat&logo=ros&logoColor=white">
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
+<img alt="MORAI Sim" src="https://img.shields.io/badge/MORAI%20Simulator-00B0F0?style=flat">
+<img alt="GPS" src="https://img.shields.io/badge/GPS%20Localization-1E88E5?style=flat">
+<img alt="PID" src="https://img.shields.io/badge/PID%20Control-43A047?style=flat">
+<img alt="OpenCV" src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white">
+<img alt="Linux" src="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Overview

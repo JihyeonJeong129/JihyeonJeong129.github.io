@@ -3,10 +3,22 @@ layout: page
 title: 2025 Summer PLC Theory & Practice Program
 description: Secondary Battery Equipment Control PLC Theory & Practice Program with OMRON
 img: assets/img/2025_summer_omron.jpg
-importance: 2
-category: PLC
+importance: 4
+category: "Hardware & Embedded"
+lang: en
+ref: omron-plc-2025
 giscus_comments: true
 ---
+
+<!-- ===== Tech Stack ===== -->
+<p>
+<img alt="OMRON PLC" src="https://img.shields.io/badge/OMRON%20PLC%20(CJ%2FCP%2FNX)-0066B3?style=flat">
+<img alt="Sysmac Studio" src="https://img.shields.io/badge/Sysmac%20Studio-0066B3?style=flat">
+<img alt="CX-Programmer" src="https://img.shields.io/badge/CX--Programmer-005BAA?style=flat">
+<img alt="Ladder Logic" src="https://img.shields.io/badge/Ladder%20Logic-37474F?style=flat">
+<img alt="Industrial I/O" src="https://img.shields.io/badge/Industrial%20I%2FO-455A64?style=flat">
+<img alt="Safety Interlock" src="https://img.shields.io/badge/Safety%20Interlock-D32F2F?style=flat">
+</p>
 
 <!-- ===== 프로젝트 개요 ===== -->
 ## Program Overview

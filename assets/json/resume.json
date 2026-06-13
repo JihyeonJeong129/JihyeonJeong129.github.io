@@ -142,6 +142,12 @@
   ],
   "awards":[
     {
+      "title": "Special Award - Regional Startup Solverthon Competition",
+      "url": "https://jihyeonjeong129.github.io/awardcertification/2026_regional_startup_solverthon/",
+      "date": "2026-01-09",
+      "summary": "Proposed an AI agent designed to improve workforce efficiency for startups. Received the Special Award at the Regional Startup Solverthon Competition."
+    },
+    {
       "title": "Excellence Award - Sejong Big Data Analysis Idea Contest",
       "url": "https://jihyeonjeong129.github.io/awardcertification/2024_sejong_bigdata/",
       "date": "2024-11-06",
@@ -158,12 +164,24 @@
       "url": "https://jihyeonjeong129.github.io/awardcertification/2021_nationalPark/",
       "date": "2021-04-20",
       "summary": "Suggested an AI-based national park recommendation system tailored to the rise in family-oriented travel. Received the Grand Prize from the Minister of Environment."
+    },
+    {
+      "title": "Special Award - Samsung Junior Software Creative Competition",
+      "url": "",
+      "date": "2017",
+      "summary": "Received a Special Award from Samsung Electronics for developing an application that helps quickly identify a patient's underlying medical conditions and guardian contact information during emergency situations."
+    },
+    {
+      "title": "Award - World Robot Olympiad",
+      "url": "",
+      "date": "2016",
+      "summary": "Awarded at The 20th International Robot Olympiad during high school."
     }
   ],
   "certificates": [
     {
-      "name": "Industrial Engineer Information Processing",
-      "date": "2024-06-18",
+      "name": "Engineer Information Processing",
+      "date": "2026-06-13",
       "issuer": "Human Resources Development Service of Korea",
       "url": "https://jihyeonjeong129.github.io/awardcertification/%20IndustrialEngineerInformationProcessing/",
       "icon": "fa-solid fa-certificate"

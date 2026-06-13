@@ -6,7 +6,7 @@ description:
 location: 
 photos:
   - /assets/img/certification_awards/2021_riot_seminar.png
-importance: 4
+importance: 6
 category: etc
 ---
 

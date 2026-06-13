@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Industrial Engineer Information Processing
-img: /assets/img/certification_awards/Industrial Engineer Information Processing.jpg
+title: Engineer Information Processing
+img: "/assets/img/certification_awards/Engineer Information Processing.png"
 description: 
-location: Human Resources Development Service of Korea, Date of Certification:2024.06.18
+location: "Human Resources Development Service of Korea, Date of Certification: 2026.06.13"
 photos:
-  - /assets/img/certification_awards/Industrial Engineer Information Processing.jpg 
+  - "/assets/img/certification_awards/Engineer Information Processing.png"
 importance: 2
 category: certifications
 ---
