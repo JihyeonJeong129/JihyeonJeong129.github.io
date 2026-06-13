@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sejong City Data-Driven Innovation Challenge
-description: Public Transport Data Analysis for Festival Accessibility 
+description: Public Transport Data Analysis for Festival Accessibility
 img: assets/img/sejong_logo.png
 importance: 2
 category: Data Analytics
@@ -10,109 +10,94 @@ ref: sejong-data
 giscus_comments: true
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
 <img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white">
-<img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white">
-<img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white">
+<img alt="SQL" src="https://img.shields.io/badge/SQL-4479A1?style=flat">
 <img alt="PCA" src="https://img.shields.io/badge/PCA%20Analysis-9C27B0?style=flat">
-<img alt="SQL" src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white">
-<img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-11557C?style=flat">
 <img alt="JupyterHub" src="https://img.shields.io/badge/JupyterHub-F37626?style=flat&logo=jupyter&logoColor=white">
 </p>
 
-<!-- ===== 프로젝트 개요 ===== -->
-## Sejong City Data-Driven Innovation Challenge: Festival Accessibility & Mobility Insights
-This project applied **bus smart-card data analysis** to propose strategies for improving **festival accessibility, scalability, and visitor experience** in Sejong City.  
-By analyzing transportation patterns, transfer convenience, and demand correlations with festival events, the study sought **data-driven solutions for better public mobility and event planning**:contentReference[oaicite:0]{index=0}.
+## Overview
 
-- **Goals**:  
-  - Enhance **festival accessibility** for external visitors using bus route modeling  
-  - Identify demand drivers through **time-series and correlation analysis**  
-  - Propose improvements in **festival operations and transportation policies**  
+This project analyzed public-transport patterns in Sejong City to propose improvements for festival accessibility and visitor movement. The work was conducted for a data-driven innovation competition and received an Excellence Award from the Mayor of Sejong.
 
----
-
-### Route & Transfer Analysis
-<div class="row justify-content-sm-center">
-  <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/sejong-challenge/routes.jpg"
-       title="Festival Route Case Analysis"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Modeled external visitor flows under multiple cases (e.g., Terminal → City Hall, Osong Station → City Hall, Hongdae → Sejong Arts High).  
-  Analyzed **minimum transfer & walking distances** to identify the most feasible access routes for visitors:contentReference[oaicite:1]{index=1}.
-</div>
+- **Project type:** team competition project
+- **Domain:** public transport data analysis / urban festival planning
+- **Core stack:** SQL, Python, Pandas, PCA-style analysis, JupyterHub
+- **My focus:** data organization, SQL-based analysis, and interpretation of mobility patterns
 
 ---
 
-### Time-Series & Correlation Analysis
-<div class="row justify-content-sm-center">
-  <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/sejong-challenge/timeseries.jpg"
-       title="Time-Series & Event Correlation"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Using SQL and PCA-based techniques, traffic trends during **Sejong Festival, Light Festival, and Fire Festival** were compared.  
-  - Verified traffic spikes for **opening ceremonies, rock festivals, and countdown events**  
-  - Found weaker-than-expected correlation for **airshows (Black Eagles)** and visits from certain universities:contentReference[oaicite:2]{index=2}.
-</div>
+## Problem & Motivation
+
+Large local festivals need more than good events. Visitors must be able to reach the venue, move between nearby attractions, and leave safely after peak-time programs.
+
+The problem we focused on was accessibility:
+
+- Some visitors arrive from outside Sejong through terminals or nearby stations.
+- Festival demand changes sharply by date, time, and event type.
+- Shuttle or circular-route planning requires evidence from movement data rather than intuition alone.
+
+The project used bus-card and route-related data to understand whether existing transport patterns supported festival growth.
 
 ---
 
-### Key Findings
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/sejong-challenge/shuttle.jpg"
-       title="Shuttle Bus Strategy"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/sejong-challenge/compact_routes.jpg"
-       title="Compact Visitor Routes"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/sejong-challenge/unique_contents.jpg"
-       title="Sejong-Only Content"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Insights included:  
-  - **Shuttle & circular bus operations** to solve last-mile and late-night access issues  
-  - **Compact route design** in Sejong Central Park to improve convenience & local economy spillover  
-  - **Strengthening Sejong-exclusive content** (e.g., gov’t complex tours, local attractions):contentReference[oaicite:3]{index=3}.
-</div>
+## My Role
+
+I contributed mainly to the data and analysis side.
+
+- Organized raw transport data into a structure that could be queried and compared.
+- Used SQL to inspect route, transfer, and time-based demand patterns.
+- Participated in correlation and principal-component style analysis to identify meaningful signals.
+- Helped translate data findings into practical proposals such as shuttle operation and compact visitor routes.
 
 ---
 
-### Demo Video
-<div class="ratio ratio-16x9 mt-3">
-  <iframe
-    src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
-    title="Sejong Data Innovation Demo"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
+## Technical Approach
+
+### Why SQL
+
+Transport data is naturally tabular and query-heavy. SQL made it easier to group records by date, route, stop, and event period, and to compare cases repeatedly without rebuilding the entire analysis pipeline.
+
+### Why Python and Pandas
+
+Python was used for exploration, aggregation, and visualization. Pandas made it easier to move from raw records to comparison tables and charts.
+
+### Why PCA-style analysis
+
+Festival mobility is influenced by multiple variables at once. PCA-style analysis was useful as an exploratory method for reducing dimensions and checking whether event-related patterns were visible in the data.
 
 ---
 
-- **Outcomes**:  
-  - Identified that **external visitors from universities (Korea Univ, Hongik Univ, etc.) were minimal**, requiring new engagement strategies  
-  - Proposed **shuttle bus expansion, extended festival bus operations, and better route design**  
-  - Suggested **“bait content” strategies** to attract outsiders and increase festival scalability  
-  - Highlighted need for **food, amenities, and compact navigation** within large-scale venues like Sejong Central Park  
-  - Contributed a **data-driven festival planning framework** with potential to improve both **visitor experience and local economic impact**:contentReference[oaicite:4]{index=4}  
+## Implementation & Problem Solving
+
+The project combined two analysis directions:
+
+1. **Route and transfer analysis** for visitors traveling from major access points.
+2. **Time-series and event analysis** to compare transport demand around festival programs.
+
+One practical challenge was that transportation signals are noisy. A popular event does not always create a clean bus-demand spike, especially when visitors use cars, taxis, walking routes, or private groups. Because of this, the analysis had to distinguish between strong evidence and weak correlation.
+
+---
+
+## Unexpected Issues
+
+- **Weak signals:** Some expected visitor groups or events did not show strong transport-data correlation.
+- **Last-mile problem:** Even if visitors could reach Sejong, the final movement from transit points to venues needed separate planning.
+- **Policy translation:** Data findings had to become realistic operations such as shuttle routes, late-night service, or compact walking paths.
+
+---
+
+## Results & Impact
+
+- Proposed shuttle and circular-bus strategies for festival accessibility.
+- Identified the need for compact visitor routes connecting venues and nearby commercial areas.
+- Suggested content and mobility planning that could improve visitor experience and local economic spillover.
+- Received an Excellence Award in the Sejong Big Data Analysis Idea Contest.
+
+---
+
+## Lessons Learned
+
+This project taught me that data analysis is useful only when it reaches an operational decision. The final value was not the chart itself, but the route, shuttle, and visitor-flow suggestions that city planners could understand.

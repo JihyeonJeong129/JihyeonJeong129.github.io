@@ -11,43 +11,45 @@ permalink: /ko/projects/sejong-data/
 giscus_comments: true
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
 <img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white">
-<img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white">
-<img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white">
+<img alt="SQL" src="https://img.shields.io/badge/SQL-4479A1?style=flat">
 <img alt="PCA" src="https://img.shields.io/badge/PCA%20Analysis-9C27B0?style=flat">
-<img alt="SQL" src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white">
-<img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-11557C?style=flat">
-<img alt="JupyterHub" src="https://img.shields.io/badge/JupyterHub-F37626?style=flat&logo=jupyter&logoColor=white">
 </p>
 
-## 세종시 데이터 기반 혁신 챌린지: 축제 접근성 & 모빌리티 인사이트
-본 프로젝트는 **버스 교통카드 데이터** 분석을 통해 세종시 축제의 **접근성 / 확장성 / 방문자 경험** 개선 방안을 제안한 것입니다. 교통 패턴, 환승 편의성, 축제 이벤트와 수요의 상관관계를 분석하여 **데이터 기반 모빌리티·운영 정책** 을 도출했습니다.
+## 개요
 
-- **목표**:
-  - 외부 방문자의 **축제 접근성** 향상 (버스 노선 모델링)
-  - **시계열·상관 분석** 으로 수요 동인 파악
-  - 축제 운영 / 교통 정책에 대한 개선안 제시
+세종시 축제 접근성 개선을 위해 버스 교통 데이터를 분석하고, 방문객 이동과 셔틀 운영 개선 방향을 제안한 데이터 분석 프로젝트입니다.
 
----
-
-### 노선 / 환승 분석
-다중 케이스 모델링 — 터미널 → 시청, 오송역 → 시청, 홍대 → 세종예고 등 — 으로 **최소 환승·도보 거리** 기준의 가장 합리적인 접근 경로를 도출.
+- **분야:** 데이터 분석 / 도시 이동성
+- **기술:** SQL, Python, Pandas, PCA 기반 탐색 분석
+- **내 역할:** 데이터 정리, SQL 분석, 이동 패턴 해석
 
 ---
 
-### 시계열 / 상관 분석
-SQL · PCA 기반으로 **세종축제, 빛축제, 불꽃축제** 시기의 교통 패턴 비교.
-- 개막식 / 록 페스티벌 / 카운트다운에 **명확한 트래픽 스파이크** 확인
-- 블랙이글스 에어쇼·일부 대학 방문은 **예상보다 약한 상관** 관찰
+## 문제와 목표
+
+지역 축제는 콘텐츠뿐 아니라 방문객이 얼마나 편하게 도착하고 이동할 수 있는지가 중요합니다. 이 프로젝트는 교통 데이터 기반으로 축제 접근성과 이동 동선을 개선할 수 있는 방안을 찾는 것을 목표로 했습니다.
 
 ---
 
-### 핵심 제안
-- **셔틀 / 순환버스** 운영으로 라스트마일 / 야간 접근 문제 해소
-- **세종 중앙공원 콤팩트 노선** 으로 편의성 + 지역 경제 파급 효과
-- 세종만의 **고유 콘텐츠 강화** 방향성 제시
+## 내 역할
 
-> 자세한 영문 원본: [English version](/projects/sejong-city-data/)
+- 교통 데이터를 분석 가능한 형태로 정리했습니다.
+- 날짜, 노선, 환승, 축제 기간 기준으로 SQL 분석을 수행했습니다.
+- 분석 결과를 셔틀버스, 순환 동선, 축제 운영 제안으로 연결했습니다.
+
+---
+
+## 접근과 이슈
+
+SQL은 반복적인 집계와 조건 비교에 적합했고, Python은 탐색 분석과 시각화에 활용했습니다. 예상보다 어려웠던 점은 특정 축제나 방문자 그룹이 항상 명확한 교통량 증가로 나타나지는 않는다는 점이었습니다.
+
+---
+
+## 결과
+
+- 셔틀 및 순환버스 운영, 압축 동선 설계, 지역 상권 연계 방향을 제안했습니다.
+- 데이터 분석 결과를 정책 제안 형태로 연결하는 경험을 얻었습니다.
+- 세종 빅데이터 분석 아이디어 공모전에서 우수상을 수상했습니다.

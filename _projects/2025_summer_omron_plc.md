@@ -10,133 +10,100 @@ ref: omron-plc-2025
 giscus_comments: true
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
-<img alt="OMRON PLC" src="https://img.shields.io/badge/OMRON%20PLC%20(CJ%2FCP%2FNX)-0066B3?style=flat">
+<img alt="OMRON PLC" src="https://img.shields.io/badge/OMRON%20PLC-0066B3?style=flat">
 <img alt="Sysmac Studio" src="https://img.shields.io/badge/Sysmac%20Studio-0066B3?style=flat">
 <img alt="CX-Programmer" src="https://img.shields.io/badge/CX--Programmer-005BAA?style=flat">
 <img alt="Ladder Logic" src="https://img.shields.io/badge/Ladder%20Logic-37474F?style=flat">
 <img alt="Industrial I/O" src="https://img.shields.io/badge/Industrial%20I%2FO-455A64?style=flat">
-<img alt="Safety Interlock" src="https://img.shields.io/badge/Safety%20Interlock-D32F2F?style=flat">
 </p>
 
-<!-- ===== 프로젝트 개요 ===== -->
-## Program Overview
-This program focuses on **PLC theory & hands-on practice** for secondary battery equipment control (OMRON PLC).
-Participants will learn ladder logic, device interfacing (I/O mapping), safety interlocks, and practical debugging
-with real equipment scenarios.
+## Overview
 
-- Duration: 4 weeks (Summer 2025)
-- Hardware: OMRON PLC (CJ/CP/NX series), digital I/O modules, sensors/actuators
-- Software: CX-Programmer / Sysmac Studio
-- Outcomes: Build & test a mini cell-handling demo line with safe starts/stops, alarms, and interlocks
+This was a summer hands-on PLC program focused on secondary-battery equipment control using OMRON PLC tools and industrial-control concepts.
+
+- **Program type:** training / practical control-system exercise
+- **Duration:** summer 2025
+- **Core stack:** OMRON PLC, CX-Programmer, Sysmac Studio, ladder logic, industrial I/O
+- **Focus:** I/O mapping, sequence control, safety logic, and debugging
 
 ---
 
-<!-- ===== 주요 사진 3열 갤러리 ===== -->
-### Highlights
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       loading="eager"
-       path="/assets/img/plc-2025/panel_wiring.jpg"
-       title="Control panel wiring"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       loading="eager"
-       path="/assets/img/plc-2025/ladder_debug.jpg"
-       title="Ladder logic debugging"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       loading="eager"
-       path="/assets/img/plc-2025/safety_interlock.jpg"
-       title="Safety interlock test"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  From left: control panel wiring, ladder debugging session, and safety interlock verification.
-</div>
+## Problem & Motivation
 
-<!-- ===== 텍스트 섹션 ===== -->
-### What We Built
-We implemented a start/stop sequence, emergency stops, alarm latching, and a cell-handling routine with limit switches.
-Participants practiced **I/O mapping**, **timers/counters**, **edge detection**, and **fault recovery** flows.
+Industrial equipment control requires deterministic behavior. Unlike general software, PLC programs must handle physical I/O, safety interlocks, emergency stops, and predictable sequence transitions.
+
+The goal was to understand how control logic is designed for equipment-like systems rather than only simulated software flows.
 
 ---
 
-<!-- ===== 단일(풀/2/3) 이미지 예시 ===== -->
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/plc-2025/hmi_overview.jpg"
-       title="HMI overview screen"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/plc-2025/io_table.jpg"
-       title="I/O mapping table"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  2/3 + 1/3 layout: HMI overview and I/O table snapshot.
-</div>
+## My Role
+
+I participated in the theory and practical sessions and implemented control logic during the lab exercises.
+
+- Practiced ladder-logic programming with OMRON tools.
+- Mapped sensors, actuators, and control signals into PLC logic.
+- Implemented start/stop sequences, alarms, and interlock behavior.
+- Debugged behavior by observing I/O state and sequence transitions.
 
 ---
 
-<!-- ===== 유튜브 영상 임베드 ===== -->
-### Demo Video
-<!-- 방법 A: 테마에 youtube include가 있을 때 (al-folio는 보통 지원)
-     사용 예: {% include youtube.liquid id="YOUTUBE_VIDEO_ID" %}
-     아래 라인을 주석 해제해서 사용하세요. -->
-{%- comment -%}
-{% include youtube.liquid id="YOUTUBE_VIDEO_ID" %}
-{%- endcomment -%}
+## Technical Approach
 
-<!-- 방법 B: iframe 임베드 (테마가 youtube.liquid 없을 때 사용) -->
-<div class="mt-3">
+### Why Ladder Logic
+
+Ladder logic was used because it is widely used in industrial control and maps naturally to relay-like control thinking. It also makes equipment states and interlocks easier to inspect during debugging.
+
+### Why I/O Mapping First
+
+Before writing sequence logic, the I/O relationship had to be clear. A wrong signal mapping can make correct logic behave incorrectly, so the implementation started from understanding input and output roles.
+
+---
+
+## Implementation & Problem Solving
+
+The practice centered on converting equipment behavior into PLC sequence logic:
+
+1. Identify inputs and outputs.
+2. Define safe start and stop conditions.
+3. Add timer/counter behavior where needed.
+4. Implement alarms and interlocks.
+5. Debug the sequence through tool feedback and observed I/O states.
+
+---
+
+## Unexpected Issues
+
+- PLC debugging required thinking in scan cycles rather than ordinary procedural code.
+- Safety logic had to be considered before convenience behavior.
+- Small mistakes in signal assumptions could affect the entire sequence.
+
+---
+
+## Results & Impact
+
+- Gained hands-on experience with OMRON PLC tools and ladder logic.
+- Practiced industrial-control thinking around I/O, interlocks, and deterministic operation.
+- Connected my software background with physical equipment-control constraints.
+
+---
+
+## Demo Evidence
+
+The demo video below records the PLC practice result and serves as evidence of the implemented control sequence.
+
+<div class="ratio ratio-16x9 mt-3">
   <iframe
-    width="1000"
-    height="562"
     src="https://www.youtube.com/embed/ruMg5BIu5Ws"
-    title="PLC Demo"
+    title="OMRON PLC Practice Demo"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
 </div>
 
-
 ---
 
-<!-- ===== 추가 갤러리 (원하는 만큼 복제) ===== -->
-### More Photos
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/plc-2025/wiring_detail.jpg"
-       title="Wiring detail"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/plc-2025/omron_plc.jpg"
-       title="OMRON PLC module"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/plc-2025/sensor_test.jpg"
-       title="Sensor test"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Wiring detail, PLC module, and sensor IO test during commissioning.
-</div>
+## Lessons Learned
+
+This program helped me understand that control software is deeply tied to hardware behavior. Reliable automation requires not just code, but clear signal definitions, safe transitions, and careful debugging.

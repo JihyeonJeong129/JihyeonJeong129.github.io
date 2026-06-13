@@ -10,42 +10,44 @@ ref: node-hades
 permalink: /ko/projects/node-hades/
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="HPE MicroServer" src="https://img.shields.io/badge/HPE%20MicroServer%20Gen10%20Plus-01A982?style=flat&logo=hewlettpackardenterprise&logoColor=white">
-<img alt="Xeon" src="https://img.shields.io/badge/Intel%20Xeon%20E--2224G-0071C5?style=flat&logo=intel&logoColor=white">
 <img alt="VMware ESXi" src="https://img.shields.io/badge/VMware%20ESXi-607078?style=flat&logo=vmware&logoColor=white">
 <img alt="NAS" src="https://img.shields.io/badge/NAS%2010TB-0085CA?style=flat">
-<img alt="PhotoPrism" src="https://img.shields.io/badge/PhotoPrism-000000?style=flat">
-<img alt="Mattermost" src="https://img.shields.io/badge/Mattermost-0072C6?style=flat&logo=mattermost&logoColor=white">
-<img alt="OpenVPN" src="https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white">
-<img alt="WireGuard" src="https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white">
+<img alt="VPN" src="https://img.shields.io/badge/VPN-455A64?style=flat">
 </p>
 
-## Node - Hades: 홈 서버 개요
-**Node - Hades** 는 HPE MicroServer Gen10 Plus 위에 구축된 가상화 / 스토리지 / 통신 / 원격접속 백본입니다. 개인 개발 환경, 미디어 아카이브, 협업 플랫폼의 기반이 됩니다.
+## 개요
 
-- **하드웨어**:
-  - HPE MicroServer Gen10 Plus
-  - CPU: Intel Xeon E-2224G
-  - RAM: 32 GB
-  - Storage: 1 TB NVMe SSD (시스템 / VM 데이터스토어), 10 TB HDD (NAS)
-  - UPS: 950VA — **무중단 운영** 및 시스템 보호
+Node - Hades는 홈랩의 저장소 및 내부 서비스 허브입니다. 프로젝트 데이터, NAS, 내부 서비스, 원격 접속 기능을 담당합니다.
 
-- **가상화**:
-  - VMware ESXi Hypervisor
-  - 다수의 경량 VM이 테스트 / 서비스 배포에 사용
+- **역할:** Storage / Virtualization / Remote Access
+- **하드웨어:** HPE MicroServer Gen10 Plus, 10 TB 저장소
+- **기술:** VMware ESXi, NAS, OpenVPN, WireGuard
 
-- **핵심 서비스**:
-  - **프로그래밍 테스트베드** — 소규모 코드 실험 / 검증 환경
-  - **NAS** — 문서 / 미디어 / 백업 중앙 저장소
-  - **PhotoPrism** — 개인 사진 관리·검색
-  - **Mattermost** — 비공개 팀 협업 / 커뮤니케이션
-  - **VPN (OpenVPN & WireGuard)** — 안전한 원격 접근
+---
 
-- **성과**:
-  - 개발 / 데이터 / 협업이 모두 가능한 안정적 환경
-  - UPS 기반 **무중단 가용성**
-  - **원격 접근 + 중앙 서비스 호스팅** 으로 개인 / 팀 프로젝트 모두 지원
+## 문제와 목표
 
-> 자세한 영문 원본: [English version](/projects/node---hades/)
+연산 서버와 저장소 역할을 한 장비에 섞으면 실험과 데이터 관리가 함께 불안정해질 수 있습니다. Hades는 지속적으로 유지되어야 하는 데이터와 내부 서비스를 담당하기 위해 분리했습니다.
+
+---
+
+## 내 역할
+
+- ESXi 기반 가상화 환경을 구성했습니다.
+- NAS와 내부 서비스 운영 방향을 설계했습니다.
+- VPN을 통해 외부에서 내부 서비스에 접근할 수 있게 구성했습니다.
+
+---
+
+## 접근과 이슈
+
+직접 공개보다 VPN 접근을 우선해 서비스 노출면을 줄였습니다. 예상보다 중요한 부분은 저장소 구조, 백업 방향, 유지보수 시 다른 노드에 미치는 영향을 관리하는 일이었습니다.
+
+---
+
+## 결과
+
+- 홈랩의 안정적인 저장소와 서비스 허브를 구축했습니다.
+- 연산 실험과 데이터 보관을 분리하면서 인프라 운영 안정성을 높였습니다.

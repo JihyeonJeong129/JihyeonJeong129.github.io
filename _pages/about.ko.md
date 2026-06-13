@@ -46,8 +46,8 @@ latest_posts:
 
 #### 대표 작업
 
-- **[TACTIX](/ko/projects/tactix/)** — 폐쇄망(에어갭) 군 네트워크용 RAG 기반 항공기 정비 지원 시스템
-- **[Moida](/ko/projects/moisam/)** — OAuth · 실시간 채팅 · 에스크로 결제를 갖춘 기숙사 공동구매 플랫폼
+- **[TACTIX]({{ '/ko/projects/tactix/' | relative_url }})** — 폐쇄망(에어갭) 군 네트워크용 RAG 기반 항공기 정비 지원 시스템
+- **[Moida]({{ '/ko/projects/moisam/' | relative_url }})** — OAuth · 실시간 채팅 · 에스크로 결제를 갖춘 기숙사 공동구매 플랫폼
 - **홈랩** — Xen + ESXi 기반 3-노드 온프레미스 클러스터 (백엔드 · JupyterHub · NAS · VPN 게이트웨이)
 
-자세한 내용은 [프로젝트](/ko/projects/) 또는 [이력서](/cv/) 페이지에서 확인하세요.
+자세한 내용은 [프로젝트]({{ '/ko/projects/' | relative_url }}) 또는 [이력서]({{ '/cv/' | relative_url }}) 페이지에서 확인하세요.

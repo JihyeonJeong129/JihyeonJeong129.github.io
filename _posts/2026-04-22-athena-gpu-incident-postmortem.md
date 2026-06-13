@@ -10,6 +10,7 @@ ref: athena-gpu-incident
 permalink: /ko/blog/2026/athena-gpu-postmortem/
 giscus_comments: true
 related_posts: false
+search_exclude: true
 toc:
   beginning: true
 ---
@@ -18,7 +19,7 @@ toc:
 
 ## 요약 (TL;DR)
 
-- **영향**: [Athena](/projects/node---athena/) 노드의 JupyterHub 사용자 4명이 약 28분 동안 GPU 사용 불가
+- **영향**: [Athena]({{ '/projects/node---athena/' | relative_url }}) 노드의 JupyterHub 사용자 4명이 약 28분 동안 GPU 사용 불가
 - **원인 (가설)**: Xen DomU에서 PCI passthrough된 Tesla P100 한 장이 IOMMU 그룹 충돌로 detach
 - **복구**: VM 재부팅 + DomU 커널 모듈 재로드로 정상화
 - **재발 방지**: 부팅 시 `nvidia-smi` health check를 systemd 유닛으로 추가, 실패 시 Discord 알람
@@ -47,7 +48,7 @@ toc:
 
 - [ ] Xen DomU 부팅 순서 명시화 (`xl create` 의존성 정의)
 - [ ] `nvidia-smi` health check systemd timer (1분 주기) → 실패 시 Discord webhook
-- [ ] PCI passthrough 디바이스 ↔ DomU 매핑 문서화 ([Athena 페이지](/projects/node---athena/)에 다이어그램 추가)
+- [ ] PCI passthrough 디바이스 ↔ DomU 매핑 문서화 ([Athena 페이지]({{ '/projects/node---athena/' | relative_url }})에 다이어그램 추가)
 - [ ] 동일 사건 재발 시 자동 DomU 재부팅 vs. 수동 개입 정책 결정
 - [ ] **이 포스트모템 템플릿을 모든 장애 기록의 표준 양식으로 채택**
 

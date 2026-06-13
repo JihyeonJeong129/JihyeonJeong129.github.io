@@ -10,40 +10,56 @@ ref: ros-morai
 permalink: /ko/projects/ros-morai/
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="ROS" src="https://img.shields.io/badge/ROS-22314E?style=flat&logo=ros&logoColor=white">
 <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
 <img alt="MORAI Sim" src="https://img.shields.io/badge/MORAI%20Simulator-00B0F0?style=flat">
-<img alt="GPS" src="https://img.shields.io/badge/GPS%20Localization-1E88E5?style=flat">
 <img alt="PID" src="https://img.shields.io/badge/PID%20Control-43A047?style=flat">
-<img alt="OpenCV" src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white">
-<img alt="Linux" src="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white">
 </p>
 
 ## 개요
-**MORAI 시뮬레이터** 위에서 진행한 ROS 기반 자율주행 프로젝트입니다. 가상 도시 환경에서 **글로벌 경로 추종, 신호등 인식, 보행자 감속 / 정지, 정적 장애물 회피** 를 구현하고 안정적인 자율 주행을 달성했습니다.
 
-- **환경**:
-  - ROS 기반 SW 스택
-  - MORAI Autonomous Driving Simulator
-  - GPS 기반 측위 / 웨이포인트 시스템
-
-- **미션**:
-  - **글로벌 경로 추종**
-  - **신호등 인식**
-  - **보행자 처리**
-  - **정적 장애물 회피**
+MORAI 시뮬레이터에서 ROS 기반 자율주행 미션을 구현한 프로젝트입니다. 전역 경로 추종, 보행자 정지, 신호 처리, 정적 장애물 회피를 다뤘습니다.
 
 ---
 
-### 글로벌 경로 추종
-GPS 기반 실시간 측위 + **PID 제어** 로 경로 이탈 최소화, 부드러운 주행 달성.
+## 문제와 목표
 
-### 보행자 감속 / 정지
-특정 웨이포인트(#247, #267)부터 잔여 거리 비례로 **점진적 감속**, 횡단보도에서 **5초 정지** (정지 시간 변수 기록) 후 자동 재출발.
+자율주행은 단순 경로 추종뿐 아니라 보행자, 장애물, 신호 등 여러 상황을 함께 처리해야 합니다. 시뮬레이터 환경에서 안정적으로 미션을 완료하는 것이 목표였습니다.
 
-### 정적 장애물 회피
-객체 토픽으로부터 **AABB 바운딩 박스** 검출 → 후보 차로 선택 → 로컬 경로 생성. 회피 중 **급가속 문제** 는 곡률 그라디언트 증가 + lattice 경로 최대 속도 5 m/s 제한으로 해결.
+---
 
-> 자세한 영문 원본: [English version](/projects/ros-project-with-morai-sim/)
+## 내 역할
+
+- GPS 기반 전역 경로 추종 로직을 구현했습니다.
+- PID 제어를 적용해 경로 이탈을 줄였습니다.
+- 보행자 구간 정지/재출발 및 정적 장애물 회피 로직을 조정했습니다.
+
+---
+
+## 접근과 이슈
+
+ROS topic 구조를 활용해 위치, 객체, 제어 명령을 분리했습니다. 예상보다 어려웠던 부분은 장애물 회피 중 급가속이 발생하지 않도록 속도와 경로를 함께 조정하는 일이었습니다.
+
+---
+
+## 결과
+
+- 전역 경로 추종, 보행자 정지, 정적 장애물 회피를 구현했습니다.
+- ROS 기반 자율주행 소프트웨어 구조와 제어 튜닝 경험을 얻었습니다.
+
+---
+
+## 데모 영상
+
+아래 영상은 MORAI 시뮬레이터에서 구현한 자율주행 미션 동작을 확인하기 위한 결과물입니다.
+
+<div class="ratio ratio-16x9 mt-3">
+  <iframe
+    src="https://www.youtube.com/embed/zIE8PgRny8g"
+    title="MORAI ROS Autonomous Driving Demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>

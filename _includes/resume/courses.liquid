@@ -37,7 +37,8 @@
   <div class="course-entry">
     <div class="course-title">
       {% if course.url %}
-        <a href="{{ course.url }}" target="_blank" rel="noopener noreferrer">{{ course.name }}</a>
+        {% capture course_url %}{% include local_url.liquid url=course.url %}{% endcapture %}
+        <a href="{{ course_url | strip }}" target="_blank" rel="noopener noreferrer">{{ course.name }}</a>
       {% else %}
         {{ course.name }}
       {% endif %}

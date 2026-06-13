@@ -47,9 +47,8 @@ My focus is **Linux · Kubernetes · AWS · CI/CD**, learned by running a 3-node
 
 #### Selected work
 
-- **[TACTIX](/projects/tactix/)** — RAG-based aircraft maintenance support system for air-gapped military networks.
-- **[Moida](/projects/moisam/)** — Dormitory group-purchasing platform (OAuth, real-time chat, escrow payments).
+- **[TACTIX]({{ '/projects/tactix/' | relative_url }})** — RAG-based aircraft maintenance support system for air-gapped military networks.
+- **[Moida]({{ '/projects/moisam/' | relative_url }})** — Dormitory group-purchasing platform (OAuth, real-time chat, escrow payments).
 - **Home Lab** — 3-node on-prem cluster (Xen + ESXi) hosting backend services, JupyterHub, NAS, and VPN gateways.
 
-For more, see the [Projects](/projects/) page or the [CV](/cv/).
-
+For more, see the [Projects]({{ '/projects/' | relative_url }}) page or the [CV]({{ '/cv/' | relative_url }}).

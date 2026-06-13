@@ -55,7 +55,8 @@
         {% endif %}
         <div class="text">
           <div class="title">
-            <a href="{{ cert.url | default: '#' }}">{{ cert.name }}</a>
+            {% capture cert_url %}{% include local_url.liquid url=cert.url %}{% endcapture %}
+            <a href="{{ cert_url | strip }}">{{ cert.name }}</a>
           </div>
           <div class="issuer">{{ cert.issuer }}</div>
         </div>

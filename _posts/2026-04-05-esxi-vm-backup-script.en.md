@@ -10,6 +10,7 @@ ref: esxi-vm-backup
 permalink: /blog/2026/esxi-vm-backup-script/
 giscus_comments: true
 related_posts: false
+search_exclude: true
 toc:
   beginning: true
 ---
@@ -18,7 +19,7 @@ toc:
 
 ## Starting Point — "There is a backup, but I have never restored from it"
 
-The [Hades](/projects/node---hades/) node runs about 8 VMs on VMware ESXi: personal services, sandboxes, Mattermost, PhotoPrism, etc. What passed for "backup" was:
+The [Hades]({{ '/projects/node---hades/' | relative_url }}) node runs about 8 VMs on VMware ESXi: personal services, sandboxes, Mattermost, PhotoPrism, etc. What passed for "backup" was:
 
 1. A manual `cp` of the ESXi datastore to a NAS HDD (roughly once per quarter)
 2. Quarterly copies of critical VMDKs onto an external HDD
@@ -58,7 +59,7 @@ notify_discord "$summary"
 ## TODO
 
 - [ ] OVF-based backups have no native incremental → evaluate rsync + thin-disk strategy
-- [ ] Forward backup logs into Loki (ties into my [monitoring stack post](/blog/2026/home-lab-monitoring-stack/))
+- [ ] Forward backup logs into Loki (ties into my [monitoring stack post]({{ '/blog/2026/home-lab-monitoring-stack/' | relative_url }}))
 - [ ] **DR drill: real restore on a separate node → measure actual RTO**
 - [ ] Automated integrity check (sha256 + boot test of restored VM)
 - [ ] Alert rule for "backup failed"

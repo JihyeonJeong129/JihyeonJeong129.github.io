@@ -9,141 +9,90 @@ lang: en
 ref: node-hades
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="HPE MicroServer" src="https://img.shields.io/badge/HPE%20MicroServer%20Gen10%20Plus-01A982?style=flat&logo=hewlettpackardenterprise&logoColor=white">
 <img alt="Xeon" src="https://img.shields.io/badge/Intel%20Xeon%20E--2224G-0071C5?style=flat&logo=intel&logoColor=white">
 <img alt="VMware ESXi" src="https://img.shields.io/badge/VMware%20ESXi-607078?style=flat&logo=vmware&logoColor=white">
 <img alt="NAS" src="https://img.shields.io/badge/NAS%2010TB-0085CA?style=flat">
-<img alt="PhotoPrism" src="https://img.shields.io/badge/PhotoPrism-000000?style=flat">
-<img alt="Mattermost" src="https://img.shields.io/badge/Mattermost-0072C6?style=flat&logo=mattermost&logoColor=white">
 <img alt="OpenVPN" src="https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white">
 <img alt="WireGuard" src="https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white">
 </p>
 
-<!-- ===== 프로젝트 개요 ===== -->
-## Node - Hades: Home Server Overview
-This project highlights my **personal home server (Node - Hades)** built on a HPE MicroServer Gen10 Plus, designed for
-virtualization, storage, communication, and remote access.  
-It serves as the backbone of my development environment, media archive, and collaboration platform.
+## Overview
 
-- **Hardware**:  
-  - HPE MicroServer Gen10 Plus  
-  - CPU: Intel Xeon E-2224G  
-  - RAM: 32 GB  
-  - Storage: 1 TB NVMe SSD (system & VM datastore), 10 TB HDD (data/NAS)
-  - UPS: 950VA UPS for **uninterruptible operation** and system protectio  
+Node - Hades is the storage and service hub in my home-lab infrastructure. It runs virtualization workloads, stores project data, and provides internal services that support development and collaboration.
 
-- **Virtualization**:  
-  - VMware ESXi Hypervisor  
-  - Hosts multiple lightweight VMs for testing and service deployment  
-
-- **Core Services**:  
-  - **Programming Testbed**: run and validate small-scale code experiments  
-  - **NAS (Network Attached Storage)**: central storage for documents and media  
-  - **PhotoPrism**: personal photo management and indexing service  
-  - **MatterMost**: private team collaboration and communication platform  
-  - **VPN (OpenVPN & WireGuard)**: secure remote access to internal resources  
-
-- **Outcomes**:  
-  - Provides a stable and versatile environment for **development, personal data management, and project collaboration** 
-  - Ensures **continuous availability** through UPS-backed power protection   
-  - Enables **remote connectivity** and centralized service hosting for both personal and team projects  
+- **Hardware:** HPE MicroServer Gen10 Plus, Intel Xeon E-2224G, 32 GB RAM, 10 TB data storage
+- **Core stack:** VMware ESXi, NAS, VPN, internal collaboration services
+- **Role:** storage, service hosting, and remote-access hub
 
 ---
 
-<!-- ===== Core Services ===== -->
-## Core Services
+## Problem & Motivation
 
-### Programming Testbed
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/hades-server/programming_vm.jpg"
-       title="Lightweight VM for programming tests"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Lightweight VMs on ESXi are used as a **testbed for code experiments**, sandboxing scripts and applications before deploying them to production systems.
-</div>
+As project data and service experiments grew, I needed a stable node for persistent storage and always-on internal services. A compute server alone was not enough because data management, backup direction, and service availability have different requirements from GPU-heavy experimentation.
+
+Hades was designed to solve:
+
+- centralized file storage for projects and personal data,
+- internal service hosting,
+- remote access to private resources,
+- separation of storage services from compute experiments.
 
 ---
 
-### NAS (Network Attached Storage)
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/hades-server/nas_service.jpg"
-       title="NAS dashboard"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Node - Hades provides a **centralized NAS** for documents, backups, and large data files.  
-  With a 10TB HDD, it acts as the main storage hub in the home network.
-</div>
+## My Role
+
+I built and operated Hades as the infrastructure node responsible for storage and service continuity.
+
+- Installed and configured VMware ESXi.
+- Organized VM-based services for storage, collaboration, and remote access.
+- Configured VPN access patterns to avoid exposing internal services unnecessarily.
+- Used Hades as a data and backup hub for other nodes.
 
 ---
 
-### PhotoPrism
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/hades-server/photoprism.jpg"
-       title="PhotoPrism interface"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  **PhotoPrism** automatically indexes and organizes personal photo collections.  
-  It supports AI-powered tagging, facial recognition, and easy web-based browsing.
-</div>
+## Technical Approach
+
+### Why VMware ESXi
+
+ESXi was selected because Hades needed to host several lightweight service VMs with clear separation. This made it easier to isolate NAS, collaboration, and network services.
+
+### Why NAS-Centered Design
+
+Persistent data should not depend on a single experiment machine. By placing shared storage on Hades, compute workloads on Athena could be rebuilt or changed without losing project data.
+
+### Why VPN Access
+
+VPN access was preferred over direct public exposure. It allowed me to reach internal services remotely while keeping the service surface smaller.
 
 ---
 
-### MatterMost
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/hades-server/mattermost.jpg"
-       title="MatterMost workspace"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  **MatterMost** is deployed as a private team communication platform.  
-  It supports channels, file sharing, and integrations, enabling effective collaboration for project teams.
-</div>
+## Implementation & Problem Solving
+
+The implementation focused on stable operation rather than raw performance. Hades was configured to host services that benefit from continuity: storage, project files, private collaboration tools, and access gateways.
+
+This made it possible to use Athena more aggressively for experimentation while Hades remained the stable base for data and internal tools.
 
 ---
 
-### VPN (OpenVPN & WireGuard)
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/hades-server/vpn_dashboard.jpg"
-       title="VPN configuration"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Secure **remote connectivity** is ensured through both OpenVPN and WireGuard setups.  
-  This allows access to internal services (NAS, MatterMost, PhotoPrism) from outside the home network safely.
-</div>
+## Unexpected Issues
+
+- **Storage planning:** Once multiple projects share storage, directory structure and backup policy become important.
+- **Service exposure:** Convenience can conflict with security, so remote access had to be designed around VPN usage.
+- **Availability:** A storage node needs more cautious maintenance because downtime affects other parts of the lab.
 
 ---
 
-### UPS (Uninterruptible Power Supply)
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/hades-server/ups.jpg"
-       title="950VA UPS system"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  A **950VA-class UPS** ensures uninterruptible operation and protects Node - Hades from sudden power outages.  
-  This guarantees continuous availability for all hosted services and safe system shutdown during extended outages.
-</div>
+## Results & Impact
+
+- Built a stable storage and virtualization hub for the home-lab cluster.
+- Supported project data management, private services, and remote access.
+- Improved the reliability of my development environment by separating storage from compute experiments.
+- Practiced infrastructure decisions that resemble small-scale production operations.
+
+---
+
+## Lessons Learned
+
+Hades taught me that storage and access control are infrastructure foundations. Even small personal services become easier to operate when data, compute, and access responsibilities are separated.

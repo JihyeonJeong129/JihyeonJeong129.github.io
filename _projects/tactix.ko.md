@@ -10,45 +10,46 @@ ref: tactix
 permalink: /ko/projects/tactix/
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
 <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
-<img alt="LangChain" src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white">
-<img alt="LLM" src="https://img.shields.io/badge/LLM-412991?style=flat&logo=openai&logoColor=white">
 <img alt="RAG" src="https://img.shields.io/badge/RAG-FF6F00?style=flat">
-<img alt="Vector DB" src="https://img.shields.io/badge/Vector%20DB-1F77B4?style=flat">
-<img alt="FAISS" src="https://img.shields.io/badge/FAISS-0467DF?style=flat&logo=meta&logoColor=white">
+<img alt="FAISS" src="https://img.shields.io/badge/FAISS-0467DF?style=flat">
 <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
-<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
-<img alt="Air-gapped" src="https://img.shields.io/badge/Air--gapped%20Network-455A64?style=flat">
 </p>
 
 ## 개요
-**TACTIX** 는 **항공기 정비 지식 검색 · 의사결정 지원** 을 목표로 하는 AI 기반 시스템입니다. 인력 감축 · 전문성 격차 · 장비 복잡도 증가가 동시에 진행되는 현대 군 정비 환경에서, **빠르고 정확한 정비 지원** 을 제공하는 것을 목적으로 합니다.
 
-- **배경 / 동기**:
-  - 인력 감소 + 정비 품질·효율에 대한 우려
-  - 정비는 단순 반복이 아닌 **수기 해석 + 사례 기반 판단 + 맥락적 추론** 의 영역
-  - 실제 현장에서는 **Q&A 루프의 시간 소모**, **인원별 전문성 격차** 가 큰 비효율로 작용
-  - **LLM + Expert System + RAG** 결합으로 정비 매뉴얼·과거 사례 검색을 통합한 **AI 기반 지식 탐색 시스템** 의 필요성 도출
+TACTIX는 항공기 정비 매뉴얼과 과거 정비 지식을 더 빠르게 찾기 위한 RAG 기반 정비 지원 시스템 프로토타입입니다.
 
----
-
-### 주요 특징
-- **하이브리드 AI 시스템**:
-  - **LLM** (맥락 답변) + **규칙 기반 Expert System** (도메인 로직) + **RAG** (문서 근거 검색)
-  - 단순 정보 조회가 아닌 **단계별 정비 가이드** 제공
-- **벡터 DB**:
-  - 매뉴얼 + 이력 데이터 청킹·임베딩
-  - **5초 이내 검색 / 95%+ 정확도**
-- **보안 배포**:
-  - **에어갭(폐쇄망)** 환경 구동 — 인터넷 불필요
-  - **계급 / 역할 기반 접근 제어**
+- **분야:** 백엔드 / AI 검색 시스템
+- **기술:** Python, FastAPI, RAG, FAISS, Docker
+- **초점:** 문서 전처리, 검색 파이프라인, 폐쇄망 배포 가능성
 
 ---
 
-### 시스템 아키텍처
-**데이터 전처리 → 벡터 DB → RAG 파이프라인 → LLM 추론 → 규칙 기반 Expert 모듈** 이 폐쇄 군 인트라넷 환경에서 통합됩니다.
+## 문제와 목표
 
-> 자세한 영문 원본: [English version](/projects/tactix/)
+정비 업무는 긴 매뉴얼과 숙련자의 경험에 크게 의존합니다. 필요한 절차를 찾는 데 시간이 오래 걸리고, 경험 차이에 따라 판단 품질이 달라질 수 있습니다. 이 프로젝트는 정비 문서를 기반으로 근거 있는 답변을 제공하는 시스템을 목표로 했습니다.
+
+---
+
+## 내 역할
+
+- 문서 수집 이후 전처리, 청킹, 메타데이터 구성 흐름을 설계했습니다.
+- 검색 결과를 기반으로 답변을 구성하는 백엔드 구조를 정리했습니다.
+- 인터넷 접근이 제한된 환경에서도 동작할 수 있는 배포 방향을 고려했습니다.
+
+---
+
+## 접근과 이슈
+
+RAG를 선택한 이유는 답변이 모델의 기억이 아니라 문서 근거에 기반해야 했기 때문입니다. 예상보다 어려웠던 점은 매뉴얼 문서의 구조가 일정하지 않아, 청크 크기와 메타데이터 설계가 검색 품질에 큰 영향을 준다는 점이었습니다.
+
+---
+
+## 결과
+
+- 정비 문서 기반 검색/응답 시스템의 프로토타입 구조를 만들었습니다.
+- AI 기능을 실제 운영 제약, 권한, 폐쇄망 환경과 함께 고려하는 경험을 얻었습니다.
+- 백엔드, 문서 검색, 인프라 배포 관점을 함께 다룬 프로젝트였습니다.

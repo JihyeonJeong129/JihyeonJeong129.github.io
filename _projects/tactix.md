@@ -9,135 +9,102 @@ lang: en
 ref: tactix
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
 <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
-<img alt="LangChain" src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white">
-<img alt="LLM" src="https://img.shields.io/badge/LLM-412991?style=flat&logo=openai&logoColor=white">
+<img alt="LangChain" src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logoColor=white">
 <img alt="RAG" src="https://img.shields.io/badge/RAG-FF6F00?style=flat">
-<img alt="Vector DB" src="https://img.shields.io/badge/Vector%20DB-1F77B4?style=flat">
-<img alt="FAISS" src="https://img.shields.io/badge/FAISS-0467DF?style=flat&logo=meta&logoColor=white">
+<img alt="FAISS" src="https://img.shields.io/badge/FAISS-0467DF?style=flat">
 <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
 <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
-<img alt="Air-gapped" src="https://img.shields.io/badge/Air--gapped%20Network-455A64?style=flat">
 </p>
 
-<!-- ===== 프로젝트 개요 ===== -->
 ## Overview
-This project introduces **TACTIX**, an AI-assisted **aircraft maintenance knowledge retrieval and support system**.  
-It aims to address challenges in modern military maintenance operations where **manpower reduction, expertise gaps, and increasing complexity of equipment** make fast and accurate maintenance support essential.
 
-- **Background & Motivation**:  
-  - Declining manpower and growing concerns over **maintenance quality and efficiency**  
-  - Maintenance requires not only repetition but also **manual interpretation, historical knowledge, and contextual judgment**  
-  - Current practice suffers from **time-consuming Q&A loops** and **expertise variance** among personnel  
-  - A need for an **AI-driven knowledge exploration system** emerged, leveraging **LLM + Expert System + RAG** for efficient access to maintenance manuals and historical records  
+TACTIX is a prototype for an aircraft-maintenance knowledge support system. The goal was to help technicians retrieve relevant manual sections and troubleshooting steps faster than manual document search, especially in environments where internet access is restricted.
 
----
-
-### Key Features
-<div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/tactix/feature_llm.jpg"
-       title="LLM Integration"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/tactix/feature_expert.jpg"
-       title="Expert System Logic"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/tactix/feature_rag.jpg"
-       title="RAG Document Retrieval"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Hybrid architecture: **LLM for flexible reasoning**, **Expert System for rule-based decision support**, and **RAG for document-grounded retrieval**.
-</div>
-
-- **Hybrid AI System**:  
-  - Combines **LLM** (contextual answers), **Rule-based Expert System** (domain logic), and **RAG** (document-grounded retrieval)  
-  - Provides **step-by-step maintenance guidance** instead of just information lookup  
-- **Vector Database**:  
-  - Preprocessed and chunked manuals + history data stored as embeddings  
-  - Enables **<5 sec retrieval latency** with 95%+ accuracy  
-- **Secure Deployment**:  
-  - Designed for **air-gapped military networks** (no internet required)  
-  - User access controlled by **rank/role-based permissions**  
+- **Project type:** team project / applied backend and AI system
+- **Domain:** aircraft maintenance support, technical-document retrieval
+- **Core stack:** Python, FastAPI, LangChain-style RAG pipeline, FAISS, Docker, Linux
+- **Primary focus:** document ingestion, retrieval flow, role-aware access, and deployability in a closed network
 
 ---
 
-### System Architecture
-<div class="row justify-content-sm-center">
-  <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/tactix/architecture.jpg"
-       title="TACTIX System Architecture"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  The system integrates **data preprocessing, vector DB, RAG pipeline, LLM inference, and rule-based expert modules**,  
-  all secured within a closed military intranet environment.
-</div>
+## Problem & Motivation
+
+Maintenance work depends on manuals, previous cases, and experienced personnel. In practice, this creates several problems:
+
+- Relevant information is spread across long technical documents.
+- Less-experienced maintainers need more time to identify the correct procedure.
+- A generic chatbot is risky because maintenance answers must be grounded in source documents.
+- Military or closed-network environments cannot rely on external cloud APIs as the default assumption.
+
+The project therefore focused on a **retrieval-first AI assistant**: the system should retrieve grounded evidence first, then generate or organize guidance from that evidence.
 
 ---
 
-### Data Processing Pipeline
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/tactix/datapipeline.jpg"
-       title="Data Processing Flow"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Maintenance manuals and history logs undergo **text extraction, cleaning, and chunking**.  
-  Processed data is embedded into a **vector DB with metadata**, enabling semantic search for context-aware responses.
-</div>
+## My Role
+
+I worked on the backend and system-design side of the project.
+
+- Designed the RAG-oriented backend flow from document ingestion to answer generation.
+- Structured the data-processing pipeline for manual text extraction, cleaning, chunking, and metadata attachment.
+- Planned deployment constraints for an air-gapped or restricted network environment.
+- Connected the project with my home-lab infrastructure to test server-side deployment and GPU-backed experimentation.
 
 ---
 
-### Use Case Scenario
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/tactix/scenario.jpg"
-       title="Scenario Example"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Example: An F-16 HUD display malfunction during pre-flight checks.  
-  - **System Response**: Provides step-by-step checks (power supply, signal module, BIT results),  
-    references past incidents, and links the relevant manual section directly.  
-  This enables even less-experienced personnel to perform accurate troubleshooting.
-</div>
+## Technical Approach
+
+### Why RAG
+
+RAG was selected because the system had to answer from maintenance manuals and incident records instead of relying only on model memory. This made it easier to:
+
+- return answers with document context,
+- keep domain knowledge updatable by replacing or re-indexing documents,
+- reduce unsupported or hallucinated responses,
+- separate the retrieval layer from the model layer.
+
+### Why FastAPI and FAISS
+
+FastAPI was a practical choice for building a small API service around retrieval and answer-generation endpoints. FAISS was suitable for a prototype because it can run locally and does not require an external managed vector database.
+
+The intended architecture was:
+
+1. Parse maintenance documents.
+2. Clean and split text into chunks.
+3. Attach metadata such as document name, section, and equipment context.
+4. Embed chunks and store them in a local vector index.
+5. Retrieve candidate chunks for a user question.
+6. Generate a grounded response with references to retrieved context.
 
 ---
 
-### Demo Video
-<div class="ratio ratio-16x9 mt-3">
-  <iframe
-    src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
-    title="TACTIX Demo"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
+## Implementation & Problem Solving
+
+The most important implementation decision was to keep the pipeline modular. Document processing, indexing, retrieval, and response formatting were treated as separate steps so that each part could be tested independently.
+
+This mattered because document quality was uneven. Some sections were procedural, while others were tables, warnings, or abbreviations. A single chunking strategy did not work equally well for every document type, so the pipeline had to support later tuning of chunk size, metadata fields, and retrieval filters.
 
 ---
 
-- **Outcomes**:  
-  - Reduced **document lookup time** drastically by shifting from manual search to AI-driven retrieval  
-  - Enabled **standardized, step-by-step troubleshooting** even for less experienced personnel  
-  - Provided a **secure, military-grade AI system** with potential expansion to predictive maintenance and fleet-wide knowledge sharing  
-  - Contributes to **smarter maintenance environments** and **higher operational readiness** in manpower-limited settings  
+## Unexpected Issues
+
+- **Grounding vs. readability:** The most useful answer was not always the most fluent answer. Maintenance support needed traceable evidence, so the response format had to prioritize references and step order.
+- **Closed-network assumption:** Many AI examples assume cloud APIs, but this project had to consider local deployment from the beginning.
+- **Domain ambiguity:** Similar equipment terms can appear in different procedures, so metadata filtering became as important as semantic similarity.
+
+---
+
+## Results & Impact
+
+- Built a clear prototype architecture for a maintenance-focused RAG system.
+- Defined a document pipeline that can be expanded with additional manuals and historical cases.
+- Connected backend AI design with realistic deployment constraints such as role-based access and restricted networks.
+- Strengthened my understanding of how backend systems, AI retrieval, and operational constraints meet in a high-stakes domain.
+
+---
+
+## Lessons Learned
+
+This project taught me that AI features are only useful when the surrounding system is reliable. For maintenance support, retrieval quality, permissions, update flow, and deployment constraints matter as much as the language model itself.

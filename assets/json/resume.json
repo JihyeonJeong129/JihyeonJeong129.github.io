@@ -54,7 +54,7 @@
       ],
       "startDate": "2025-11-01",
       "endDate": "2025-11-02",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2025_aws_11_01_11_02/",
+      "url": "/awardcertification/2025_aws_11_01_11_02/",
       "organization": "Amazon Web Services (Korea)"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "startDate": "2025-09-28",
       "endDate": "2025-09-28",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2025_aws_09_28/",
+      "url": "/awardcertification/2025_aws_09_28/",
       "organization": "Amazon Web Services (Korea)"
     },
     {
@@ -82,7 +82,7 @@
       ],
       "startDate": "2025-09-27",
       "endDate": "2025-09-27",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2025_aws_09_27/",
+      "url": "/awardcertification/2025_aws_09_27/",
       "organization": "Amazon Web Services (Korea)"
     },
     {
@@ -97,7 +97,7 @@
       ],
       "startDate": "2025-08-19",
       "endDate": "2025-08-29",
-      "url": "https://jihyeonjeong129.github.io/projects/2025_summer_omron_plc/",
+      "url": "/projects/2025_summer_omron_plc/",
       "organization": "OMRON Automation (Korea)"
     },
     {
@@ -112,7 +112,7 @@
       "startDate": "2025-07-28",
       "endDate": "2025-08-01",
       "organization": "Ajou University – Future Mobility Convergence Program",
-      "url": "https://jihyeonjeong129.github.io/projects/ROS%20Project%20-%201/"
+      "url": "/projects/ROS%20Project%20-%201/"
     },
     {
       "name": "Future Mobility Lecture Series: E2E Autonomous Driving Technology",
@@ -124,7 +124,7 @@
       "startDate": "2025-04-30",
       "endDate": "2025-04-30",
       "organization": "Ajou University – Future Automotive Convergence Program",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2025_e2e_seminar/"
+      "url": "/awardcertification/2025_e2e_seminar/"
     },
     {
       "name": "Practical Coding with Riot Games",
@@ -136,32 +136,32 @@
       ],
       "startDate": "2021-07-26",
       "endDate": "2021-07-26",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2021_riot_games_seminar/",
+      "url": "/awardcertification/2021_riot_games_seminar/",
       "organization": "Ajou University, Department of Software"
     }
   ],
   "awards":[
     {
       "title": "Special Award - Regional Startup Solverthon Competition",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2026_regional_startup_solverthon/",
+      "url": "/awardcertification/2026_regional_startup_solverthon/",
       "date": "2026-01-09",
       "summary": "Received the Special Award at the Regional Startup Solverthon Competition from the Director of the Seoul National University University Alliance Regional Talent Development Project Group."
     },
     {
       "title": "Excellence Award - Sejong Big Data Analysis Idea Contest",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2024_sejong_bigdata/",
+      "url": "/awardcertification/2024_sejong_bigdata/",
       "date": "2024-11-06",
       "summary": "Proposed a strategy to boost tourism by analyzing bus card data related to major festivals in Sejong City. Responsible for building a MySQL database with raw bus card data and performing SQL-based correlation and principal component analysis. Received the Excellence Award from the Mayor of Sejong."
     },
     {
       "title": "Excellence Award - KEPCO KDN Innovation Idea Contest",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2021_KDN/",
+      "url": "/awardcertification/2021_KDN/",
       "date": "2021-07-07",
       "summary": "Proposed an AI-based electric vehicle charging station management and optimal allocation system to support the acceleration of EV adoption. Received the Excellence Award from the President of KEPCO KDN."
     },
     {
       "title": "Grand Prize - National Park Visitor Service Idea Contest",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/2021_nationalPark/",
+      "url": "/awardcertification/2021_nationalPark/",
       "date": "2021-04-20",
       "summary": "Suggested an AI-based national park recommendation system tailored to the rise in family-oriented travel. Received the Grand Prize from the Minister of Environment."
     },
@@ -183,21 +183,21 @@
       "name": "Engineer Information Processing",
       "date": "2026-06-13",
       "issuer": "Human Resources Development Service of Korea",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/%20IndustrialEngineerInformationProcessing/",
+      "url": "/awardcertification/EngineerInformationProcessing/",
       "icon": "fa-solid fa-certificate"
     },
     {
       "name": "SQL Developer (SQLD)",
       "date": "2023-12-15",
       "issuer": "Korea Data Agency",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/SQLD/",
+      "url": "/awardcertification/SQLD/",
       "icon": "fa-solid fa-database"
     },
     {
       "name": "Advanced Data Analytics Semi-Professional (ADsP)",
       "date": "2023-09-15",
       "issuer": "Korea Data Agency",
-      "url": "https://jihyeonjeong129.github.io/awardcertification/ADsP/",
+      "url": "/awardcertification/ADsP/",
       "icon": "fa-solid fa-chart-line"
     }
   ],
@@ -214,7 +214,7 @@
       ],
       "startDate": "2017",
       "endDate": "PRESENT",
-      "url": "https://jihyeonjeong129.github.io/projects/"
+      "url": "/projects/"
     },
     {
       "name": "TACTIX: RAG-based Aircraft Maintenance Support System",
@@ -226,7 +226,7 @@
       ],
       "startDate": "2025-05-21",
       "endDate": "2025-06-13",
-      "url": "https://jihyeonjeong129.github.io/projects/tactix/"
+      "url": "/projects/tactix/"
     },
     {
       "name": "Moisam: Dormitory Group-Purchase Platform",
@@ -237,7 +237,7 @@
       ],
       "startDate": "2025-04-28",
       "endDate": "2025-05-16",
-      "url": "https://jihyeonjeong129.github.io/projects/moisam/"
+      "url": "/projects/moisam/"
     }
   ],
   "skills": [

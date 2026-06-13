@@ -10,6 +10,7 @@ ref: home-lab-monitoring-stack
 permalink: /ko/blog/2026/home-lab-monitoring-stack/
 giscus_comments: true
 related_posts: false
+search_exclude: true
 toc:
   beginning: true
 ---
@@ -18,7 +19,7 @@ toc:
 
 ## 배경
 
-3-노드 홈랩([Athena](/projects/node---athena/), [Hades](/projects/node---hades/), [Daedalus](/projects/node---daedalus/))을 운영하면서 다음 문제를 자주 겪었습니다.
+3-노드 홈랩([Athena]({{ '/projects/node---athena/' | relative_url }}), [Hades]({{ '/projects/node---hades/' | relative_url }}), [Daedalus]({{ '/projects/node---daedalus/' | relative_url }}))을 운영하면서 다음 문제를 자주 겪었습니다.
 
 - VM 게스트 OS가 죽어도 알 길이 없음 → 다음 날 SSH 접속 시도하다가 발견
 - ZFS 풀 사용량이 임계치를 넘은 채로 며칠간 방치된 사례

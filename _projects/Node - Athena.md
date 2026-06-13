@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Node - Athena
-description: Personal home server (Node - Athena) built on a Lenovo System X3650 server 
+description: Personal home server (Node - Athena) built on a Lenovo System X3650 server
 img: assets/img/lenovo_x3650_2gpu.jpg
 importance: 2
 category: "Infrastructure & DevOps"
@@ -9,7 +9,6 @@ lang: en
 ref: node-athena
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="Lenovo X3650" src="https://img.shields.io/badge/Lenovo%20System%20X3650-E2231A?style=flat&logo=lenovo&logoColor=white">
 <img alt="Xeon" src="https://img.shields.io/badge/Intel%20Xeon%20E5--2630%20v4-0071C5?style=flat&logo=intel&logoColor=white">
@@ -17,160 +16,88 @@ ref: node-athena
 <img alt="Xen" src="https://img.shields.io/badge/Xen%20Hypervisor-EE0000?style=flat">
 <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
 <img alt="JupyterHub" src="https://img.shields.io/badge/JupyterHub-F37626?style=flat&logo=jupyter&logoColor=white">
-<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white">
-<img alt="OpenVPN" src="https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white">
-<img alt="WireGuard" src="https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white">
 </p>
 
-<!-- ===== 프로젝트 개요 ===== -->
-## Node - Athena: AI & Data Science Server Overview
-This project introduces **Node - Athena**, a Lenovo System X3650 server designed for **AI research, data analysis, and collaborative software projects**.  
-It serves as the main compute backbone for high-performance machine learning, academic coursework, and team-based R&D.
+## Overview
 
-- **Hardware**:  
-  - Lenovo System X3650  
-  - CPU: Dual Intel Xeon E5-2630 v4 (each 10 cores / 20 threads → total **20 cores / 40 threads**)  
-  - RAM: 80 GB (upgrade to **272 GB planned for October 2025**)  
-  - Storage: 1 TB NVMe SSD  
-  - GPU: 2 × NVIDIA Tesla P100 (16 GB VRAM each)  
-  - Network: Intel 10Gb Ethernet NIC for high-throughput data transfer  
-  - UPS: 1000VA UPS installation scheduled for October 2025 to ensure uninterruptible operation  
+Node - Athena is the compute-focused node in my home-lab infrastructure. It is used for AI experiments, data-analysis workloads, backend prototypes, and course or competition projects that need more resources than a laptop can comfortably provide.
 
-- **Virtualization**:  
-  - **Xen Hypervisor**  
-  - Hosts multiple VMs dedicated to AI workloads, Docker-based services, and software engineering projects  
-
-- **Core Services**:  
-  - **JupyterHub**: provides a collaborative environment for data analysis and AI training  
-    - Used in **Sejong Big Data Competition**  
-    - Supported multiple projects in the **Spring 2025 Machine Learning course**  
-  - **Docker-based AI Agent Platform**: ongoing development and deployment of AI agents  
-  - **Software Engineering Projects**: student and team projects hosted and tested on this server  
-  - **Past Projects**:  
-    - **TACTIX**: RAG-based Aircraft Maintenance Support System  
-    - **Moisam**: Dormitory Group-Purchase Platform  
-  - **VPN (OpenVPN & WireGuard)**: secure remote access for external connectivity to hosted services  
-
-- **Outcomes**:  
-  - Enables high-performance **AI model training, data science experiments, and prototype deployment**  
-  - Provides a centralized platform for **coursework, hackathons, and research competitions**  
-  - Supports **ongoing confidential AI and software projects** under active development  
-  - Allows **secure external access** to internal resources through VPN (OpenVPN & WireGuard)  
+- **Hardware:** Lenovo System X3650, dual Intel Xeon E5-2630 v4, 80 GB RAM, 2 x NVIDIA Tesla P100 GPUs
+- **Core stack:** Xen, Linux, Docker, JupyterHub
+- **Role:** compute and experimentation node
 
 ---
 
-<!-- ===== Core Services ===== -->
-## Core Services
+## Problem & Motivation
 
-### JupyterHub
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/athena-server/jupyterhub.jpg"
-       title="JupyterHub environment"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  **JupyterHub** provides a collaborative platform for data analysis and AI training.  
-  - Used in the **Sejong Big Data Competition**  
-  - Supported multiple projects in the **Spring 2025 Machine Learning course**  
-  Students and team members can access GPU resources and shared notebooks seamlessly.
-</div>
+AI and data projects often need persistent compute resources, shared notebooks, GPU access, and repeatable environments. Running everything on a personal laptop made it hard to separate experiments from daily work.
+
+Athena was built to solve this by providing a dedicated compute node for:
+
+- GPU-backed model experiments,
+- JupyterHub-based data analysis,
+- containerized backend prototypes,
+- team or course projects that need a controlled server environment.
 
 ---
 
-### Docker-based AI Agent Platform
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/athena-server/ai_agent.jpg"
-       title="AI Agent platform on Docker"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Node - Athena runs an **AI agent platform** based on Docker containers.  
-  This platform supports ongoing AI research and prototyping.  
-  Current projects include a **confidential AI agent system** under development.
-</div>
+## My Role
+
+I configured and operated Athena as part of my personal infrastructure.
+
+- Installed and managed the virtualization environment.
+- Prepared Linux-based server environments for AI and backend workloads.
+- Deployed JupyterHub and Docker-based project environments.
+- Used the node as a backend and AI experimentation platform for projects such as TACTIX and Moisam.
 
 ---
 
-### Software Engineering Projects
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/athena-server/software_engineering.jpg"
-       title="Software engineering projects"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  The server hosts multiple **software engineering projects** for coursework and research.  
-  It provides a controlled environment for testing, CI/CD pipelines, and collaborative development.
-</div>
+## Technical Approach
+
+### Why a Dedicated Compute Node
+
+Separating compute from storage and gateway functions made the cluster easier to reason about. Athena could focus on CPU/GPU workloads, while Hades handled storage and remote-access services.
+
+### Why JupyterHub
+
+JupyterHub was useful because several data or ML workflows required notebook-based exploration. It also made it possible to use the server remotely without manually copying notebooks between machines.
+
+### Why Docker
+
+Docker helped isolate project environments and avoid dependency conflicts between AI experiments, backend prototypes, and coursework.
 
 ---
 
-### Past Projects: TACTIX
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/athena-server/tactix.jpg"
-       title="TACTIX Project"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  **TACTIX** (RAG-based Aircraft Maintenance Support System) was developed and deployed on Node - Athena.  
-  This project focused on integrating retrieval-augmented generation for maintenance workflows.
-</div>
+## Implementation & Problem Solving
+
+The main implementation goal was to make Athena reusable. Instead of configuring one-off environments for each project, I focused on creating a server that could host multiple workloads with different dependencies.
+
+This required careful separation between:
+
+- base system configuration,
+- VM or container environments,
+- GPU-dependent workloads,
+- project data synchronized with storage nodes.
 
 ---
 
-### Past Projects: Moida
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/athena-server/moida.jpg"
-       title="Moida Platform"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  **Moida** (Dormitory Group-Purchase Platform) was another major project built and deployed on Node - Athena.  
-  It provided a safe and efficient environment for closed-community group purchasing in university dormitories.
-</div>
+## Unexpected Issues
+
+- **Resource planning:** GPU and memory are valuable, but they must be allocated carefully when multiple experiments run.
+- **Thermal and power concerns:** Enterprise hardware is powerful but requires attention to noise, power draw, and stable operation.
+- **Environment drift:** Long-running experimentation servers need cleanup rules, otherwise old dependencies and containers accumulate.
 
 ---
 
-### VPN (OpenVPN & WireGuard)
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/athena-server/vpn.jpg"
-       title="VPN remote access"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  Node - Athena ensures **secure external connectivity** through both OpenVPN and WireGuard.  
-  This enables team members to access JupyterHub, Docker containers, and project resources remotely.
-</div>
+## Results & Impact
+
+- Created a reusable compute backbone for AI, data, and backend projects.
+- Supported JupyterHub-based analysis and GPU-backed experimentation.
+- Provided a practical environment for learning deployment and server operation.
+- Helped connect project development with real infrastructure constraints.
 
 ---
 
-### UPS (Uninterruptible Power Supply)
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/athena-server/ups.jpg"
-       title="1000VA UPS (planned)"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  A **1000VA UPS** installation is scheduled for October 2025.  
-  It will ensure uninterruptible operation, safe shutdown procedures, and overall system protection for Node - Athena.
-</div>
+## Lessons Learned
+
+Athena taught me that raw compute is only part of the problem. To make a server useful, I also needed repeatable environments, clear workload boundaries, and operational discipline.

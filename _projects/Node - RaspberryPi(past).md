@@ -9,71 +9,71 @@ lang: en
 ref: node-raspberrypi
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="Raspberry Pi" src="https://img.shields.io/badge/Raspberry%20Pi%203B%2B%20%2F%204-A22846?style=flat&logo=raspberrypi&logoColor=white">
 <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
-<img alt="Samba" src="https://img.shields.io/badge/Samba%20%2F%20NFS-CB2027?style=flat">
+<img alt="OpenMediaVault" src="https://img.shields.io/badge/OpenMediaVault-5DACDF?style=flat">
 <img alt="NAS" src="https://img.shields.io/badge/NAS%204TB-0085CA?style=flat">
 </p>
 
-<!-- ===== 프로젝트 개요 ===== -->
-## Node - RaspberryPi: Legacy NAS Server Overview
-This project introduces **Node - RaspberryPi**, a past server project built with Raspberry Pi boards.  
-Although it is no longer in operation, it was used to experiment with **lightweight NAS deployments**.
+## Overview
 
-- **Hardware**:  
-  - First Build: Raspberry Pi 3 B+  
-  - Second Build: Raspberry Pi 4 (8 GB model)  
-  - Storage: 4 TB external HDD (used as main NAS storage)  
+Node - RaspberryPi was my first home-server experiment. It started as a low-power NAS built with Raspberry Pi boards and later became the starting point for the larger home-lab cluster.
 
-- **Purpose**:  
-  - Designed to operate as a **NAS (Network Attached Storage)**  
-  - Both builds were configured with **OpenMediaVault** to manage storage and provide file services  
+- **Hardware:** Raspberry Pi 3 B+ and Raspberry Pi 4 (8 GB)
+- **Storage:** 4 TB external HDD
+- **Core stack:** Linux, OpenMediaVault, SMB/NFS-style file sharing
+- **Status:** retired after migration to larger server nodes
 
 ---
 
-### Raspberry Pi 3 B+ Build
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/raspberrypi-server/pi3bplus.jpg"
-       title="Raspberry Pi 3 B+ NAS Setup"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  The **first build** of Node - RaspberryPi was based on a **Raspberry Pi 3 B+**.  
-  It served as a low-power testbed for running **OpenMediaVault NAS**, connected to a 4 TB HDD.  
-  This setup validated the feasibility of running a NAS on constrained hardware.
-</div>
+## Problem & Motivation
+
+I wanted to learn whether a small, low-power device could provide useful local storage and file-sharing services. The goal was simple: build a NAS-like environment before investing in larger server hardware.
 
 ---
 
-### Raspberry Pi 4 (8 GB) Build
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/raspberrypi-server/pi4_8gb.jpg"
-       title="Raspberry Pi 4 (8 GB) NAS Setup"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  The **second build** upgraded to a **Raspberry Pi 4 (8 GB model)**, significantly improving performance and stability.  
-  It continued to run **OpenMediaVault NAS** with a 4 TB HDD, offering better throughput and multi-user handling.  
-  This version demonstrated the practical limits of Raspberry Pi-based NAS before transitioning to enterprise-grade servers.
-</div>
+## My Role
+
+This was an individual learning project.
+
+- Installed and configured OpenMediaVault.
+- Connected external storage and tested local file sharing.
+- Compared Raspberry Pi 3 B+ and Raspberry Pi 4 behavior under NAS workloads.
+- Used the experience to plan the later Hades storage node.
 
 ---
 
-- **Core Services**:  
-  - **NAS (OpenMediaVault)**: provided file sharing, user management, and storage access within the local network  
-  - Lightweight home server environment for testing and learning purposes  
+## Technical Approach
 
-- **Outcomes**:  
-  - Served as an **experimental platform** to validate NAS setups on low-power hardware  
-  - Demonstrated the feasibility of **cost-effective storage solutions** using Raspberry Pi boards  
-  - Retired from active use after migration to more powerful, enterprise-grade nodes in the infrastructure  
+OpenMediaVault was selected because it provided a practical NAS interface on top of Linux. Raspberry Pi boards were useful because they were inexpensive, low-power, and easy to rebuild during experiments.
 
+The project helped me understand:
 
+- storage mount configuration,
+- network file sharing,
+- user and permission management,
+- limitations of USB-attached storage and small-board hardware.
+
+---
+
+## Unexpected Issues
+
+- Performance was limited by board I/O and external drive behavior.
+- Long-term reliability required more attention than expected.
+- A small NAS is easy to start, but harder to treat as dependable infrastructure.
+
+---
+
+## Results & Impact
+
+- Built and operated a working lightweight NAS environment.
+- Learned the basics of Linux-based storage administration.
+- Identified why a more reliable server-grade storage node was needed.
+- Migrated the role to Hades as the home lab matured.
+
+---
+
+## Lessons Learned
+
+This project was valuable because it exposed infrastructure basics early: storage is not only capacity, but also reliability, permissions, access patterns, and recovery planning.

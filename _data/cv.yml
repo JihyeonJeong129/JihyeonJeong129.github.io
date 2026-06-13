@@ -14,7 +14,7 @@
       year: 2021 - present
       description:
         - Coursework includes Operating Systems, Computer Networks, Database Systems, Distributed Systems, Algorithms, Computer Architecture, and Machine Learning.
-        - See the <a href="/Coursework/">Coursework</a> page for details.
+        - See the <a href="{{ '/Coursework/' | relative_url }}">Coursework</a> page for details.
 
 - title: Experience
   type: time_table

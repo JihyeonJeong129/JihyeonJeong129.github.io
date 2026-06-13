@@ -2,14 +2,13 @@
 layout: page
 title: Home Server Infrastructure Overview
 description: Overview of the personal distributed server cluster (Athena, Hades, Daedalus)
-img: assets/img/home_server_overview.jpg
+img: assets/img/main_pic.jpg
 importance: 0
 category: "Infrastructure & DevOps"
 lang: en
 ref: home-server-overview
 ---
 
-<!-- ===== Tech Stack ===== -->
 <p>
 <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black">
 <img alt="VMware ESXi" src="https://img.shields.io/badge/VMware%20ESXi-607078?style=flat&logo=vmware&logoColor=white">
@@ -18,75 +17,98 @@ ref: home-server-overview
 <img alt="OpenVPN" src="https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white">
 <img alt="WireGuard" src="https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white">
 <img alt="NAS" src="https://img.shields.io/badge/NAS-0085CA?style=flat">
-<img alt="FPGA" src="https://img.shields.io/badge/Xilinx%20ZYNQ-FFCC00?style=flat">
 </p>
 
-<!-- ===== 전체 개요 ===== -->
-## Home Server Infrastructure Overview
+## Overview
 
-This section provides a **high-level overview** of my distributed **home server infrastructure**,  
-which consists of three interconnected nodes — [**Node - Athena**](/my-awesome-home-lab/node-athena/), [**Node - Hades**](/my-awesome-home-lab/node-hades/), and [**Node - Daedalus**](/my-awesome-home-lab/node-daedalus/).  
-Together, they form a miniature on-premise data center that supports **AI research, software development, and hardware prototyping**.
+This project is my personal on-premise infrastructure, built as a small distributed environment for backend deployment, AI experimentation, storage, and hardware testing.
 
----
-
-### 🧠 [Node - Athena](/my-awesome-home-lab/node-athena/) (Compute & AI Research)
-- **Primary Role**: High-performance compute node for **AI training**, **data science**, and **R&D**.  
-- **Highlights**:  
-  - Dual Xeon processors, dual Tesla P100 GPUs  
-  - Xen-based virtualization for isolated AI and engineering workloads  
-  - Runs **JupyterHub**, **Docker AI agent platforms**, and **software engineering projects**  
-  - Acts as the **central compute backbone** for coursework, competitions, and LLM-based systems  
-- **Connected Services**: Remote access via VPN, shared data sync with Hades NAS
+- **Cluster:** 3 nodes: Athena, Hades, and Daedalus
+- **Main roles:** compute, storage, virtualization, VPN access, and hardware testbed
+- **Core stack:** Linux, Xen, VMware ESXi, Docker, NAS, OpenVPN, WireGuard
+- **Purpose:** operate a realistic environment where I can deploy, break, monitor, and improve services outside a local-only laptop setup
 
 ---
 
-### 🗄️ [Node - Hades](/my-awesome-home-lab/node-hades/) (Storage & Virtualization Hub)
-- **Primary Role**: **Storage, collaboration, and virtualization** node  
-- **Highlights**:  
-  - VMware ESXi hypervisor managing multiple lightweight VMs  
-  - **NAS** for centralized storage and backups (10 TB)  
-  - **PhotoPrism** and **MatterMost** for media and team collaboration  
-  - Serves as **gateway and remote-access hub** (OpenVPN / WireGuard)  
-- **Connected Services**: Syncs with Athena for data and code backup, hosts personal cloud services
+## Problem & Motivation
+
+Many student projects end after a local demo. I wanted an environment where services could be deployed, accessed remotely, backed up, and operated over time.
+
+The main problems I wanted to solve were:
+
+- separating experimental workloads from personal devices,
+- providing persistent storage for project data and backups,
+- testing backend services in a networked environment,
+- learning infrastructure trade-offs through direct operation,
+- supporting AI, backend, and embedded projects from one shared platform.
 
 ---
 
-### ⚙️ [Node - Daedalus](/my-awesome-home-lab/node-daedalus/) (FPGA & Hardware Testing)
-- **Primary Role**: Dedicated system for **FPGA and embedded experiments**  
-- **Highlights**:  
-  - Focused on **Xilinx ZYNQ-7000** hardware-software co-design  
-  - Used for **AXI interface**, **firmware testing**, and hardware validation  
-  - Lightweight environment for low-level prototyping before integration with Athena or Hades  
-- **Connected Services**: Local data transfer and test logs synchronized to Hades NAS
+## My Role
+
+This is an individual infrastructure project. I designed, assembled, configured, and operated the environment myself.
+
+- Designed the role of each node.
+- Installed and configured hypervisors and Linux environments.
+- Set up VPN access for remote operation.
+- Deployed project services such as JupyterHub, collaboration tools, and backend prototypes.
+- Managed storage, backup direction, and service separation between nodes.
 
 ---
 
-### 🔗 Interconnection & Architecture
-<div class="row justify-content-sm-center">
-  <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid
-       path="/assets/img/home_server_architecture.jpg"
-       title="Home server cluster architecture"
-       class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">
-  The three nodes form a **distributed cluster** connected via a high-speed local network.  
-  - **Athena** handles compute-intensive AI workloads  
-  - **Hades** provides storage, virtualization, and VPN gateway functions  
-  - **Daedalus** supports FPGA and embedded experiments  
-  Together, they operate as a **cohesive hybrid environment** bridging AI, software, and hardware domains.
-</div>
+## Architecture & Technology Choices
+
+### Node Roles
+
+- **Athena:** compute node for AI training, JupyterHub, and backend experiments.
+- **Hades:** storage and virtualization hub with NAS, collaboration services, and VPN gateway functions.
+- **Daedalus:** lightweight hardware and FPGA test node.
+
+### Why On-Premise
+
+Cloud services are convenient, but the home-lab environment gave me direct control over hardware, networking, storage, and failure handling. This was useful for learning DevOps concepts at a lower level than managed services normally expose.
+
+### Why Mixed Virtualization
+
+Different nodes had different roles, so I used virtualization based on the workload:
+
+- Xen for compute-oriented VM isolation on Athena.
+- VMware ESXi for lightweight service VMs on Hades.
+- Bare-metal or simple Linux setup for hardware testing on Daedalus.
 
 ---
 
-### 🌐 Use Cases & Outcomes
-- Enables **AI model development**, **FPGA prototyping**, and **DevOps experimentation** within a private environment  
-- Serves as a **complete on-premise research and education platform** for academic and personal projects  
-- Provides **redundancy, modularity, and security** through virtualization and UPS-backed nodes  
-- Powers ongoing projects such as **RAG-based AI systems**, **IoT firmware integration**, and **collaborative software platforms**
+## Implementation & Problem Solving
+
+The infrastructure was organized around separation of concerns:
+
+1. Compute-heavy workloads run on Athena.
+2. Persistent data and internal services are centered around Hades.
+3. Hardware experiments are isolated on Daedalus.
+4. Remote access is handled through VPN instead of exposing internal services directly.
+
+This structure let me reuse the same infrastructure across coursework, competitions, and personal services without mixing every workload into one machine.
 
 ---
 
-_📦 Together, [Node - Athena](/my-awesome-home-lab/node-athena/), [Node - Hades](/my-awesome-home-lab/node-hades/), and [Node - Daedalus](/my-awesome-home-lab/node-daedalus/) illustrate the convergence of AI, DevOps, and embedded systems within a personal research ecosystem._
+## Unexpected Issues
+
+- **Operational complexity:** Running multiple nodes creates more maintenance work than a single machine.
+- **Power and availability:** A home environment requires attention to UPS capacity, safe shutdown, and recovery.
+- **Service boundaries:** It is easy for a home lab to become messy unless each node has a clear responsibility.
+- **Documentation:** The infrastructure is only useful as a portfolio if the architecture and operating decisions are clearly documented.
+
+---
+
+## Results & Impact
+
+- Built a reusable infrastructure foundation for backend, AI, and hardware projects.
+- Used the environment to host or test projects such as TACTIX, Moisam, and JupyterHub-based analysis workflows.
+- Gained hands-on experience with virtualization, service deployment, VPN access, and storage planning.
+- Developed a more realistic understanding of what it means to operate a service beyond a local demo.
+
+---
+
+## Lessons Learned
+
+The biggest lesson was that infrastructure is not just hardware. A useful system needs clear roles, backup thinking, access control, and operational habits. This project became a practical base for learning those habits.

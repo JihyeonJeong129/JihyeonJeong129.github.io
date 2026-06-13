@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Engineer Information Processing
+permalink: /awardcertification/EngineerInformationProcessing/
 img: "/assets/img/certification_awards/Engineer Information Processing.png"
 description: 
 location: "Human Resources Development Service of Korea, Date of Certification: 2026.06.13"

@@ -10,6 +10,7 @@ ref: home-lab-monitoring-stack
 permalink: /blog/2026/home-lab-monitoring-stack/
 giscus_comments: true
 related_posts: false
+search_exclude: true
 toc:
   beginning: true
 ---
@@ -18,7 +19,7 @@ toc:
 
 ## Background
 
-Running a 3-node home lab ([Athena](/projects/node---athena/), [Hades](/projects/node---hades/), [Daedalus](/projects/node---daedalus/)) surfaced recurring problems:
+Running a 3-node home lab ([Athena]({{ '/projects/node---athena/' | relative_url }}), [Hades]({{ '/projects/node---hades/' | relative_url }}), [Daedalus]({{ '/projects/node---daedalus/' | relative_url }})) surfaced recurring problems:
 
 - A guest VM would die and I would only notice the next day when SSH failed
 - ZFS pool usage crossed thresholds and stayed there, unnoticed, for days

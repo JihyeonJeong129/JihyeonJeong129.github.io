@@ -10,6 +10,7 @@ ref: esxi-vm-backup
 permalink: /ko/blog/2026/esxi-vm-backup-script/
 giscus_comments: true
 related_posts: false
+search_exclude: true
 toc:
   beginning: true
 ---
@@ -18,7 +19,7 @@ toc:
 
 ## 시작 — "백업이 있긴 한데 복구는 안 해봤다"
 
-[Hades](/projects/node---hades/) 노드는 VMware ESXi 위에서 약 8개의 VM(개인 서비스, 테스트베드, Mattermost, PhotoPrism 등)을 돌리고 있습니다.  
+[Hades]({{ '/projects/node---hades/' | relative_url }}) 노드는 VMware ESXi 위에서 약 8개의 VM(개인 서비스, 테스트베드, Mattermost, PhotoPrism 등)을 돌리고 있습니다.  
 백업이라고 부를 만한 건 다음 두 가지뿐이었습니다.
 
 1. ESXi 데이터스토어 → NAS HDD 수동 `cp` (분기 1회 정도)
