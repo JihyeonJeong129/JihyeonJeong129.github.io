@@ -32,7 +32,7 @@ Hi, I'm **Jihyeon Jeong (정지현)** — I build and operate the kind of **prod
 
 My focus is **Linux · Kubernetes · AWS · CI/CD**, working across backend and infrastructure with an interest in systems that are *observable, reproducible, and recoverable*. I don't have professional experience yet, but I treat my self-hosted 3-node home lab as a small production-like environment — practicing how to design and take responsibility for reliability, observability, and failure recovery.
 
-It isn't large-scale traffic, but even at a personal-lab scale I try to leave operational evidence: the storage node has run **~255 days** since its last maintenance, its disks are still **SMART-clean after 5+ years** of power-on time, and the compute node has stayed up **~254 days** through real outages on UPS protection. More than scale, I want to show the discipline of owning failure, backup, and security end to end.
+It isn't large-scale traffic, but even at a personal-lab scale I try to leave operational evidence. The storage node has run **~255 days** since its last maintenance, its disks are still **SMART-clean after 5+ years** of power-on time, and the compute node has stayed up **~254 days** through real outages on UPS protection. (As of 2026-06-15)
 
 I'm also considering graduate study, with research interests in **(1) distributed systems & ML infrastructure (MLOps / LLM serving)** and **(2) FPGA/PCIe-based hardware acceleration**.
 
