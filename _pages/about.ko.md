@@ -50,7 +50,7 @@ latest_posts:
   <span class="tag">Observability</span>
 </div>
 
-#### 대표 작업
+#### 대표 프로젝트
 
 - **[MyAwesomeHomeLab]({{ '/ko/projects/home-server-overview/' | relative_url }})** — Xen + ESXi 기반 3-노드 온프레미스 클러스터 (백엔드 · JupyterHub · NAS · VPN 게이트웨이). UPS로 보호되며, 관리자 로그인 · UPS 이벤트 · 백업 결과를 이메일로 자동 알림.
 - **TACTIX** — 폐쇄망(에어갭) 군 네트워크용 RAG 기반 항공기 정비 지원 시스템
