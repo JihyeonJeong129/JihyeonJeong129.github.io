@@ -144,42 +144,42 @@ ninja.data = [{
               window.location.href = "/projects/Home%20Server%20Overview/";
             },},{id: "projects-node-athena",
           title: 'Node - Athena',
-          description: "Lenovo System X3650 기반 개인 홈 서버 (AI / 데이터 사이언스 노드)",
+          description: "Lenovo System X3650 기반 Compute / AI / VM Host 노드",
           section: "Projects",handler: () => {
               window.location.href = "/ko/projects/node-athena/";
             },},{id: "projects-node-athena",
           title: 'Node - Athena',
-          description: "Personal home server (Node - Athena) built on a Lenovo System X3650 server",
+          description: "Compute / AI / VM Host node built on a Lenovo System X3650 server",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20Athena/";
             },},{id: "projects-node-daedalus",
           title: 'Node - Daedalus',
-          description: "FPGA 시스템 테스트 전용 노드",
+          description: "FPGA / PCIe / NIC 등 하드웨어 테스트 전용 노드",
           section: "Projects",handler: () => {
               window.location.href = "/ko/projects/node-daedalus/";
             },},{id: "projects-node-daedalus",
           title: 'Node - Daedalus',
-          description: "Node - Daedalus, dedicated to FPGA system testing",
+          description: "Dedicated node for hardware testing (FPGA / PCIe / NIC)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20Daedalus/";
             },},{id: "projects-node-hades",
           title: 'Node - Hades',
-          description: "HPE MicroServer Gen10 Plus 기반 개인 홈 서버 (스토리지 · 가상화 허브)",
+          description: "HPE MicroServer Gen10 Plus 기반 Storage / NAS / Core Service 노드",
           section: "Projects",handler: () => {
               window.location.href = "/ko/projects/node-hades/";
             },},{id: "projects-node-hades",
           title: 'Node - Hades',
-          description: "Personal home server (Node - Hades) built on a HPE MicroServer Gen10 Plus",
+          description: "Storage / NAS / Core Service node built on a HPE MicroServer Gen10 Plus",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20Hades/";
-            },},{id: "projects-node-raspberrypi",
-          title: 'Node - RaspberryPi',
-          description: "Raspberry Pi 보드로 구성했던 과거 NAS 서버 프로젝트",
+            },},{id: "projects-node-raspberrypi-운영종료",
+          title: 'Node - RaspberryPi (운영종료)',
+          description: "Raspberry Pi 기반 초기 NAS 실험용도. Hades Node 도입과 함께 운영종료.",
           section: "Projects",handler: () => {
               window.location.href = "/ko/projects/node-raspberrypi/";
-            },},{id: "projects-node-raspberrypi",
-          title: 'Node - RaspberryPi',
-          description: "Node - RaspberryPi, a past server project built with Raspberry Pi boards.",
+            },},{id: "projects-node-raspberrypi-retired",
+          title: 'Node - RaspberryPi (retired)',
+          description: "An early Raspberry Pi NAS experiment. Retired when Node - Hades came online.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Node%20-%20RaspberryPi(past)/";
             },},{id: "projects-ros-project-morai-시뮬레이터",
