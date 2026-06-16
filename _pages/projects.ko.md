@@ -6,7 +6,7 @@ description: 홈랩, 백엔드, 인프라, DevOps 관련 프로젝트를 정리�
 nav: false
 lang: ko
 ref: projects
-display_categories: [Infrastructure & DevOps, Backend, Data Analytics, Hardware & Embedded]
+display_categories: [Infrastructure & DevOps]
 horizontal: false
 ---
 

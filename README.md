@@ -30,13 +30,13 @@ assets/                 Images, PDFs, scripts, styles, and generated assets
 
 ```bash
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload --livereload-port 35730
 ```
 
-If the default port is already in use:
+If the site port is already in use:
 
 ```bash
-bundle exec jekyll serve --port 4001
+bundle exec jekyll serve --port 4001 --livereload --livereload-port 35730
 ```
 
 Then open `http://localhost:4001`.

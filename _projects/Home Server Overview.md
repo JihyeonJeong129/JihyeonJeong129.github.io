@@ -2,7 +2,7 @@
 layout: page
 title: Home Server Infrastructure Overview
 description: Overview of the personal distributed server cluster (Athena, Hades, Daedalus)
-img: assets/img/main_pic.jpg
+img: assets/img/homelab-overview.png
 importance: 0
 category: "Infrastructure & DevOps"
 lang: en
@@ -14,101 +14,147 @@ ref: home-server-overview
 <img alt="VMware ESXi" src="https://img.shields.io/badge/VMware%20ESXi-607078?style=flat&logo=vmware&logoColor=white">
 <img alt="Xen" src="https://img.shields.io/badge/Xen%20Hypervisor-EE0000?style=flat">
 <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
-<img alt="OpenVPN" src="https://img.shields.io/badge/OpenVPN-EA7E20?style=flat&logo=openvpn&logoColor=white">
 <img alt="WireGuard" src="https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white">
-<img alt="NAS" src="https://img.shields.io/badge/NAS-0085CA?style=flat">
+<img alt="NAS" src="https://img.shields.io/badge/NAS-455A64?style=flat">
 </p>
+
+<style>
+.home-server-table {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.2rem 0;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+.home-server-table th,
+.home-server-table td {
+  text-align: left;
+  vertical-align: middle;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-height: 1.55;
+}
+
+.home-server-spaced-table {
+  border-spacing: 0 5pt !important;
+}
+
+.home-server-overview-image {
+  display: block;
+  width: 70%;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2rem auto;
+}
+
+.post article hr {
+  margin-top: calc(1rem + 5pt);
+  margin-bottom: calc(1rem + 5pt);
+}
+</style>
 
 ## Overview
 
-This project is my personal on-premise infrastructure, built as a small distributed environment for backend deployment, AI experimentation, storage, and hardware testing.
+MyAwesomeHomeLab is my personal on-premise infrastructure, running on three nodes: Athena, Hades, and Daedalus. I built it to host service deployments, AI / Local LLM experiments, NAS workflows, and FPGA / PCIe hardware tests.
 
-- **Cluster:** 3 nodes: Athena, Hades, and Daedalus
-- **Main roles:** compute, storage, virtualization, VPN access, and hardware testbed
-- **Core stack:** Linux, Xen, VMware ESXi, Docker, NAS, OpenVPN, WireGuard
-- **Purpose:** operate a realistic environment where I can deploy, break, monitor, and improve services outside a local-only laptop setup
+It started with every role on a single Hades box, but as the compute I needed grew, I rebuilt it into the current layout that *physically separates* **compute / storage / hardware testing**. Each node uses its own IP range, and inter-node access is connected only through WireGuard VPN.
 
----
-
-## Problem & Motivation
-
-Many student projects end after a local demo. I wanted an environment where services could be deployed, accessed remotely, backed up, and operated over time.
-
-The main problems I wanted to solve were:
-
-- separating experimental workloads from personal devices,
-- providing persistent storage for project data and backups,
-- testing backend services in a networked environment,
-- learning infrastructure trade-offs through direct operation,
-- supporting AI, backend, and embedded projects from one shared platform.
+<img class="home-server-overview-image" src="{{ '/assets/img/homelab-overview.png' | relative_url }}" alt="MyAwesomeHomeLab infrastructure overview">
 
 ---
 
-## My Role
+## Node Architecture
 
-This is an individual infrastructure project. I designed, assembled, configured, and operated the environment myself.
+| Node | Role | IP range | OS | Details |
+| --- | --- | --- | --- | --- |
+| **Athena** | Compute / AI / VM Host | `192.168.200.X` | XCP-ng (Xen) | [View details]({{ '/projects/Node%20-%20Athena/' | relative_url }}) |
+| **Hades** | Storage / NAS / Core Service | `192.168.100.X` | VMware ESXi | [View details]({{ '/projects/Node%20-%20Hades/' | relative_url }}) |
+| **Daedalus** | Hardware Test / FPGA / PCIe | — | Ubuntu (bare metal) | [View details]({{ '/projects/Node%20-%20Daedalus/' | relative_url }}) |
+| **RaspberryPi** *(retired)* | Early NAS experiment | — | Raspberry Pi OS | [View details]({{ '/projects/Node%20-%20RaspberryPi%28past%29/' | relative_url }}) |
+{: .home-server-table .home-server-spaced-table}
 
-- Designed the role of each node.
-- Installed and configured hypervisors and Linux environments.
-- Set up VPN access for remote operation.
-- Deployed project services such as JupyterHub, collaboration tools, and backend prototypes.
-- Managed storage, backup direction, and service separation between nodes.
-
----
-
-## Architecture & Technology Choices
-
-### Node Roles
-
-- **Athena:** compute node for AI training, JupyterHub, and backend experiments.
-- **Hades:** storage and virtualization hub with NAS, collaboration services, and VPN gateway functions.
-- **Daedalus:** lightweight hardware and FPGA test node.
-
-### Why On-Premise
-
-Cloud services are convenient, but the home-lab environment gave me direct control over hardware, networking, storage, and failure handling. This was useful for learning DevOps concepts at a lower level than managed services normally expose.
-
-### Why Mixed Virtualization
-
-Different nodes had different roles, so I used virtualization based on the workload:
-
-- Xen for compute-oriented VM isolation on Athena.
-- VMware ESXi for lightweight service VMs on Hades.
-- Bare-metal or simple Linux setup for hardware testing on Daedalus.
+Each node's hosted workloads, decisions, and operational incidents are covered on the node pages above.
 
 ---
 
-## Implementation & Problem Solving
+## Why Separate Roles
 
-The infrastructure was organized around separation of concerns:
+My earlier web projects were tested almost entirely on `localhost`, so I never got to experience the networking, auth, DB, and deployment problems that show up once a real external user connects. A commercial cloud could cover some of that, but the monthly cost was a burden — and since I work across a Windows desktop and a MacBook, I needed a central file store anyway. On top of that, hardware experiments like FPGA and PCIe are effectively impossible in a cloud environment.
 
-1. Compute-heavy workloads run on Athena.
-2. Persistent data and internal services are centered around Hades.
-3. Hardware experiments are isolated on Daedalus.
-4. Remote access is handled through VPN instead of exposing internal services directly.
-
-This structure let me reuse the same infrastructure across coursework, competitions, and personal services without mixing every workload into one machine.
+Initially I put NAS, services, VPN, and the experiment environment all on a single Hades box, but the MicroServer's limited memory expansion meant it hit a wall quickly. So I split compute out to Athena, refocused Hades on Storage/Core, and added Daedalus as a separate node for hardware experiments — the current structure.
 
 ---
 
-## Unexpected Issues
+## Network & Security
 
-- **Operational complexity:** Running multiple nodes creates more maintenance work than a single machine.
-- **Power and availability:** A home environment requires attention to UPS capacity, safe shutdown, and recovery.
-- **Service boundaries:** It is easy for a home lab to become messy unless each node has a clear responsibility.
-- **Documentation:** The infrastructure is only useful as a portfolio if the architecture and operating decisions are clearly documented.
+**IP range per node**
+- Hades: `192.168.100.X`
+- Athena: `192.168.200.X`
+
+**VPN topology**
+- One VM on each of Hades / Athena runs WireGuard as the VPN endpoint
+- Daedalus runs a WireGuard client on Ubuntu to reach both nodes' internal networks
+- `AllowedIPs` routes only management traffic through the VPN, keeping ordinary internet traffic separate
+
+**Public ports (minimized)**
+- Hades: NAS service + WireGuard ports only
+- Athena: WireGuard port only
+- Daedalus: no direct exposure (VPN-only access)
+
+**Security policy**
+- SSH is never exposed directly to the public internet — administration happens only over the internal network after connecting via VPN
+- Root account login is disabled
+- Fail2ban is applied to public NAS services (5 password failures within 24 h → 24 h ban)
+- The real incident behind these policies is covered in [Hades · Operations & Incidents]({{ '/projects/Node%20-%20Hades/' | relative_url }}#operations--incidents).
 
 ---
 
-## Results & Impact
+## Operational Snapshot
 
-- Built a reusable infrastructure foundation for backend, AI, and hardware projects.
-- Used the environment to host or test projects such as TACTIX, Moisam, and JupyterHub-based analysis workflows.
-- Gained hands-on experience with virtualization, service deployment, VPN access, and storage planning.
-- Developed a more realistic understanding of what it means to operate a service beyond a local demo.
+| Item | Current status |
+| --- | --- |
+| Active nodes | 3 (Hades / Athena / Daedalus) |
+| NAS main / backup capacity | 4 TB Main · 6 TB Backup |
+| Backup method / frequency | `rsync` Main → Backup, once daily |
+| Public port count | Hades 2 / Athena 1 / Daedalus 0 |
+| Inter-node communication | WireGuard VPN only |
+{: .home-server-table .home-server-spaced-table}
+
+The disks consist of a 4 TB Main Storage used for primary NAS data and a 6 TB Backup Storage for the `rsync` backup.
+
+> Node-level metrics — uptime, number of hosted VMs/containers, latest backup result — are in the "At a Glance" section of each node page.
 
 ---
 
-## Lessons Learned
+## Technology Choices
 
-The biggest lesson was that infrastructure is not just hardware. A useful system needs clear roles, backup thinking, access control, and operational habits. This project became a practical base for learning those habits.
+| Technology | Reason (summary) |
+| --- | --- |
+| **VMware ESXi** | Hades (HPE MicroServer, 4-core) has an official HPE image and runs on the free license → [Hades · Key Decisions]({{ '/projects/Node%20-%20Hades/' | relative_url }}#key-decisions) |
+| **XCP-ng / Xen** | Athena (20-core) exceeds the free ESXi license range. After evaluating Proxmox, I chose XCP-ng for its ESXi-like operating model → [Athena · Key Decisions]({{ '/projects/Node%20-%20Athena/' | relative_url }}#key-decisions) |
+| **OpenMediaVault + ext4** | Built the NAS quickly while reusing existing ext4 disks. The trade-offs vs. ZFS are on the Hades page → [Hades · Key Decisions]({{ '/projects/Node%20-%20Hades/' | relative_url }}#key-decisions) |
+| **Docker on VM** | VMs isolate per project, Docker separates runtime dependencies. The deployment pipeline is on the Athena page → [Athena · What Runs Here]({{ '/projects/Node%20-%20Athena/' | relative_url }}#what-runs-here) |
+| **WireGuard VPN** | Simpler to configure than OpenVPN, and `AllowedIPs` makes selective routing easy — a good fit for isolating the management network |
+| **Ubuntu (Daedalus)** | Most stable compatibility with FPGA vendor tools (Vivado, etc.) and board drivers → [Daedalus · Key Decisions]({{ '/projects/Node%20-%20Daedalus/' | relative_url }}#key-decisions) |
+{: .home-server-table .home-server-spaced-table .home-server-choice-table}
+
+---
+
+## Future Plans
+
+The current infrastructure mixes manual setup with partial automation. I keep only the high-priority improvements here and leave the rest in each node page's "Limitations & Next Steps".
+
+- **Monitoring/alerting** — visualize node/service state and backup results with Prometheus + Grafana
+- **Recovery-test automation** — periodically verify that a backup is a *restorable* backup
+- **IaC for server setup** — fix the node-rebuild procedure as code with Ansible
+- **Stronger network separation** — separate NAS / management / experiment traffic more clearly with VLAN / firewall policy
+
+> Per-node improvement items (GPU resource scheduling, ZFS review, FPGA environment upgrades, etc.) are covered on the individual node pages.
+
+---
+
+<p class="text-muted small mt-4">
+  Korean version: <a href="{{ '/ko/projects/home-server-overview/' | relative_url }}">홈 서버 인프라 개요</a>
+</p>

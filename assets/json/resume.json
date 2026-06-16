@@ -225,8 +225,7 @@
         "Designed secure, on-premise full-stack deployment (Frontend, Backend, GPU acceleration) for closed military networks"
       ],
       "startDate": "2025-05-21",
-      "endDate": "2025-06-13",
-      "url": "/projects/tactix/"
+      "endDate": "2025-06-13"
     },
     {
       "name": "Moisam: Dormitory Group-Purchase Platform",
@@ -236,8 +235,7 @@
         "Implemented database-backed features including recruitment posts, participation tracking, comments, and real-time chat" 
       ],
       "startDate": "2025-04-28",
-      "endDate": "2025-05-16",
-      "url": "/projects/moisam/"
+      "endDate": "2025-05-16"
     }
   ],
   "skills": [

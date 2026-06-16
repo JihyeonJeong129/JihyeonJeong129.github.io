@@ -8,7 +8,7 @@ nav: true
 nav_order: 3
 lang: en
 ref: projects
-display_categories: [Infrastructure & DevOps, Backend, Data Analytics, Hardware & Embedded]
+display_categories: [Infrastructure & DevOps]
 horizontal: false
 ---
 
