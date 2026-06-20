@@ -77,7 +77,7 @@ permalink: /ko/projects/node-hades/
 | 현재 상태 | 운영 중 (Storage 허브) |
 {: .home-server-table .home-server-spaced-table}
 
-한 줄 요약: **Hades는 클러스터의 데이터·VPN·핵심 서비스가 모이는 항상-켜져-있는 노드입니다.**
+한 줄 요약: **Hades는 클러스터의 데이터, VPN, 핵심 서비스가 모이는 항상 켜져 있는 노드입니다.**
 
 ---
 
@@ -89,7 +89,7 @@ permalink: /ko/projects/node-hades/
 | --- | --- | --- |
 | OpenMediaVault VM | NAS 메인. SMB/NFS 공유, 사용자/권한 관리, rsync 백업 잡, **UPS USB 연결 엔드포인트** | vCPU 2, RAM 4 GB |
 | WireGuard VM | 외부 → 홈랩 진입점. 관리 트래픽을 받아 내부 VPN으로 분배 | vCPU 1, RAM 2 GB |
-| Core Service VM | 항상 떠 있어야 하는 내부 서비스 (협업 도구 등) | vCPU 3, RAM 12 GB |
+| Core Service VM | 항상 켜져 있어야 하는 내부 서비스 (협업 도구 등) | vCPU 3, RAM 12 GB |
 | Couch DB | Obsidian self hosted sync 서비스 운영 | vCPU 2, RAM 2 GB |
 {: .home-server-table .home-server-spaced-table}
 
@@ -100,8 +100,8 @@ permalink: /ko/projects/node-hades/
 **NAS 공유 분류 (정책)**
 
 - **장기 보존 대상** — 프로젝트 산출물, 사진/문서, 학습 데이터 일부 → 일일 백업 포함
-- **재생성 가능 데이터** — 컨테이너 캐시, 임시 실험 산출물 → 백업 대상 제외
-- **설정 자산** — Docker Compose, 서비스 설정 파일 → 별도 Git 저장소로 동기화
+- **(재생성 가능한) 임시 데이터** — 컨테이너 내부 데이터, 임시 산출물 → 백업 대상 제외
+- **환경설정 데이터** — Docker Compose, 서비스 설정 파일 → 별도 Git 저장소로 동기화
 
 서비스 설정/Compose 파일을 NAS가 아니라 Git에 두는 이유는, NAS 자체가 죽었을 때는 서비스 복구가 불가능하므로 이를 대비하기 위함.
 
@@ -172,7 +172,7 @@ Fail2ban 사건처럼 로그를 *직접 확인하는 방식*은 매번 열어보
 {: .home-server-table .home-server-spaced-table}
 
 - 두 디스크 모두 *재할당·대기·Offline 불량 섹터가 0*이고 인터페이스(CRC) 오류도 없어, 5년 이상 가동한 Main 디스크도 물리적으로는 아직 건강합니다.
-- 이 값들은 *지금 시점의 단일 스냅샷*이며, 추세(증가율·온도 변화)를 보려면 별도 수집이 필요합니다 → Next Steps의 모니터링 항목과 연결됩니다.
+- 이 값들은 *지금 시점의 단일 스냅샷*이며, 추세(증가율·온도 변화)를 보려면 별도 데이터 수집이 필요합니다.
 
 **겪은 사건 — 외부 로그인 시도 → Fail2ban 도입**
 
@@ -183,7 +183,7 @@ Fail2ban 사건처럼 로그를 *직접 확인하는 방식*은 매번 열어보
 대응:
 1. **Root 계정 로그인 차단** — SSH 및 NAS 관리자 계정 모두 root 직접 로그인 금지로 변경.
 2. **Fail2ban 적용** — 공개 NAS 서비스에 정책 추가: 24시간 내 비밀번호 오류 5회 발생 시 24시간 Ban.
-3. **외부 공개면 재점검** — 꼭 필요하지 않은 서비스 포트를 닫고 VPN 경유로 전환.
+3. **외부 공개 포트 최소화** — 꼭 필요하지 않은 서비스 포트를 닫고 VPN 경유로 전환.
 
 배운 점: *서비스를 외부에 노출하는 작업*과 *서비스를 운용하는 작업*은 별개의 작업이라는 점. 로그를 직접 보기 전까지는 "잘 작동하고 있다 = 외부 침입이 없는 상태"로 착각하기 쉽다는 점.
 

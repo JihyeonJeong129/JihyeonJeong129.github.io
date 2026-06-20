@@ -60,7 +60,7 @@ permalink: /ko/projects/home-server-overview/
 
 MyAwesomeHomeLab은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 온프레미스 인프라입니다. 서비스 배포, AI/Local LLM 실험, NAS, FPGA·PCIe 하드웨어 테스트를 진행하기 위해 구성했습니다.
 
-처음에는 Hades 하나에 모든 역할을 올렸지만, 필요한 컴퓨팅 자원이 늘어나면서 **연산 / 저장소 / 하드웨어 테스트**를 물리적으로 분리한 현재 구조로 재 구성 하였습니다. 각 노드는 서로 다른 IP 대역을 쓰고, 노드 간 접근은 WireGuard VPN으로만 연결됩니다.
+처음에는 Hades 하나에 모든 역할을 올렸지만, 필요한 컴퓨팅 자원이 늘어나면서 **연산 / 저장소 / 하드웨어 테스트**를 물리적으로 분리하는 방식으로 재 구성 하였습니다. 각 노드는 서로 다른 IP 대역을 쓰고, 노드 간 접근은 WireGuard VPN으로만 연결되도록 설계하였습니다.
 
 <img class="home-server-overview-image" src="{{ '/assets/img/homelab-overview.png' | relative_url }}" alt="MyAwesomeHomeLab infrastructure overview">
 
@@ -76,7 +76,7 @@ MyAwesomeHomeLab은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 �
 | **RaspberryPi** *(은퇴)* | 초기 NAS 실험 | — | Raspberry Pi OS | [상세 보기]({{ '/ko/projects/node-raspberrypi/' | relative_url }}) |
 {: .home-server-table .home-server-spaced-table}
 
-각 노드의 호스팅 워크로드, 의사결정, 운영 사건은 위 노드 페이지에서 다룹니다.
+각 노드의 호스팅 워크로드, 의사결정(기술 선택 등..), 운영 사건은 각 노드 페이지에 기술하였습니다.
 
 ---
 
@@ -108,7 +108,7 @@ MyAwesomeHomeLab은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 �
 - SSH는 외부에 직접 노출하지 않음 — VPN 접속 후 내부망에서만 관리
 - Root 계정 로그인 차단
 - 공개 NAS 서비스에 Fail2ban 적용 (24h 내 비밀번호 오류 5회 → 24h Ban)
-- 보안 정책을 정하게 된 실제 사건은 [Hades 페이지의 Operations & Incidents]({{ '/ko/projects/node-hades/' | relative_url }}#operations--incidents)에서 다룹니다.
+- 보안 정책을 구성하게 된 이유는 [Hades 페이지의 Operations & Incidents]({{ '/ko/projects/node-hades/' | relative_url }}#operations--incidents)에 기술하였습니다.
 
 ---
 
@@ -125,7 +125,7 @@ MyAwesomeHomeLab은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 �
 
 디스크는 NAS 메인 데이터 저장소로 사용하는 4 TB Main Storage와, `rsync` 백업을 위한 6 TB Backup Storage로 구성되어 있습니다.
 
-> 가동 시작일, 호스팅 중인 VM/컨테이너 수, 최근 백업 결과 등 노드 단위 지표는 각 노드 페이지의 "At a Glance"에서 확인합니다.
+> 가동 시작일, 호스팅 중인 VM/컨테이너 수, 최근 백업 결과 등 노드 단위 지표는 각 노드 페이지의 "At a Glance"에서 확인할 수 있습니다.
 
 ---
 
