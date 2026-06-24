@@ -55,6 +55,6 @@ I'm also considering graduate study, with research interests in **(1) distribute
 
 - **Home Lab** — a [3-node on-prem cluster]({{ '/projects/Home%20Server%20Overview/' | relative_url }}) (Xen + ESXi) hosting backend services, JupyterHub, NAS, and VPN gateways. UPS-protected, with email alerting for admin logins, UPS events, and backup results.
 - **TACTIX** — RAG-based aircraft maintenance support system for air-gapped military networks.
-- **Moida** — Dormitory group-purchasing platform (OAuth, real-time chat, escrow payments).
+- **Moida** — Dormitory group-purchasing platform (OAuth, real-time chat).
 
 For more, see the [Projects]({{ '/projects/' | relative_url }}) page or the [CV]({{ '/cv/' | relative_url }}).
