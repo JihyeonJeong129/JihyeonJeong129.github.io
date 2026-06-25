@@ -82,6 +82,16 @@ ninja.data = [{
           description: "",
           section: "Awardcertification",handler: () => {
               window.location.href = "/awardcertification/2025_e2e_seminar/";
+            },},{id: "awardcertification-2025-summer-skill-up-autonomous-driving-simulation-program",
+          title: '2025 Summer Skill-UP Autonomous Driving Simulation Program',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2025_summer_morai/";
+            },},{id: "awardcertification-practical-plc-programming-with-omron",
+          title: 'Practical PLC Programming with Omron',
+          description: "",
+          section: "Awardcertification",handler: () => {
+              window.location.href = "/awardcertification/2025_summer_omron/";
             },},{id: "awardcertification-regional-startup-solverthon-competition",
           title: 'Regional Startup Solverthon Competition',
           description: "",
@@ -97,8 +107,8 @@ ninja.data = [{
           description: "",
           section: "Awardcertification",handler: () => {
               window.location.href = "/awardcertification/SQLD/";
-            },},{id: "photos-sejong-data-hackerton",
-          title: 'Sejong Data Hackerton',
+            },},{id: "photos-sejong-data-hackathon",
+          title: 'Sejong Data Hackathon',
           description: "",
           section: "Photos",handler: () => {
               window.location.href = "/photos/2024_Sejong_data/";
