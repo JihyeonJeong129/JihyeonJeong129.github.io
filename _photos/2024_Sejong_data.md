@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sejong Data Hackerton
+title: Sejong Data Hackathon
 img: assets/img/photos/2024_sejong_main.jpg
 description: 
 location: 📍 Sejong City Hall, Sejong, Republic of Korea.

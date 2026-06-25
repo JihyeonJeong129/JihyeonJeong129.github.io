@@ -28,11 +28,11 @@ latest_posts:
   limit: 3
 ---
 
-Hi, I'm **Jihyeon Jeong (정지현)** — I build and operate the kind of **production-ready systems** I want to work on professionally.
+Hi, I'm **Jihyeon Jeong (정지현)** — I **design and operate backend and cloud infrastructure that stays reliable under real-world failures**: observable, reproducible, and recoverable by design.
 
-My focus is **Linux · Kubernetes · AWS · CI/CD**, working across backend and infrastructure with an interest in systems that are *observable, reproducible, and recoverable*. I don't have professional experience yet, but I treat my self-hosted 3-node home lab as a small production-like environment — practicing how to design and take responsibility for reliability, observability, and failure recovery.
+My focus is **Linux · Kubernetes · AWS · CI/CD**, working across backend and infrastructure. I'm early in my career, and I run a self-hosted 3-node home lab as a production-like environment where I own reliability, observability, and failure recovery end to end.
 
-It isn't large-scale traffic, but even at a personal-lab scale I try to leave operational evidence. The storage node has run **~255 days** since its last maintenance, its disks are still **SMART-clean after 5+ years** of power-on time, and the compute node has stayed up **~254 days** through real outages on UPS protection. (As of 2026-06-15)
+It isn't large-scale traffic, but even at home-lab scale I keep an operational track record. The storage node has run **~255 days** since its last maintenance, its disks are still **SMART-clean after 5+ years** of power-on time, and the compute node has stayed up **~254 days** through real outages on UPS protection. (As of 2026-06-15)
 
 I'm also considering graduate study, with research interests in **(1) distributed systems & ML infrastructure (MLOps / LLM serving)** and **(2) Hardware acceleration**.
 
@@ -55,6 +55,6 @@ I'm also considering graduate study, with research interests in **(1) distribute
 
 - **Home Lab** — a [3-node on-prem cluster]({{ '/projects/Home%20Server%20Overview/' | relative_url }}) (Xen + ESXi) hosting backend services, JupyterHub, NAS, and VPN gateways. UPS-protected, with email alerting for admin logins, UPS events, and backup results.
 - **TACTIX** — RAG-based aircraft maintenance support system for air-gapped military networks.
-- **Moida** — Dormitory group-purchasing platform (OAuth, real-time chat).
+- **Moisam** — Dormitory group-purchasing platform (OAuth, real-time chat).
 
 For more, see the [Projects]({{ '/projects/' | relative_url }}) page or the [CV]({{ '/cv/' | relative_url }}).

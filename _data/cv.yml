@@ -34,7 +34,7 @@
       description:
         - Designed for air-gapped (closed) military networks.
         - Built an end-to-end retrieval-augmented generation pipeline for technical-manual Q&A.
-    - title: Moida — Dormitory Group-Purchasing Platform
+    - title: Moisam — Dormitory Group-Purchasing Platform
       year: 2025
       description:
         - Backend with OAuth authentication, real-time chat, and an escrow-style payment flow.
@@ -43,15 +43,15 @@
       year: 2024 - present
       description:
         - Xen + VMware ESXi hosting backend services, JupyterHub, container workloads, NAS, and VPN gateways.
-        - Operated as a small, production-like environment (not large-scale traffic) — UPS-protected with email alerting for admin logins, UPS events, and backup results; ~254 days of continuous compute-node uptime through real outages, and SMART-clean storage after 5+ years of disk runtime.
-        - Personal sandbox for distributed infrastructure, service reliability, and automation.
+        - Operated as a production-like environment (not large-scale traffic) — UPS-protected with email alerting for admin logins, UPS events, and backup results; ~254 days of continuous compute-node uptime through real outages, and SMART-clean storage after 5+ years of disk runtime.
+        - Used to practice distributed infrastructure, service reliability, and automation end to end.
 
 - title: Honors and Awards
   type: time_table
   contents:
     - year: 2026
       items:
-        - Regional Startup Solverthon Competition — Special Award (Director of the Seoul National University University Alliance Regional Talent Development Project Group)
+        - Regional Startup Solverthon Competition — Special Award (SNU University Alliance — Regional Talent Development Program)
     - year: 2024
       items:
         - Sejong Big Data Analysis Idea Contest — Excellence Award (Mayor of Sejong)
@@ -112,4 +112,4 @@
   contents:
     - <u>Focus areas:</u> Backend, DevOps, Cloud Infrastructure, distributed systems, service reliability (SRE), observability, and infrastructure-as-code.
     - <u>Graduate research interests:</u> (1) distributed systems & ML infrastructure (MLOps / LLM serving); (2) FPGA/PCIe-based hardware acceleration.
-    - <u>Note:</u> No professional industry experience yet; the home lab is operated as a small, production-like environment to practice reliability, backup, and security end to end.
+    - <u>Note:</u> Early-career; the home lab is operated as a production-like environment to practice reliability, backup, and security end to end.

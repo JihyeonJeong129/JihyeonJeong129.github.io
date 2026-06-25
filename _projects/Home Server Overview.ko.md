@@ -58,11 +58,11 @@ permalink: /ko/projects/home-server-overview/
 
 ## 개요
 
-MyAwesomeHomeLab은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 온프레미스 인프라입니다. 서비스 배포, AI/Local LLM 실험, NAS, FPGA·PCIe 하드웨어 테스트를 진행하기 위해 구성했습니다.
+**홈랩(Home Lab)**은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 온프레미스 인프라입니다. 서비스 배포, AI/Local LLM 실험, NAS, FPGA·PCIe 하드웨어 테스트를 진행하기 위해 구성했습니다.
 
-처음에는 Hades 하나에 모든 역할을 올렸지만, 필요한 컴퓨팅 자원이 늘어나면서 **연산 / 저장소 / 하드웨어 테스트**를 물리적으로 분리하는 방식으로 재 구성 하였습니다. 각 노드는 서로 다른 IP 대역을 쓰고, 노드 간 접근은 WireGuard VPN으로만 연결되도록 설계하였습니다.
+처음에는 Hades 하나에 모든 역할을 올렸지만, 필요한 컴퓨팅 자원이 늘어나면서 **연산 / 저장소 / 하드웨어 테스트**를 물리적으로 분리하는 방식으로 재구성하였습니다. 각 노드는 서로 다른 IP 대역을 쓰고, 노드 간 접근은 WireGuard VPN으로만 연결되도록 설계하였습니다.
 
-<img class="home-server-overview-image" src="{{ '/assets/img/homelab-overview.png' | relative_url }}" alt="MyAwesomeHomeLab infrastructure overview">
+<img class="home-server-overview-image" src="{{ '/assets/img/homelab-overview.png' | relative_url }}" alt="Home Lab infrastructure overview">
 
 ---
 
@@ -76,7 +76,7 @@ MyAwesomeHomeLab은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 �
 | **RaspberryPi** *(은퇴)* | 초기 NAS 실험 | — | Raspberry Pi OS | [상세 보기]({{ '/ko/projects/node-raspberrypi/' | relative_url }}) |
 {: .home-server-table .home-server-spaced-table}
 
-각 노드의 호스팅 워크로드, 의사결정(기술 선택 등..), 운영 사건은 각 노드 페이지에 기술하였습니다.
+각 노드의 호스팅 워크로드, 의사결정(기술 선택 등), 운영 장애 사례는 각 노드 페이지에 기술하였습니다.
 
 ---
 
@@ -84,7 +84,7 @@ MyAwesomeHomeLab은 Athena, Hades, Daedalus 세 노드로 운영 중인 개인 �
 
 이전 웹 프로젝트는 거의 `localhost`에서만 테스트했고, 그래서 외부 사용자가 실제로 접속했을 때 생기는 네트워크·인증·DB·배포 문제를 직접 경험할 기회가 없었습니다. 상용 클라우드로 일부는 경험할 수 있었지만 월 비용이 부담스러웠고, Windows 데스크톱과 MacBook을 같이 쓰는 환경이라 중앙 파일 저장소도 필요했습니다. 또한 FPGA·PCIe 같은 하드웨어 실험은 클라우드 환경에서 사실상 불가능했습니다.
 
-초기에는 Hades 한 대에 NAS·서비스·VPN·실험 환경을 모두 올렸지만 MicroServer 특성상 메모리 확장에 제한이 있어 금방 한계에 부딫쳤습니다. 그래서 Compute를 Athena로 분리하고 Hades는 Storage/Core에 집중시켰으며, 하드웨어 실험은 Daedalus를 따로 두는 현재 구조로 개선하였습니다.
+초기에는 Hades 한 대에 NAS·서비스·VPN·실험 환경을 모두 올렸지만 MicroServer 특성상 메모리 확장에 제한이 있어 금방 한계에 부딪쳤습니다. 그래서 Compute를 Athena로 분리하고 Hades는 Storage/Core에 집중시켰으며, 하드웨어 실험은 Daedalus를 따로 두는 현재 구조로 개선하였습니다.
 
 ---
 

@@ -57,11 +57,11 @@ ref: home-server-overview
 
 ## Overview
 
-MyAwesomeHomeLab is my personal on-premise infrastructure, running on three nodes: Athena, Hades, and Daedalus. I built it to host service deployments, AI / Local LLM experiments, NAS workflows, and FPGA / PCIe hardware tests.
+My **Home Lab** is a personal, on-prem infrastructure running on three nodes: Athena, Hades, and Daedalus. I built it to host service deployments, AI / Local LLM experiments, NAS workflows, and FPGA / PCIe hardware tests.
 
 It started with every role on a single Hades box, but as the compute I needed grew, I rebuilt it into the current layout that *physically separates* **compute / storage / hardware testing**. Each node uses its own IP range, and inter-node access is connected only through WireGuard VPN.
 
-<img class="home-server-overview-image" src="{{ '/assets/img/homelab-overview.png' | relative_url }}" alt="MyAwesomeHomeLab infrastructure overview">
+<img class="home-server-overview-image" src="{{ '/assets/img/homelab-overview.png' | relative_url }}" alt="Home Lab infrastructure overview">
 
 ---
 
