@@ -1,12 +1,30 @@
 {
   "basics": {
     "name": "Jihyeon Jeong",
-    "label": "Undergraduate Student",
+    "label": "Undergraduate Research Intern · Aspiring Backend & Infrastructure Engineer",
     "image": "",
     "email": "fosyl@ajou.ac.kr",
     "url": "https://jihyeonjeong129.github.io",
-    "summary": "Aspiring backend and infrastructure engineer with hands-on experience across software systems and applied projects, from server development to autonomous driving and industrial automation."
+    "summary": "Undergraduate researcher and aspiring backend/infrastructure engineer focused on system-level optimization of Approximate Nearest Neighbor Search (ANNS) — the retrieval engine behind vector databases, recommendation, and LLM RAG systems. Hands-on experience across software systems and applied projects, from server infrastructure and vector search to autonomous driving and industrial automation."
   },
+
+  "research": [
+    {
+      "organization": "AISA (Accelerated Intelligent System and Architecture) Research Group, Ajou University",
+      "position": "Undergraduate Research Intern — ANNS Optimization",
+      "location": "Suwon, South Korea",
+      "startDate": "2026-07-16",
+      "endDate": "",
+      "summary": "Advised by Prof. Young H. Oh. Researching system-level optimization of Approximate Nearest Neighbor Search (ANNS), the core retrieval workload behind vector databases, recommendation engines, and LLM RAG pipelines.",
+      "highlights": [
+        "Studying graph-based ANNS indexes (e.g., HNSW) and vector quantization to improve the throughput\u2013recall trade-off under tight memory and latency budgets.",
+        "Profiling ANNS workloads across the full system stack to pinpoint compute- and memory-bound bottlenecks, following the lab's vertical acceleration methodology.",
+        "Exploring hardware-aware optimization (SIMD, cache locality, and GPU/NPU offload) to accelerate nearest-neighbor search.",
+        "Benchmarking ANNS implementations on standard vector-search datasets (e.g., ANN-Benchmarks) to evaluate recall\u2013QPS trade-offs."
+      ],
+      "url": "https://ajou-aisa.github.io/"
+    }
+  ],
 
   "work": [
     {
@@ -21,6 +39,22 @@
       "Performed system maintenance and troubleshooting on Linux/UNIX platforms."
       ]
     } 
+  ],
+
+  "opensource": [
+    {
+      "organization": "Open Source Contribution Academy (OSSCA) — MSIT / NIPA, South Korea",
+      "position": "LLVM Mentee — Studying Compiler Internals for Open Source Contribution",
+      "location": "Remote, South Korea",
+      "startDate": "2026-07-11",
+      "endDate": "",
+      "summary": "Selected as a mentee for the LLVM track of OSSCA 2026. Focused on learning the LLVM codebase and the open-source contribution workflow under maintainer guidance, working toward first upstream contributions.",
+      "highlights": [
+        "Studying LLVM's architecture: the Clang frontend, LLVM IR, optimization passes, and backend code generation.",
+        "Learning the contribution workflow — building LLVM from source, navigating a large C++ codebase, and following community code-review practices.",
+        "Connecting compiler internals to my software and electronic-engineering background as a foundation for future contributions."
+      ]
+    }
   ],
 
   "education": [
@@ -86,21 +120,6 @@
       "organization": "Amazon Web Services (Korea)"
     },
     {
-      "name": "Practical PLC Programming with Omron",
-      "summary": "A hands-on workshop focused on Omron PLC fundamentals, ladder logic design, and real-world troubleshooting using CX-Programmer / Sysmac Studio.",
-      "highlights": [
-        "PLC architecture and I/O wiring with Omron hardware",
-        "Ladder logic basics: contacts, coils, timers, counters",
-        "Motion and analog I/O basics with function blocks",
-        "Networking and fieldbus (EtherNet/IP) configuration",
-        "HMI linkage and basic alarm/trend screens"
-      ],
-      "startDate": "2025-08-19",
-      "endDate": "2025-08-29",
-      "url": "/awardcertification/2025_summer_omron/",
-      "organization": "OMRON Automation (Korea)"
-    },
-    {
       "name": "2025 Summer Skill-UP: Autonomous Driving Simulation Program",
       "summary": "A 5-day intensive hands-on program using MORAI-SIM, focusing on core technologies in autonomous driving such as ROS, sensor integration, HD mapping, obstacle detection, and team-based mission programming.",
       "highlights": [
@@ -115,18 +134,6 @@
       "url": "/awardcertification/2025_summer_morai/"
     },
     {
-      "name": "Future Mobility Lecture Series: E2E Autonomous Driving Technology",
-      "summary": "A special lecture on end-to-end autonomous driving technology led by Hyun Youngjin, CEO of SUM, focusing on future mobility innovations.",
-      "highlights": [
-        "Overview of E2E autonomous driving technology",
-        "Industry insights into future mobility trends"
-      ],
-      "startDate": "2025-04-30",
-      "endDate": "2025-04-30",
-      "organization": "Ajou University – Future Automotive Convergence Program",
-      "url": "/awardcertification/2025_e2e_seminar/"
-    },
-    {
       "name": "Practical Coding with Riot Games",
       "summary": "A hands-on seminar covering version control systems and collaborative development using Git and GitHub.",
       "highlights": [
@@ -138,6 +145,21 @@
       "endDate": "2021-07-26",
       "url": "/awardcertification/2021_riot_games_seminar/",
       "organization": "Ajou University, Department of Software"
+    },
+    {
+      "name": "Practical PLC Programming with Omron",
+      "summary": "A hands-on workshop focused on Omron PLC fundamentals, ladder logic design, and real-world troubleshooting using CX-Programmer / Sysmac Studio.",
+      "highlights": [
+        "PLC architecture and I/O wiring with Omron hardware",
+        "Ladder logic basics: contacts, coils, timers, counters",
+        "Motion and analog I/O basics with function blocks",
+        "Networking and fieldbus (EtherNet/IP) configuration",
+        "HMI linkage and basic alarm/trend screens"
+      ],
+      "startDate": "2025-08-19",
+      "endDate": "2025-08-29",
+      "url": "/awardcertification/2025_summer_omron/",
+      "organization": "OMRON Automation (Korea)"
     }
   ],
   "awards":[
@@ -277,6 +299,8 @@
       "name": "Distributed and Parallel Systems",
       "icon": "fa-solid fa-network-wired",
       "keywords": [
+        "Approximate Nearest Neighbor Search (ANNS)",
+        "Vector Databases",
         "Cluster Computing",
         "Distributed Parallel Computing",
         "Distributed Storage Systems",
@@ -288,6 +312,14 @@
       "icon": "fa-solid fa-network-wired",
       "keywords": [
         "Hardware Accelerator Architectures (e.g. FPGA, GPU)"
+      ]
+    },
+    {
+      "name": "Compilers & Toolchains",
+      "icon": "fa-solid fa-gears",
+      "keywords": [
+        "LLVM / Clang, LLVM IR, MLIR",
+        "Compiler internals at the software/hardware boundary"
       ]
     }
   ],

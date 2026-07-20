@@ -31,30 +31,83 @@
   margin-left: 1rem;
   list-style-type: disc;
 }
+
+#cv-courses.collapsed .course-extra {
+  display: none;
+}
+
+.course-toggle-btn {
+  margin-top: 0.9rem;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b300b3;
+  cursor: pointer;
+}
+
+.course-toggle-btn:hover {
+  text-decoration: underline;
+}
 </style>
 
-{% for course in data[1] %}
-  <div class="course-entry">
-    <div class="course-title">
-      {% if course.url %}
-        {% capture course_url %}{% include local_url.liquid url=course.url %}{% endcapture %}
-        <a href="{{ course_url | strip }}" target="_blank" rel="noopener noreferrer">{{ course.name }}</a>
-      {% else %}
-        {{ course.name }}
+<noscript>
+  <style>
+    #cv-courses .course-extra { display: block !important; }
+    .course-toggle-btn { display: none !important; }
+  </style>
+</noscript>
+
+{% assign visible_count = 3 %}
+{% assign total_courses = data[1] | size %}
+<div id="cv-courses" class="collapsed">
+  {% for course in data[1] %}
+    <div class="course-entry{% if forloop.index > visible_count %} course-extra{% endif %}">
+      <div class="course-title">
+        {% if course.url %}
+          {% capture course_url %}{% include local_url.liquid url=course.url %}{% endcapture %}
+          <a href="{{ course_url | strip }}" target="_blank" rel="noopener noreferrer">{{ course.name }}</a>
+        {% else %}
+          {{ course.name }}
+        {% endif %}
+      </div>
+      <div class="course-date">
+        {{ course.startDate }} ~ {{ course.endDate }}
+      </div>
+      {% if course.summary %}
+        <div class="course-summary">{{ course.summary }}</div>
+      {% endif %}
+      {% if course.highlights %}
+        <ul class="course-highlights">
+          {% for item in course.highlights %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
       {% endif %}
     </div>
-    <div class="course-date">
-      {{ course.startDate }} ~ {{ course.endDate }}
-    </div>
-    {% if course.summary %}
-      <div class="course-summary">{{ course.summary }}</div>
-    {% endif %}
-    {% if course.highlights %}
-      <ul class="course-highlights">
-        {% for item in course.highlights %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </div>
-{% endfor %}
+  {% endfor %}
+
+  {% if total_courses > visible_count %}
+    {% assign more_count = total_courses | minus: visible_count %}
+    <button type="button" class="course-toggle-btn" aria-expanded="false" data-more-label="+ Show {{ more_count }} more">+ Show {{ more_count }} more</button>
+  {% endif %}
+</div>
+
+{% if total_courses > visible_count %}
+<script>
+  (function () {
+    var container = document.getElementById('cv-courses');
+    if (!container) return;
+    var btn = container.querySelector('.course-toggle-btn');
+    if (!btn) return;
+    var moreLabel = btn.getAttribute('data-more-label');
+    btn.addEventListener('click', function () {
+      var collapsed = container.classList.toggle('collapsed');
+      btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      btn.textContent = collapsed ? moreLabel : '\u2212 Show less';
+    });
+  })();
+</script>
+{% endif %}
