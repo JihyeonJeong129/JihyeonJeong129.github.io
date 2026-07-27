@@ -23,6 +23,21 @@
             {% endif %}
           </h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
+          {% if content.keywords and content.keywords.size > 0 %}
+            <p class="ml-1 ml-md-4 mt-1 mb-1">
+              {% for keyword in content.keywords %}
+                {% case keyword %}
+                  {% when 'MySQL' %}{% assign badgeColor = '4479A1' %}{% assign badgeLogo = 'mysql' %}
+                  {% when 'Flask' %}{% assign badgeColor = '000000' %}{% assign badgeLogo = 'flask' %}
+                  {% when 'FastAPI' %}{% assign badgeColor = '009688' %}{% assign badgeLogo = 'fastapi' %}
+                  {% when 'Qdrant' %}{% assign badgeColor = 'DC244C' %}{% assign badgeLogo = 'qdrant' %}
+                  {% when 'Ollama' %}{% assign badgeColor = '000000' %}{% assign badgeLogo = 'ollama' %}
+                  {% else %}{% assign badgeColor = '455A64' %}{% assign badgeLogo = keyword | downcase | remove: ' ' | remove: '.' %}
+                {% endcase %}
+                <img alt="{{ keyword }}" src="https://img.shields.io/badge/{{ keyword | replace: ' ', '%20' }}-{{ badgeColor }}?style=flat&logo={{ badgeLogo }}&logoColor=white" style="margin: 1px 2px;">
+              {% endfor %}
+            </p>
+          {% endif %}
           <ul class="items">
             {% for item in content.highlights %}
               <li>
