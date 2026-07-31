@@ -35,8 +35,6 @@
         "Operated PhotoPrism for automated photo management and archiving",
         "Utilized the HomeLab to deploy and showcase results from various projects"
       ],
-      "startDate": "2017",
-      "endDate": "PRESENT",
       "url": "/projects/"
     },
     {
@@ -47,8 +45,6 @@
         "Integrated LLM with rule-based expert system to guide troubleshooting and procedures",
         "Designed secure, on-premise full-stack deployment (Frontend, Backend, GPU acceleration) for closed military networks"
       ],
-      "startDate": "2025-05-21",
-      "endDate": "2025-06-13",
       "keywords": ["FastAPI", "Qdrant", "Ollama"]
     },
     {
@@ -58,8 +54,6 @@
         "Designed relational schema and normalized tables (1NF→BCNF) for core entities such as Users, Posts, Participation, and Chat",
         "Implemented database-backed features including recruitment posts, participation tracking, comments, and real-time chat" 
       ],
-      "startDate": "2025-04-28",
-      "endDate": "2025-05-16",
       "keywords": ["MySQL", "Flask"]
     }
   ],
