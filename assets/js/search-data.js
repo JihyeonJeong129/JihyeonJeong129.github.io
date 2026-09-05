@@ -117,6 +117,11 @@ ninja.data = [{
           description: "",
           section: "Photos",handler: () => {
               window.location.href = "/photos/2025_APO_Concert/";
+            },},{id: "photos-2026-apo-concert",
+          title: '2026 APO Concert',
+          description: "",
+          section: "Photos",handler: () => {
+              window.location.href = "/photos/2026_APO_Concert/";
             },},{id: "photos-2026-regional-startup-solverthon-competition",
           title: '2026 Regional Startup Solverthon Competition',
           description: "",
