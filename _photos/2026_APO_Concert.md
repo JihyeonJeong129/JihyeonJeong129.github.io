@@ -6,6 +6,7 @@ location: 📍 Yeonam Hall, Ajou University
 photos:
   - /assets/img/photos/2026_apo_poster.jpg
   - /assets/img/photos/2026_apo_profile.png
+  - /assets/img/photos/2026_apo_photo.jpg
 importance: 2
 category: 2026
 ---
