@@ -1,0 +1,54 @@
+<ul class="card-text font-weight-light list-group list-group-flush cv-opensource">
+  {% for content in data[1] %}
+    <li class="list-group-item px-0">
+      <h6 class="title font-weight-bold">
+        <a href="{{ content.url | escape }}">{{ content.organization | escape }}</a>
+      </h6>
+      <p class="cv-opensource-role">{{ content.position | escape }}</p>
+      <p>{{ content.summary | escape }}</p>
+      <ul class="cv-contributions">
+        {% for contribution in content.contributions %}
+          <li class="cv-contribution">
+            <div class="cv-contribution-heading">
+              <span class="cv-pr-status cv-pr-status--{{ contribution.status | escape }}">
+                {% case contribution.status %}
+                  {% when 'merged' %}
+                    <i class="fa-solid fa-code-merge" aria-hidden="true"></i>
+                    Merged
+                  {% when 'open' %}
+                    <i class="fa-solid fa-code-pull-request" aria-hidden="true"></i>
+                    Open
+                  {% else %}
+                    {{ contribution.status | capitalize | escape }}
+                {% endcase %}
+              </span>
+              <a href="{{ contribution.url | escape }}" class="cv-contribution-title">
+                {{ contribution.title | escape }}
+                <span class="cv-contribution-number">#{{ contribution.number }}</span>
+              </a>
+            </div>
+            <p class="cv-contribution-summary">{{ contribution.summary | escape }}</p>
+            {% if contribution.highlights.size > 0 %}
+              <ul class="cv-contribution-highlights">
+                {% for highlight in contribution.highlights %}
+                  <li>{{ highlight | escape }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if contribution.issue %}
+              <p class="cv-contribution-issue">
+                Related issue: <a href="{{ contribution.issue.url | escape }}">#{{ contribution.issue.number }}</a>
+              </p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      {% if content.statusesCheckedAt %}
+        <p class="cv-status-date">
+          PR statuses checked on
+          <time datetime="{{ content.statusesCheckedAt | escape }}">{{ content.statusesCheckedAt | date: '%b %d, %Y' }}</time>.
+        </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

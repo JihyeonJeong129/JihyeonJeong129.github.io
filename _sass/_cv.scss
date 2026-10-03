@@ -39,6 +39,91 @@ a.btncv:hover {
 }
 
 /*****************************
+ * Open source contributions
+ *****************************/
+
+.cv-opensource {
+  --cv-pr-merged-color: #8250df;
+  --cv-pr-open-color: #1a7f37;
+
+  .cv-opensource-role {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cv-contributions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv-contribution {
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .cv-contribution-heading {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .cv-pr-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .cv-pr-status--merged {
+    color: var(--cv-pr-merged-color);
+  }
+
+  .cv-pr-status--open {
+    color: var(--cv-pr-open-color);
+  }
+
+  .cv-contribution-title {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .cv-contribution-number {
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  .cv-contribution-summary {
+    margin: 0.4rem 0 0;
+  }
+
+  .cv-contribution-highlights {
+    margin: 0.4rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .cv-contribution-issue,
+  .cv-status-date {
+    font-size: 0.85rem;
+    margin: 0.4rem 0 0;
+  }
+}
+
+html[data-theme="dark"] .cv-opensource {
+  --cv-pr-merged-color: #c4a5ff;
+  --cv-pr-open-color: #56d364;
+}
+
+@media print {
+  .cv-opensource .cv-contribution {
+    break-inside: avoid;
+  }
+}
+
+/*****************************
  * CV TIME_TABLE styles
  *****************************/
 

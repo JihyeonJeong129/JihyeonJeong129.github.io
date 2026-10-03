@@ -5,21 +5,82 @@
     "image": "",
     "email": "fosyl@ajou.ac.kr",
     "url": "https://jihyeonjeong129.github.io",
-    "summary": "Aspiring backend and infrastructure engineer who designs and operates systems that stay reliable, observable, and recoverable under real-world failures. Hands-on through a self-hosted 3-node home lab (Linux, Docker) run as a production-like environment. Also interested in open-source contribution and Approximate Nearest Neighbor Search (ANNS)."
+    "summary": "Aspiring backend and infrastructure engineer who designs and operates systems that stay reliable, observable, and recoverable under real-world failures. Hands-on through a self-hosted 3-node home lab (Linux, Docker) run as a production-like environment. LLVM contributor with an interest in Approximate Nearest Neighbor Search (ANNS)."
   },
 
   "opensource": [
     {
-      "organization": "Open Source Contribution Academy (OSSCA) — MSIT / NIPA, South Korea",
-      "position": "Open Source Contributor — LLVM (OSSCA 2026 Mentee)",
-      "location": "Remote, South Korea",
-      "startDate": "2026-07-11",
+      "organization": "LLVM Project",
+      "position": "Open Source Contributor",
+      "location": "Remote",
+      "url": "https://github.com/llvm/llvm-project",
+      "startDate": "2026-07-26",
       "endDate": "",
-      "summary": "Selected for the LLVM track of OSSCA 2026, contributing to LLVM — a large-scale, industry-wide open-source project — under maintainer mentorship. Focused on the real-world open-source contribution workflow and community collaboration, working toward first upstream contributions.",
-      "highlights": [
-        "Engaging with a large-scale, widely-used open-source C++ codebase — building from source and navigating an industrial-scale project structure.",
-        "Learning the upstream contribution workflow end to end: issue tracking, patch preparation, and community code review under maintainer guidance.",
-        "Building fluency with the collaboration practices behind major open-source projects (Git-based workflow, CI, and review etiquette)."
+      "summary": "Contributing to LLVM libc, compiler optimizations, and X86 code generation through implementation, regression tests, and upstream code review.",
+      "statusesCheckedAt": "2026-10-03",
+      "contributions": [
+        {
+          "number": 221748,
+          "title": "[libc] Implement fmemopen",
+          "url": "https://github.com/llvm/llvm-project/pull/221748",
+          "status": "merged",
+          "summary": "Implemented POSIX fmemopen to support memory-backed file streams in LLVM libc.",
+          "highlights": [
+            "Added read, write, seek, and close operations with ownership handling for caller-provided and internally allocated buffers.",
+            "Added 11 tests covering buffer boundaries, seek and append behavior, zero-capacity streams, and recovery after short writes."
+          ]
+        },
+        {
+          "number": 212112,
+          "title": "[ConstantFolding] Fold vector.partial.reduce.add constants",
+          "url": "https://github.com/llvm/llvm-project/pull/212112",
+          "status": "merged",
+          "summary": "Implemented constant folding for fixed-length vector.partial.reduce.add operations.",
+          "highlights": [
+            "Added regression tests for poison propagation, integer wraparound, nonconstant inputs, and multiple reduction ratios.",
+            "Added a safety guard to reject mixed fixed/scalable vector types."
+          ]
+        },
+        {
+          "number": 228359,
+          "title": "[X86] combineAddOfPMADDWD - add PMADDUBSW support",
+          "url": "https://github.com/llvm/llvm-project/pull/228359",
+          "status": "open",
+          "summary": "Proposed an X86 code-generation optimization combining eligible PMADDUBSW multiply-add sequences across 128-, 256-, and 512-bit vectors.",
+          "highlights": [
+            "Guarded against signed i16 overflow and restricted combining to cases that reconstruct existing inputs without additional shuffles.",
+            "Added code-generation regression tests for unsigned inputs with the high bit set, commuted additions, positive and negative signed overflow, and inputs requiring extra shuffles."
+          ],
+          "issue": {
+            "number": 223367,
+            "url": "https://github.com/llvm/llvm-project/issues/223367"
+          }
+        },
+        {
+          "number": 224207,
+          "title": "[libc] Add x and e mode support to fopen()",
+          "url": "https://github.com/llvm/llvm-project/pull/224207",
+          "status": "open",
+          "summary": "Proposed exclusive-create (x) and close-on-exec (e) mode support for fopen(), with related handling in fdopen()/freopen() and regression tests."
+        },
+        {
+          "number": 215073,
+          "title": "[InstCombine] Fold a zero-select hexadecimal digit count into ctlz(x | 1)",
+          "url": "https://github.com/llvm/llvm-project/pull/215073",
+          "status": "open",
+          "summary": "Reported a missed optimization and proposed removing the zero-case select from a hexadecimal digit-count pattern, with regression tests for poison-sensitive arithmetic flags.",
+          "issue": {
+            "number": 214416,
+            "url": "https://github.com/llvm/llvm-project/issues/214416"
+          }
+        },
+        {
+          "number": 221130,
+          "title": "[InstCombine] Fold correlated poison-blocking logical selects",
+          "url": "https://github.com/llvm/llvm-project/pull/221130",
+          "status": "open",
+          "summary": "Proposed simplifying correlated nested logical selects while preserving poison semantics, with scalar, vector, and negative regression tests."
+        }
       ]
     }
   ],
@@ -52,7 +113,7 @@
       "summary": "Developed a closed web platform for Ajou University dorm residents to coordinate group purchases, focusing on database design and implementation.",
       "highlights": [
         "Designed relational schema and normalized tables (1NF→BCNF) for core entities such as Users, Posts, Participation, and Chat",
-        "Implemented database-backed features including recruitment posts, participation tracking, comments, and real-time chat" 
+        "Implemented database-backed features including recruitment posts, participation tracking, comments, and real-time chat"
       ],
       "keywords": ["MySQL", "Flask"]
     }
@@ -60,17 +121,17 @@
 
   "work": [
     {
-    "name": "Republic of Korea Air Force – 1MCRC (Master Control and Reporting Center)",
-    "position": "Military Service, Systems Technician",
-    "location": "Osan, South Korea",
-    "startDate": "2023-03-20",
-    "endDate": "2024-12-19",
-    "highlights": [
-      "Provided maintenance and operation support for critical air defense communication and backup systems.",
-      "Managed equipment essential to Anti-jamming Radio and command center operations.",
-      "Performed system maintenance and troubleshooting on Linux/UNIX platforms."
+      "name": "Republic of Korea Air Force – 1MCRC (Master Control and Reporting Center)",
+      "position": "Military Service, Systems Technician",
+      "location": "Osan, South Korea",
+      "startDate": "2023-03-20",
+      "endDate": "2024-12-19",
+      "highlights": [
+        "Provided maintenance and operation support for critical air defense communication and backup systems.",
+        "Managed equipment essential to Anti-jamming Radio and command center operations.",
+        "Performed system maintenance and troubleshooting on Linux/UNIX platforms."
       ]
-    } 
+    }
   ],
 
   "education": [
@@ -178,7 +239,7 @@
       "organization": "OMRON Automation (Korea)"
     }
   ],
-  "awards":[
+  "awards": [
     {
       "title": "Special Award - Regional Startup Solverthon Competition",
       "url": "/awardcertification/2026_regional_startup_solverthon/",
@@ -241,33 +302,22 @@
   ],
   "skills": [
     {
-    "name": "Infrastructure & DevOps",
-    "level": "Intermediate",
-    "icon": "fa-solid fa-server",
-    "keywords": [
-      "Linux",
-      "Docker"
-    ]
-  },
+      "name": "Infrastructure & DevOps",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-server",
+      "keywords": ["Linux", "Docker"]
+    },
     {
-    "name": "Programming Languages",
-    "level": "Advanced",
-    "icon": "fa-solid fa-code",
-    "keywords": [
-      "C (Proficient)",
-      "Python (Intermediate)",
-      "C++ (Intermediate)",
-      "Java (Basic)"
-    ]
-  },
-  {
-    "name": "Hardware & Embedded Systems",
-    "level": "Intermediate",
-    "icon": "fa-solid fa-microchip",
-    "keywords": [
-      "Verilog HDL",
-      "FPGA Design and Simulation"
-      ]
+      "name": "Programming Languages",
+      "level": "Advanced",
+      "icon": "fa-solid fa-code",
+      "keywords": ["C (Proficient)", "Python (Intermediate)", "C++ (Intermediate)", "Java (Basic)"]
+    },
+    {
+      "name": "Hardware & Embedded Systems",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-microchip",
+      "keywords": ["Verilog HDL", "FPGA Design and Simulation"]
     }
   ],
 
@@ -316,32 +366,32 @@
     {
       "name": "Hardware Accelerator",
       "icon": "fa-solid fa-network-wired",
-      "keywords": [
-        "Hardware Accelerator Architectures (e.g. FPGA, GPU)"
-      ]
+      "keywords": ["Hardware Accelerator Architectures (e.g. FPGA, GPU)"]
     },
     {
       "name": "Compilers & Toolchains",
       "icon": "fa-solid fa-gears",
-      "keywords": [
-        "LLVM / Clang, LLVM IR, MLIR",
-        "Compiler internals at the software/hardware boundary"
-      ]
+      "keywords": ["LLVM / Clang, LLVM IR, MLIR", "Compiler internals at the software/hardware boundary"]
     }
   ],
   "extracurricular": [
     {
+      "name": "Open Source Contribution Academy 2026 — LLVM Track",
+      "position": "Mentee",
+      "organization": "MSIT / NIPA, South Korea",
+      "summary": "Selected for the LLVM track of OSSCA 2026 and participating in mentorship on upstream development and community collaboration.",
+      "startDate": "2026-07-11",
+      "endDate": "",
+      "url": "#opensource"
+    },
+    {
       "name": "Ajou Pops Orchestra (APO)",
       "summary": "Double bass (contrabass) player in a Ajou University orchestra. performed in regular concerts and participated in section rehearsals and ensemble coordination.",
-      "highlights": [
-        "Performed in the 2022 Regular Concert",
-        "Performed in the 2025 Regular Concert",
-        "Performed in the 2026 Regular Concert"
-      ],
+      "highlights": ["Performed in the 2022 Regular Concert", "Performed in the 2025 Regular Concert", "Performed in the 2026 Regular Concert"],
       "startDate": "2022-03-01",
       "endDate": "PRESENT",
       "url": "https://www.instagram.com/ajou_pops_orchestra/",
       "organization": "Ajou University"
-    } 
-  ] 
+    }
+  ]
 }
