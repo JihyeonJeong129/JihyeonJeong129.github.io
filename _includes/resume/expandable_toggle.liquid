@@ -1,0 +1,35 @@
+<button
+  type="button"
+  class="cv-toggle-btn"
+  aria-controls="{{ include.container_id | escape }}"
+  aria-expanded="false"
+  data-more-label="+ Show {{ include.more_count }} more"
+>
+  + Show {{ include.more_count }} more
+</button>
+
+<noscript>
+  <style>
+    .cv-expandable .cv-extra {
+      display: block !important;
+    }
+    .cv-toggle-btn {
+      display: none !important;
+    }
+  </style>
+</noscript>
+
+<script>
+  (function () {
+    var container = document.getElementById({{ include.container_id | jsonify }});
+    if (!container) return;
+    var btn = container.querySelector('.cv-toggle-btn');
+    if (!btn) return;
+    var moreLabel = btn.getAttribute('data-more-label');
+    btn.addEventListener('click', function () {
+      var collapsed = container.classList.toggle('collapsed');
+      btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      btn.textContent = collapsed ? moreLabel : '\u2212 Show less';
+    });
+  })();
+</script>

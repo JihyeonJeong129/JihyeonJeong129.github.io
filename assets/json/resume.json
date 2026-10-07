@@ -17,7 +17,7 @@
       "startDate": "2026-07-26",
       "endDate": "",
       "summary": "Contributing to LLVM libc, compiler optimizations, and X86 code generation through implementation, regression tests, and upstream code review.",
-      "statusesCheckedAt": "2026-10-03",
+      "statusesCheckedAt": "2026-10-07",
       "contributions": [
         {
           "number": 221748,
@@ -29,6 +29,13 @@
             "Added read, write, seek, and close operations with ownership handling for caller-provided and internally allocated buffers.",
             "Added 11 tests covering buffer boundaries, seek and append behavior, zero-capacity streams, and recovery after short writes."
           ]
+        },
+        {
+          "number": 224207,
+          "title": "[libc] Add 'x' and 'e' mode support to fopen()",
+          "url": "https://github.com/llvm/llvm-project/pull/224207",
+          "status": "merged",
+          "summary": "Implemented exclusive-create (x) and close-on-exec (e) mode support for fopen(), with related handling in fdopen()/freopen() and regression tests."
         },
         {
           "number": 212112,
@@ -55,13 +62,6 @@
             "number": 223367,
             "url": "https://github.com/llvm/llvm-project/issues/223367"
           }
-        },
-        {
-          "number": 224207,
-          "title": "[libc] Add x and e mode support to fopen()",
-          "url": "https://github.com/llvm/llvm-project/pull/224207",
-          "status": "open",
-          "summary": "Proposed exclusive-create (x) and close-on-exec (e) mode support for fopen(), with related handling in fdopen()/freopen() and regression tests."
         },
         {
           "number": 215073,

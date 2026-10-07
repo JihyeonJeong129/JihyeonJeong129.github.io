@@ -39,6 +39,63 @@ a.btncv:hover {
 }
 
 /*****************************
+ * Expandable CV sections and courses
+ *****************************/
+
+.cv-expandable.collapsed .cv-extra {
+  display: none;
+}
+
+.cv-toggle-btn {
+  margin-top: 0.9rem;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b300b3;
+  cursor: pointer;
+}
+
+.cv-toggle-btn:hover {
+  text-decoration: underline;
+}
+
+.course-entry {
+  padding: 1rem 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.course-entry:last-child {
+  border-bottom: none;
+}
+
+.course-title {
+  font-weight: 600;
+  color: #b300b3;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.course-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.course-summary {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-highlights {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+
+/*****************************
  * Open source contributions
  *****************************/
 
@@ -58,8 +115,12 @@ a.btncv:hover {
   }
 
   .cv-contribution {
-    padding: 0.85rem 0;
-    border-top: 1px solid var(--global-divider-color);
+    padding: 1rem 0;
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .cv-contribution:last-child {
+    border-bottom: none;
   }
 
   .cv-contribution-heading {
@@ -67,6 +128,7 @@ a.btncv:hover {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 0.35rem 0.75rem;
+    font-size: 1rem;
   }
 
   .cv-pr-status {
@@ -98,11 +160,13 @@ a.btncv:hover {
 
   .cv-contribution-summary {
     margin: 0.4rem 0 0;
+    font-size: 0.95rem;
   }
 
   .cv-contribution-highlights {
     margin: 0.4rem 0 0;
     padding-left: 1.25rem;
+    font-size: 0.9rem;
   }
 
   .cv-contribution-issue,
@@ -118,6 +182,14 @@ html[data-theme="dark"] .cv-opensource {
 }
 
 @media print {
+  .cv-expandable .cv-extra {
+    display: block !important;
+  }
+
+  .cv-toggle-btn {
+    display: none;
+  }
+
   .cv-opensource .cv-contribution {
     break-inside: avoid;
   }

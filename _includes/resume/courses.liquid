@@ -1,70 +1,8 @@
-<style>
-.course-entry {
-  padding: 1rem 0;
-  border-bottom: 1px dashed #ccc;
-}
-
-.course-entry:last-child {
-  border-bottom: none;
-}
-
-.course-title {
-  font-weight: 600;
-  color: #b300b3;
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
-}
-
-.course-date {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.course-summary {
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.course-highlights {
-  font-size: 0.9rem;
-  margin-left: 1rem;
-  list-style-type: disc;
-}
-
-#cv-courses.collapsed .course-extra {
-  display: none;
-}
-
-.course-toggle-btn {
-  margin-top: 0.9rem;
-  background: none;
-  border: 1px solid #ccc;
-  border-radius: 0.4rem;
-  padding: 0.3rem 0.85rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #b300b3;
-  cursor: pointer;
-}
-
-.course-toggle-btn:hover {
-  text-decoration: underline;
-}
-</style>
-
-<noscript>
-  <style>
-    #cv-courses .course-extra { display: block !important; }
-    .course-toggle-btn { display: none !important; }
-  </style>
-</noscript>
-
 {% assign visible_count = 3 %}
 {% assign total_courses = data[1] | size %}
-<div id="cv-courses" class="collapsed">
+<div id="cv-courses" class="cv-expandable collapsed">
   {% for course in data[1] %}
-    <div class="course-entry{% if forloop.index > visible_count %} course-extra{% endif %}">
+    <div class="course-entry{% if forloop.index > visible_count %} cv-extra{% endif %}">
       <div class="course-title">
         {% if course.url %}
           {% capture course_url %}{% include local_url.liquid url=course.url %}{% endcapture %}
@@ -73,9 +11,7 @@
           {{ course.name }}
         {% endif %}
       </div>
-      <div class="course-date">
-        {{ course.startDate }} ~ {{ course.endDate }}
-      </div>
+      <div class="course-date">{{ course.startDate }} ~ {{ course.endDate }}</div>
       {% if course.summary %}
         <div class="course-summary">{{ course.summary }}</div>
       {% endif %}
@@ -91,23 +27,6 @@
 
   {% if total_courses > visible_count %}
     {% assign more_count = total_courses | minus: visible_count %}
-    <button type="button" class="course-toggle-btn" aria-expanded="false" data-more-label="+ Show {{ more_count }} more">+ Show {{ more_count }} more</button>
+    {% include resume/expandable_toggle.liquid container_id='cv-courses' more_count=more_count %}
   {% endif %}
 </div>
-
-{% if total_courses > visible_count %}
-<script>
-  (function () {
-    var container = document.getElementById('cv-courses');
-    if (!container) return;
-    var btn = container.querySelector('.course-toggle-btn');
-    if (!btn) return;
-    var moreLabel = btn.getAttribute('data-more-label');
-    btn.addEventListener('click', function () {
-      var collapsed = container.classList.toggle('collapsed');
-      btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
-      btn.textContent = collapsed ? moreLabel : '\u2212 Show less';
-    });
-  })();
-</script>
-{% endif %}
